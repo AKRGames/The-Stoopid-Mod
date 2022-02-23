@@ -4,7 +4,10 @@ All notable changes will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.3] - 2021-06-29
+##[SM 0] - 2022-02-22
+Initial commit to GitHub.
+
+## [MU 2.0.3] - 2021-06-29
 ### Added:
 * downscroll
 * all keys can be binded now
@@ -101,7 +104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * fix combo being offset by 1
 * mirror and upside down should be working at all times
 
-## [2.0.2] - 2021-05-05
+## [MU 2.0.2] - 2021-05-05
 ### Added:
 * new options page for clearing out your config and save
 * new options: **menu music**, **rainbow fps** and Kade Engine's **Late Damage**
@@ -120,7 +123,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * if an enemy misses a note, it shouldn't affect your health
 * fixed easter egg images disappearing
 
-## [2.0.1] - 2021-04-27
+## [MU 2.0.1] - 2021-04-27
 ### Added:
 * added Ash237 to the credits
 * new chart type: **Stair** - stairs for every chart
@@ -140,7 +143,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * input system no longer eats inputs and is a wee bit more reminiscent of Kade Engine's input
 * timing shown didn't disappear sometimes, so now it does
 
-## [2.0] - 2021-04-25
+## [MU 2.0] - 2021-04-25
 ### Added:
 * multi-preset naming system for modifiers
 * _easter eggs_
@@ -153,6 +156,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed:
 * **pretty much everything, all recoded and redesigned for a new graphical and functional style, for the most part.**
 
-## [1.0] - 2021-02-15
+## [MU 1.0] - 2021-02-15
 ### Added
 * Uh, everything
