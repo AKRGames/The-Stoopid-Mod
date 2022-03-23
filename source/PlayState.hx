@@ -261,6 +261,10 @@ class PlayState extends MusicBeatState
 
 		misses = 0;
 		accuracy = 0.00;
+		
+		// PRELOADING INST AND VOICES
+		FlxG.sound.cache(Paths.inst(PlayState.SONG.song));
+		FlxG.sound.cache(Paths.voices(PlayState.SONG.song));
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
