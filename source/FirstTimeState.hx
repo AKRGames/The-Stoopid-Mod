@@ -30,9 +30,9 @@ class FirstTimeState extends MusicBeatState
 		DiscordClient.changePresence("Started for the first time.", null);
 
 		txt = new FlxText(0, 360, FlxG.width,
-			"Heads up!\nFriday Night Funkin: The Stoopid Mod contains a lot of stoopid memes. Viewer discretion is advised.\nAlso, you can only open this mod once.\nThe next time you open the mod, it'll give you a Null Object Reference.\n"
-			+ "The Stoopid Mod is cool. You should agree."
-			+ "STOOPID GUY IS NOT LITTLE MAN ON STEROIDS. That's the only argument I can make."
+			"Heads up!\nFriday Night Funkin: The Stoopid Mod contains a lot of stoopid memes. Viewer discretion is advised.\n\n"
+			+ "The Stoopid Mod is cool. You should agree. "
+			+ "Also, STOOPID GUY IS NOT LITTLE MAN ON STEROIDS. That's the only argument I can make. "
 			+ "Anyway, shoutout to Verwex for making this engine.\n\n"
 			+ "Thanks for reading. I hope you enjoy this mod.\n(you should also play little man and bob mod)\nPress ENTER to proceed.",
 			32);
