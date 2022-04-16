@@ -407,6 +407,18 @@ class Character extends FlxSprite
 				loadOffsetFile('parents-christmas');
 
 				playAnim('idle');
+
+			case 'stoopidguy':
+				frames = Paths.getSparrowAtlas('characters/stoopidguy', 'shared');
+				animation.addByPrefix('idle', 'stoopid idle', 24, false);
+				animation.addByPrefix('singUP', 'stoopid up', 24, false);
+				animation.addByPrefix('singDOWN', 'stoopid down', 24, false);
+				animation.addByPrefix('singLEFT', 'stoopid left', 24, false);
+				animation.addByPrefix('singRIGHT', 'stoopid right', 24, false);
+
+				loadOffsetFile('stoopidguy');
+
+				playAnim('idle');
 		}
 
 		dance();

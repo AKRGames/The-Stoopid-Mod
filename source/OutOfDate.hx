@@ -13,9 +13,9 @@ class OutOfDate extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
-	public static var needVer:String = "IDFK LOL";
+	public static var needVer:String = "idk";
 
-	public static var changelog:String = "qwertyuiop";
+	public static var changelog:String = "stuff";
 
 	override function create()
 	{
@@ -27,18 +27,18 @@ class OutOfDate extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
-			"Oh boy... Your micropfone software seems to be outdated.\n"
-			+ "Luckily for you, you can upgrade your software from "
+			"Uh oh! Your version of the mod seems to be outdated.\n"
+			+ "Fortunatly, you can update the game from "
 			+ Application.current.meta.get('version')
 			+ " to "
 			+ needVer
 			+ " for free. "
 			+ "New features include:\n"
 			+ changelog
-			+ " All you have to do is press ACCEPT to go to its official patch release and grab the latest build from there."
+			+ " All you have to do is press ENTER to go to its official page and grab the latest build from there."
 			+ "!\nYou can always ignore this by pressing BACK.",
 			32);
-		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
 		add(txt);
 	}
@@ -47,7 +47,7 @@ class OutOfDate extends MusicBeatState
 	{
 		if (controls.ACCEPT)
 		{
-			FlxG.openURL("https://gamebanana.com/mods/44236");
+			FlxG.openURL("https://gamejolt.com/games/fnfstoopidmod/688327");
 		}
 		if (controls.BACK)
 		{
