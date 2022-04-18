@@ -27,7 +27,7 @@ class FirstTimeState extends MusicBeatState
 		var lol = (cast(Lib.current.getChildAt(0), Main)).lastY;
 		FlxTween.tween(Application.current.window, {y: lol}, 0.5, {ease: FlxEase.circOut});
 		
-		DiscordClient.changePresence("Started for the first time.", null);
+		DiscordClient.changePresence("guys don't jugde them it's their first time :(", null);
 
 		txt = new FlxText(0, 360, FlxG.width,
 			"Heads up!\nFriday Night Funkin: The Stoopid Mod contains a lot of stoopid memes. Viewer discretion is advised.\n\n"
@@ -36,7 +36,7 @@ class FirstTimeState extends MusicBeatState
 			+ "Anyway, shoutout to Verwex for making this engine.\n\n"
 			+ "Thanks for reading. I hope you enjoy this mod.\n(you should also play little man and bob mod)\nPress ENTER to proceed.",
 			32);
-		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		add(txt);
 
 		super.create();
