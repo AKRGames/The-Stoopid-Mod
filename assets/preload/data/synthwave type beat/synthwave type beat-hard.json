@@ -1,91 +1,88 @@
 {
     "song": {
         "player1": "bf",
-        "song": "Synthwave Type Beat",
-        "player2": "stoopidguy",
         "notes": [
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         27826.0869565217,
@@ -102,10 +99,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         29565.2173913043,
@@ -122,10 +119,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         31304.3478260869,
@@ -156,10 +153,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         33260.8695652174,
@@ -190,10 +187,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         34782.6086956522,
@@ -210,10 +207,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         36521.7391304348,
@@ -230,10 +227,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         38260.8695652174,
@@ -250,10 +247,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         40000,
@@ -319,10 +316,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         41739.1304347826,
@@ -339,10 +336,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         43478.2608695652,
@@ -359,10 +356,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         45217.3913043478,
@@ -393,10 +390,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         47173.9130434783,
@@ -427,10 +424,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         48695.652173913,
@@ -447,10 +444,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         50434.7826086956,
@@ -467,10 +464,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         52173.9130434783,
@@ -487,10 +484,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         53913.0434782609,
@@ -556,10 +553,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         55652.1739130435,
@@ -576,10 +573,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         57391.3043478261,
@@ -596,10 +593,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         59130.4347826087,
@@ -630,10 +627,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         61086.9565217392,
@@ -664,10 +661,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         62608.6956521739,
@@ -684,10 +681,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         64347.8260869565,
@@ -704,10 +701,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         66086.9565217392,
@@ -724,10 +721,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         67826.0869565218,
@@ -793,10 +790,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         69565.2173913043,
@@ -813,10 +810,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         71304.3478260869,
@@ -833,10 +830,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         73043.4782608695,
@@ -867,10 +864,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         75000,
@@ -901,10 +898,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         76521.7391304347,
@@ -921,10 +918,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         78260.8695652173,
@@ -941,10 +938,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         80000,
@@ -961,10 +958,10 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
-                "lengthInSteps": 16,
                 "sectionNotes": [
                     [
                         81739.1304347826,
@@ -1030,97 +1027,3287 @@
                         false
                     ]
                 ],
+                "lengthInSteps": 16,
                 "mustHitSection": true
             },
             {
+                "sectionNotes": [
+                    [
+                        83478.2608695652,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83586.9565217391,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83695.652173913,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83804.3478260869,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83913.0434782608,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84021.7391304348,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84130.4347826087,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84239.1304347826,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84347.8260869565,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84456.5217391304,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84565.2173913043,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84673.9130434782,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84782.6086956522,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84891.3043478261,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85000,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85108.6956521739,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83478.2608695652,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83913.0434782608,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84347.8260869565,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84782.6086956522,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83586.9565217391,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84021.7391304348,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84456.5217391304,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84891.3043478261,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83695.652173913,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84130.4347826087,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84565.2173913043,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85000,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85108.6956521739,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84673.9130434782,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        84239.1304347826,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        83804.3478260869,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        85217.3913043478,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85326.0869565217,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85434.7826086956,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85543.4782608696,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85652.1739130435,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85760.8695652174,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85869.5652173913,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85978.2608695652,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86086.9565217391,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86195.652173913,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86304.3478260869,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86413.0434782608,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86521.7391304348,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86630.4347826087,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86739.1304347826,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86847.8260869565,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85217.3913043478,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85652.1739130435,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86086.9565217391,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86521.7391304348,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85326.0869565217,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85760.8695652174,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86195.652173913,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86630.4347826087,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85434.7826086956,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85869.5652173913,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86304.3478260869,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86739.1304347826,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86847.8260869565,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86413.0434782608,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85978.2608695652,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        85543.4782608696,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
+                "mustHitSection": true
+            },
+            {
+                "sectionNotes": [
+                    [
+                        86956.5217391304,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87065.2173913043,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87173.9130434782,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87282.6086956522,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87391.3043478261,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87500,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87608.6956521739,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87717.3913043478,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87826.0869565217,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87934.7826086956,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88043.4782608696,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88152.1739130435,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88260.8695652174,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88369.5652173913,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88478.2608695652,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88586.9565217391,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        86956.5217391304,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87391.3043478261,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87826.0869565217,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88260.8695652174,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87065.2173913043,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87500,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87934.7826086956,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88369.5652173913,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87173.9130434782,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87608.6956521739,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88043.4782608696,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88478.2608695652,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88586.9565217391,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88152.1739130435,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87717.3913043478,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        87282.6086956522,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        88695.652173913,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88804.3478260869,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88913.0434782608,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89021.7391304348,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89130.4347826087,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89239.1304347826,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89347.8260869565,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89456.5217391304,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89565.2173913043,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89673.9130434782,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89782.6086956522,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89891.3043478261,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90000,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90108.6956521739,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90217.3913043478,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90326.0869565217,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88695.652173913,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89130.4347826087,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89565.2173913043,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90000,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88804.3478260869,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89239.1304347826,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89673.9130434782,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90108.6956521739,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        88913.0434782608,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89347.8260869565,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89782.6086956522,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90217.3913043478,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90326.0869565217,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89891.3043478261,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89456.5217391304,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        89021.7391304348,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": true
             },
             {
+                "sectionNotes": [
+                    [
+                        90434.7826086956,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90543.4782608696,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90652.1739130435,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90760.8695652174,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90869.5652173913,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90978.2608695652,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91086.9565217391,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91195.652173913,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91304.3478260869,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91413.0434782608,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91521.7391304348,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91630.4347826087,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91739.1304347826,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91847.8260869565,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91956.5217391304,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92065.2173913043,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90434.7826086956,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90869.5652173913,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91304.3478260869,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91739.1304347826,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90543.4782608696,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90978.2608695652,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91413.0434782608,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91847.8260869565,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90652.1739130435,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91086.9565217391,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91521.7391304348,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91956.5217391304,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92065.2173913043,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91630.4347826087,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        91195.652173913,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        90760.8695652174,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
-                "mustHitSection": true
-            },
-            {
-                "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        92173.9130434782,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92282.6086956522,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92391.3043478261,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92500,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92608.6956521739,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92717.3913043478,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92826.0869565217,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92934.7826086956,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93043.4782608696,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93152.1739130435,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93260.8695652174,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93369.5652173913,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93478.2608695652,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93586.9565217391,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93695.652173913,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93804.3478260869,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92173.9130434782,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92608.6956521739,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93043.4782608696,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93478.2608695652,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92282.6086956522,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92717.3913043478,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93152.1739130435,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93586.9565217391,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92391.3043478261,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92826.0869565217,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93260.8695652174,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93695.652173913,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93804.3478260869,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93369.5652173913,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92934.7826086956,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        92500,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
+                "mustHitSection": true
+            },
+            {
+                "sectionNotes": [
+                    [
+                        93913.0434782608,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94021.7391304348,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94130.4347826087,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94239.1304347826,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94347.8260869565,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94456.5217391304,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94565.2173913043,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94673.9130434782,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94782.6086956522,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94891.3043478261,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95000,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95108.6956521739,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95217.3913043478,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95326.0869565217,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95434.7826086956,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95543.4782608695,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        93913.0434782608,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94347.8260869565,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94782.6086956522,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95217.3913043478,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94021.7391304348,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94456.5217391304,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94891.3043478261,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95326.0869565217,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94130.4347826087,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94565.2173913043,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95000,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95434.7826086956,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95543.4782608695,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95108.6956521739,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94673.9130434782,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        94239.1304347826,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        95652.1739130435,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95760.8695652174,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95869.5652173913,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95978.2608695652,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96086.9565217391,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96195.652173913,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96304.3478260869,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96413.0434782608,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96521.7391304348,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96630.4347826087,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96739.1304347826,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96847.8260869565,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96956.5217391304,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97065.2173913043,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97173.9130434782,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97282.6086956521,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95652.1739130435,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96086.9565217391,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96521.7391304348,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96956.5217391304,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95760.8695652174,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96195.652173913,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96630.4347826087,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97065.2173913043,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95869.5652173913,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96304.3478260869,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96739.1304347826,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97173.9130434782,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97282.6086956521,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96847.8260869565,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        96413.0434782608,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        95978.2608695652,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": true
             },
             {
+                "sectionNotes": [
+                    [
+                        97391.3043478261,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97500,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97608.6956521739,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97717.3913043478,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97826.0869565217,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97934.7826086956,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98043.4782608695,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98152.1739130435,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98260.8695652174,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98369.5652173913,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98478.2608695652,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98586.9565217391,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98695.652173913,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98804.3478260869,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98913.0434782608,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99021.7391304348,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97391.3043478261,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97826.0869565217,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98260.8695652174,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98695.652173913,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97500,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97934.7826086956,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98369.5652173913,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98804.3478260869,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97608.6956521739,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98043.4782608695,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98478.2608695652,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98913.0434782608,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99021.7391304348,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98586.9565217391,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        98152.1739130435,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        97717.3913043478,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
-                "mustHitSection": true
-            },
-            {
-                "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        99130.4347826087,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99239.1304347826,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99347.8260869565,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99456.5217391304,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99565.2173913043,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99673.9130434782,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99782.6086956521,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99891.3043478261,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100000,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100108.695652174,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100217.391304348,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100326.086956522,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100434.782608696,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100543.47826087,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100652.173913043,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100760.869565217,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99130.4347826087,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99565.2173913043,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100000,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100434.782608696,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99239.1304347826,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99673.9130434782,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100108.695652174,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100543.47826087,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99347.8260869565,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99782.6086956521,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100217.391304348,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100652.173913043,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100760.869565217,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100326.086956522,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99891.3043478261,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        99456.5217391304,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
+                "mustHitSection": true
+            },
+            {
+                "sectionNotes": [
+                    [
+                        100869.565217391,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100978.260869565,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101086.956521739,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101195.652173913,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101304.347826087,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101413.043478261,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101521.739130435,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101630.434782609,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101739.130434783,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101847.826086956,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101956.52173913,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102065.217391304,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102173.913043478,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102282.608695652,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102391.304347826,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102500,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100869.565217391,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101304.347826087,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101739.130434783,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102173.913043478,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        100978.260869565,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101413.043478261,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101847.826086956,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102282.608695652,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101086.956521739,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101521.739130435,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101956.52173913,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102391.304347826,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102500,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102065.217391304,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101630.434782609,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        101195.652173913,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        102608.695652174,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102717.391304348,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102826.086956522,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102934.782608696,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103043.47826087,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103152.173913043,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103260.869565217,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103369.565217391,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103478.260869565,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103586.956521739,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103695.652173913,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103804.347826087,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103913.043478261,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104021.739130435,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104130.434782609,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104239.130434783,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102608.695652174,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103043.47826087,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103478.260869565,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103913.043478261,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102717.391304348,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103152.173913043,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103586.956521739,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104021.739130435,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102826.086956522,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103260.869565217,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103695.652173913,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104130.434782609,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104239.130434783,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103804.347826087,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        103369.565217391,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        102934.782608696,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": true
             },
             {
+                "sectionNotes": [
+                    [
+                        104347.826086956,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104456.52173913,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104565.217391304,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104673.913043478,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104782.608695652,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104891.304347826,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105000,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105108.695652174,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105217.391304348,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105326.086956522,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105434.782608696,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105543.47826087,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105652.173913043,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105760.869565217,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105869.565217391,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105978.260869565,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104347.826086956,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104782.608695652,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105217.391304348,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105652.173913043,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104456.52173913,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104891.304347826,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105326.086956522,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105760.869565217,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104565.217391304,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105000,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105434.782608696,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105869.565217391,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105978.260869565,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105543.47826087,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        105108.695652174,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        104673.913043478,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
-                "mustHitSection": true
-            },
-            {
-                "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        106086.956521739,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106195.652173913,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106304.347826087,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106413.043478261,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106521.739130435,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106630.434782609,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106739.130434783,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106847.826086956,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106956.52173913,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107065.217391304,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107173.913043478,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107282.608695652,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107391.304347826,
+                        3,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107500,
+                        1,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107608.695652174,
+                        2,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107717.391304348,
+                        0,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106086.956521739,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106521.739130435,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106956.52173913,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107391.304347826,
+                        7,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106195.652173913,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106630.434782609,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107065.217391304,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107500,
+                        5,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106304.347826087,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106739.130434783,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107173.913043478,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107608.695652174,
+                        6,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107717.391304348,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        107282.608695652,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106847.826086956,
+                        4,
+                        0,
+                        "",
+                        false
+                    ],
+                    [
+                        106413.043478261,
+                        4,
+                        0,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
+                "mustHitSection": true
+            },
+            {
                 "sectionNotes": [],
+                "lengthInSteps": 16,
                 "mustHitSection": false
             },
             {
+                "sectionNotes": [
+                    [
+                        110434.782608696,
+                        2,
+                        326.086956521739,
+                        "",
+                        false
+                    ],
+                    [
+                        110869.565217391,
+                        1,
+                        326.086956521739,
+                        "",
+                        false
+                    ],
+                    [
+                        110434.782608696,
+                        6,
+                        326.086956521739,
+                        "",
+                        false
+                    ],
+                    [
+                        110869.565217391,
+                        5,
+                        326.086956521739,
+                        "",
+                        false
+                    ]
+                ],
                 "lengthInSteps": 16,
-                "sectionNotes": [],
                 "mustHitSection": true
             },
             {
                 "lengthInSteps": 16,
-                "sectionNotes": [],
-                "mustHitSection": true
-            },
-            {
-                "sectionNotes": [],
                 "typeOfSection": 0,
-                "lengthInSteps": 16,
-                "sectionSpeed": 1,
+                "sectionNotes": [],
                 "altAnim": false,
-                "mustHitSection": true,
+                "sectionSpeed": 1,
+                "bpm": 138,
                 "changeBPM": false,
-                "bpm": 138
+                "mustHitSection": true
+            },
+            {
+                "lengthInSteps": 16,
+                "typeOfSection": 0,
+                "sectionNotes": [],
+                "altAnim": false,
+                "sectionSpeed": 1,
+                "bpm": 138,
+                "changeBPM": false,
+                "mustHitSection": true
             },
             {
                 "sectionNotes": [],
@@ -1143,9 +4330,11 @@
                 "mustHitSection": true
             }
         ],
-        "needsVoices": true,
+        "player2": "stoopidguy",
+        "song": "Synthwave Type Beat",
         "validScore": true,
-        "bpm": 138,
-        "speed": 2.76
+        "needsVoices": true,
+        "speed": 2.76,
+        "bpm": 138
     }
 }
