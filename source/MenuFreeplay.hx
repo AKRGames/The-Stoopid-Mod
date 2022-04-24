@@ -548,7 +548,7 @@ class MenuFreeplay extends MusicBeatState
 		}
 
 		// Updating Discord Rich Presence
-		switch (FlxG.random.int(0, 21))
+		switch (FlxG.random.int(0, 13))
 		{
 			case 0:
 				DiscordClient.changePresence("vibing to " + songs[curSelected].songName + " for:", null, null, true);
@@ -575,29 +575,9 @@ class MenuFreeplay extends MusicBeatState
 			case 11:
 				DiscordClient.changePresence("listening to " + songs[curSelected].songName + " for:", null, null, true);
 			case 12:
-				DiscordClient.changePresence("going through Twitter while listening to " + songs[curSelected].songName + " for:", null, null, true);
+				DiscordClient.changePresence("going through something while listening to " + songs[curSelected].songName + " for:", null, null, true);
 			case 13:
-				DiscordClient.changePresence("going through Twitter while vibing to " + songs[curSelected].songName + " for:", null, null, true);
-			case 14:
-				DiscordClient.changePresence("going through Reddit while listening to " + songs[curSelected].songName + " for:", null, null, true);
-			case 15:
-				DiscordClient.changePresence("going through Reddit while vibing to " + songs[curSelected].songName + " for:", null, null, true);
-			case 16:
-				DiscordClient.changePresence("going through Discord while listening to " + songs[curSelected].songName + " for:", null, null, true);
-			case 17:
-				DiscordClient.changePresence("going through Discord while vibing to " + songs[curSelected].songName + " for:", null, null, true);
-			case 16:
-				DiscordClient.changePresence("going through Funkin Forum while listening to " + songs[curSelected].songName + " for:", null, null, true);
-			case 17:
-				DiscordClient.changePresence("going through Funkin Forum while vibing to " + songs[curSelected].songName + " for:", null, null, true);
-			case 18:
-				DiscordClient.changePresence("going through YouTube while listening to " + songs[curSelected].songName + " for:", null, null, true);
-			case 19:
-				DiscordClient.changePresence("going through YouTube while vibing to " + songs[curSelected].songName + " for:", null, null, true);
-			case 20:
-				DiscordClient.changePresence("going through GameBanana while listening to " + songs[curSelected].songName + " for:", null, null, true);
-			case 21:
-				DiscordClient.changePresence("going through GameBanana while vibing to " + songs[curSelected].songName + " for:", null, null, true);
+				DiscordClient.changePresence("going through something while vibing to " + songs[curSelected].songName + " for:", null, null, true);
 		}
 
 		disc.animation.addByPrefix(songs[curSelected].songCharacter, songs[curSelected].songCharacter, 24);
