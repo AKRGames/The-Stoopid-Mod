@@ -16,7 +16,7 @@ import flash.text.TextFormat;
 {
 }
 
-@:font("assets/fonts/vcr.ttf") class CustomFont extends Font
+@:font("assets/fonts/comic.ttf") class CustomFont extends Font
 {
 }
 

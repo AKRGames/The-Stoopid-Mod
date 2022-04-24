@@ -31,24 +31,26 @@ class MenuWeek extends MusicBeatState
 		['Satin Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter Horrorland'],
 		['Senpai', 'Roses', 'Thorns']
+		['Synthwave Type Beat']
 	];
 
 	var curWeekData:Array<Dynamic> = [];
 
 	public static var curDifficulty:Int = 2;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
 
-	var weekCharacters:Array<String> = ["gf", "dad", "spooky", "pico", "mom", "parents-christmas", "senpai"];
+	var weekCharacters:Array<String> = ["gf", "dad", "spooky", "pico", "mom", "parents-christmas", "senpai", "gf"];
 
 	var weekNames:Array<String> = [
-		"How to FUNK",
+		"Tutorial",
 		"Daddy Dearest",
 		"Spooky Month",
 		"PICO",
 		"MOMMY MUST MURDER",
 		"RED SNOW",
-		"hating simulator ft. moawling"
+		"hating simulator ft. moawling",
+		"The STOOPID Week!!"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -153,12 +155,12 @@ class MenuWeek extends MusicBeatState
 		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
 		scoreText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		scoreText.alignment = CENTER;
-		scoreText.setFormat("VCR OSD Mono", 32);
+		scoreText.setFormat("Comic Sans MS", 32);
 		scoreText.screenCenter(X);
 		scoreText.y = 10;
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
-		txtWeekTitle.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);
+		txtWeekTitle.setFormat("Comic Sans MS", 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alignment = CENTER;
 		txtWeekTitle.screenCenter(X);
 		txtWeekTitle.y = scoreText.y + scoreText.height + 5;
@@ -187,7 +189,7 @@ class MenuWeek extends MusicBeatState
 
 		trace("Line 150");
 
-		txtTracklist = new FlxText(FlxG.width * 0.05, 200, 0, "INCLUDES FAMOUS\n TRACKS LIKE:\n\n", 32);
+		txtTracklist = new FlxText(FlxG.width * 0.05, 200, 0, "THE BANGERS:\n\n", 32);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.font = scoreText.font;
 		txtTracklist.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -280,7 +282,7 @@ class MenuWeek extends MusicBeatState
 			selectedSomethin = true;
 			FlxG.switchState(new PlaySelection());
 
-			DiscordClient.changePresence("Going Back!", null);
+			DiscordClient.changePresence("they headin' out", null);
 
 			FlxTween.tween(FlxG.camera, {zoom: 0.6, alpha: -0.6}, 0.8, {ease: FlxEase.quartInOut});
 			FlxTween.tween(bg, {alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
@@ -347,7 +349,7 @@ class MenuWeek extends MusicBeatState
 				FlxTween.tween(item, {x: 2600}, 0.6, {ease: FlxEase.quartInOut});
 			}
 
-			DiscordClient.changePresence("Selecting chart types.", null);
+			DiscordClient.changePresence("they choosing a chart type", null);
 
 			for (item in grpWeekText.members)
 			{
@@ -400,7 +402,7 @@ class MenuWeek extends MusicBeatState
 		intendedScore = Highscore.getWeekScore(curWeek, curDifficulty);
 		#end
 
-		DiscordClient.changePresence("Deciding to play week " + curWeek + " on " + sprDifficulty.animation.name + "!", null);
+		DiscordClient.changePresence("they on the verge of selecting week " + curWeek + " on " + sprDifficulty.animation.name + "!!", null);
 
 		FlxTween.tween(sprDifficulty, {y: txtWeekTitle.y + 62, alpha: 1}, 0.07);
 	}
@@ -434,7 +436,7 @@ class MenuWeek extends MusicBeatState
 			bullShit++;
 		}
 
-		DiscordClient.changePresence("Deciding to play week " + curWeek + " on " + sprDifficulty.animation.name + "!", null);
+		DiscordClient.changePresence("they on the verge of selecting week " + curWeek + " on " + sprDifficulty.animation.name + "!!", null);
 
 		FlxG.sound.play(Paths.sound('scrollMenu'), _variables.svolume / 100);
 
@@ -443,7 +445,7 @@ class MenuWeek extends MusicBeatState
 
 	function updateText()
 	{
-		txtTracklist.text = "INCLUDES FAMOUS\n TRACKS LIKE:\n\n";
+		txtTracklist.text = "THE BANGERS:\n\n";
 
 		var stringThing:Array<String> = weekData[curWeek];
 

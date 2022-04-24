@@ -91,10 +91,10 @@
 	<assets path="assets/week6"    library="week6"    exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false'/>
-	<assets path='art/readme.txt' rename='do NOT readme.txt' />
+	<assets path='art/readme.txt' rename='PLEASE readme.txt' />
 
 	<!--Allows the License to be in exports and compiles of the code-->
-	<assets path="LICENSE" rename="License"/>
+	<assets path="LICENSE" rename="interesting-ass license"/>
 	<assets path="ndll/" rename=''/>
 	
 	<!-- <template path='mods' /> -->
