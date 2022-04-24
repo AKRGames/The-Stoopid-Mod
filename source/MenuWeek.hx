@@ -30,8 +30,8 @@ class MenuWeek extends MusicBeatState
 		['Pico', 'Philly Nice', "Blammed"],
 		['Satin Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter Horrorland'],
-		['Senpai', 'Roses', 'Thorns']
-		['Synthwave Type Beat']
+		['Senpai', 'Roses', 'Thorns'],
+		["Synthwave Type Beat"]
 	];
 
 	var curWeekData:Array<Dynamic> = [];
