@@ -152,7 +152,7 @@ You will also need to install a couple things that involve Gits. To do this, you
 6. Run `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm` to install Eextension-WEBM and run `lime rebuild extension-webm windows`. This is required to run webm videos in-game.
 7. Optional: - Run `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` to update Flixel-Addons. This fixes the transition bug for zoomed out stage cameras.
 8. Optional: - Run `haxelib git random https://github.com/jasononeil/hxrandom` to make random more random.
-9. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if defender decides to say "fuck u virus" then ignore it. **USE HAYA'S REPO TO MAKE IT WORK OR IT'LL THROW A COMPILER ERROR.**
+9. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if your antivirus decides to say "bro it's not worth it, it's a virus" then ignore it. **USE HAYA3218'S REPO TO MAKE IT WORK, OR IT'LL THROW A COMPILER ERROR.**
 
 You should have everything ready for compiling the mod! Follow the guide below to continue!
 
@@ -174,14 +174,14 @@ Desktop building can be a bit tedious. Each different version requires a differe
 ### Linux Building (UNTESTED):
 
 1. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
-2. Type `lime build linux -debug` or `lime build linux -release` to build the Linux version of the mod.
-3. Type `lime run linux -debug` or `lime run linux -release` to run the Linux version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/linux/bin`)
+2. Type `lime build linux -release` to build the Linux version of the mod.
+3. Type `lime run linux -release` to run the Linux version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/linux/bin`)
 
 ### Mac Building (UNTESTED):
 
 1. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
-2. Type `lime build mac -debug` or `lime build mac -release` to build the Mac version of the mod.
-3. Type `lime run mac -debug` or `lime run mac -release` to run the Mac version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/mac/bin`)
+2. Type `lime build mac -release` to build the Mac version of the mod.
+3. Type `lime run mac -release` to run the Mac version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/mac/bin`)
 
 ### Windows Building:
 **THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE. SO SAVE UP YOUR STORAGESPACE!!**
@@ -204,8 +204,8 @@ Desktop building can be a bit tedious. Each different version requires a differe
 ```
 3. Wait for the install to finish, which might take a while.
 4. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
-5. Once everything is installed, type `lime build windows -debug` or `lime build windows -release` to build the Windows version of the mod.
-6. Type `lime run windows -debug` or `lime run windows -release` after the mod is compiled to run the Windows version of the mod. (You can also run the mod from `funkin/export/debug/windows/bin`)
+5. Once everything is installed, type `lime build windows -release` to build the Windows version of the mod.
+6. Type `lime run windows -release` after the mod is compiled to run the Windows version of the mod. (You can also run the mod from `funkin/export/debug/windows/bin`)
 
 # All done!
 You should have been able to compile the whole mod now! What can you do now? Well, you can mod to your heart's desire! Since this mod and its engine is open-source, the creator loves seeing what other talented artists and programmers can make!
