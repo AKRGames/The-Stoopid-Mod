@@ -2,7 +2,7 @@
 	<a href="https://gamebanana.com/gamefiles/15309" target="_blank"><img src="/art/FNF Logo.png" alt="Logo" width="658.5px" height="487.5px"></a>
 </p>
 
-### This is the repository for Friday Night Funkin: Mic'd Up, previously named FNF: EX Replayability, a non-profit modification of Friday Night Funkin'.
+### This is the repository for Friday Night Funkin: The Stoopid Mod, a funny mod using Friday Night Funkin: Mic'd Up, previously named FNF: EX Replayability, an engine for Friday Night Funkin'.
 
 Support the original Newgrounds Build [here](https://www.newgrounds.com/portal/view/770371)!
 
@@ -11,6 +11,8 @@ Play the original build on the [Itch.io page](https://ninja-muffin24.itch.io/fun
 Play the Ludum Dare prototype of the original game [here](https://ninja-muffin24.itch.io/friday-night-funkin)!
 
 Go support the original repository for the game [here](https://github.com/ninjamuffin99/Funkin)!
+
+Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex/Funkin-Mic-d-Up-SC)!
 
 ## Credits / Shoutouts
 <!--me lol-->
@@ -36,11 +38,11 @@ Go support the original repository for the game [here](https://github.com/ninjam
 	</tr>
 </table>
 
-<h2>Mod Creators:</h2>
+<h2>Engine Creators:</h2>
 
 <table style="span:90%">
 	<tr>
-		<th style=”text-align:left”><h4>⚙️ Mod Creator:</h4></th>
+		<th style=”text-align:left”><h4>⚙️ Engine Creators:</h4></th>
 		<th style="text-align:middle"><h4>🖥 Additional Programmers:</h4></th>
 		<th style="text-align:right"><h4>🖼 Additional Artists:</h4></th>
 	</tr>
@@ -61,6 +63,19 @@ Go support the original repository for the game [here](https://github.com/ninjam
 		<a href='https://twitter.com/Sector0003'><b>Sector03</b></a><br>
 		<img src="/art/Sector03.png" alt="Sector03" width="80" height="80"></a>
 	</tr>
+</table>
+
+<h2>Mod Creator:</h2>
+
+<table style="span:90%">
+	<tr>
+		<th style=”text-align:left”><h3>me</h3></th>
+        </tr>
+        <td>
+		<a href='https://twitter.com/AKRGames_93110'><b>AKRGames</b><br>
+		<img src="/art/download.png" alt="AKR" width="175" height="175"></a>
+	</td>
+        </tr>
 </table>
 </table>
 
