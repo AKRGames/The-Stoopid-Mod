@@ -73,7 +73,7 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
         </tr>
         <td>
 		<a href='https://twitter.com/AKRGames_93110'><b>AKRGames</b><br>
-		<img src="/art/download.png" alt="AKR" width="175" height="175"></a>
+		<img src="/art/channels4_profile.jpg" alt="AKR" width="175" height="175"></a>
 	</td>
         </tr>
 </table>
@@ -83,37 +83,39 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
 	<a href="https://ninja-muffin24.itch.io/funkin"><img src="/art/preloaderArt.png" width"658.5px" height="369.75px"></a>
 </p>
 
-**This mod was made with love to Friday Night Funkin' and its community. Extra love to the team behind it. 💖**
+**The engine and this mod was made with love to Friday Night Funkin' and its community. Extra love to the team behind it. 💖**
 
-# Mods ([skip](#Compiling))
+# Mods and Modcharts ([skip](#Compiling))
 
 <p align="center">
 	<a href="https://github.com/Verwex/Mic-d-Up-PRIVATE/blob/main/art/polymodNo.png" target="_blank"><img src="/art/polymodNo.png"></a>
 </p>
 
 In order to load in mods, it HAS to be in the mainMods/_append folder. 
-Why? This is to have backup support for when week 7 polymod actually releases.
+Why? According to Verwex, this is to have backup support for when week 7 polymod actually releases.
 So if you wanna put in a mod for the shared/ folder then you put it in:
 
 ```mods/mainMods/_append/shared```
 
-A reminder that this doesnt just work like a charm just yet!!!! This is experimental and can lead to some issues.
-Report major mod system bugs to Github Issues.
+This is a reminder that this doesnt just work like a charm just yet. This is experimental and can lead to some issues.
+Report major mod/engine system bugs to Github Issues.
 
-Theres also modcharts, but unlike kade's they make use of hscript, a haxe script parser.
-This allows for arbitrary code execution while ingame, however they take up some ram.
+Theres also modcharts, but unlike Kade's they make use of hscript, a Haxe script parser.
+This allows for arbitrary code execution while ingame, however they take up some RAM.
+Fortunately, this mod doesn't use this system and instead hardcodes all events.
+<sub>Please don't replace any songs for a BETADCIU. Instead, use the source code.</sub>
 
-Guide for this will be soon once it gets completed.
+A guide for this will never come out.
 
 # Compiling
 
-## What can I do with compiling the mod? Why should I compile the mod instead of downloading it from [the GamaBanana page of the mod](https://gamebanana.com/gamefiles/15309)?
+## What can I do with compiling the mod? Why should I compile the mod instead of downloading it from [the GamaBanana page of the mod](https://gamebanana.com/concepts/1830)?
 
 Compiling the mod gives access to the `/source` folder, allowing you to change the code of the mod. You can add a lot of cool things with the open-source code!
 
 I recommend having a good idea on how to program. Compiling the mod is not for everyone!
 
-If you just want to download and play the mod normally, you can click [here to go to the GameBanana page of the mod](https://gamebanana.com/gamefiles/15309)!
+If you just want to download and play the mod normally, you can click [here to go to the GameBanana page of the mod](https://gamebanana.com/concepts/1830)!
 
 ### **If you do want to compile, continue reading!**
 
@@ -123,7 +125,7 @@ If you just want to download and play the mod normally, you can click [here to g
 	<a href="https://haxe.org/documentation/introduction/" target="_blank"><img src="/art/haxeLogo.png"></a>
 </p>
 
-First you need to install Haxe and HaxeFlixel.
+First, you need to install Haxe and HaxeFlixel.
 1. [Install Haxe 4.1.5](https://haxe.org/download/version/4.1.5/) (Download 4.1.5 instead of 4.2.0 because 4.2.0 is broken and is not working with gits properly...)
 2. [Install HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) after downloading Haxe
 
@@ -139,38 +141,20 @@ random
 systools
 actuate
 ```
-So, for each of those type `haxelib install [library]` so shit like `haxelib install newgrounds`.
+So, for each of those, type `haxelib install [library]`. For example: `haxelib install newgrounds`.
 
 You will also need to install a couple things that involve Gits. To do this, you need to do a few things first.
-1. Download [git-scm](https://git-scm.com/downloads). Works for Windows, Mac, and Linux, just select your build.
+1. Download [git-scm](https://git-scm.com/downloads). Works for Windows, Mac, and Linux, just select your build!
 2. Follow instructions to install the application properly.
 3. Run `haxelib git polymod https://github.com/larsiusprime/polymod.git` to install Polymod.
 4. Run `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc` to install Discord RPC.
 5. Run `haxelib git hscript-plus https://github.com/DleanJeans/hscript-plus/` because its required to compile properly.
-6. Run `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm` to install extension-webm and run `lime rebuild extension-webm windows`. This is required to run webm videos in-game.
+6. Run `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm` to install Eextension-WEBM and run `lime rebuild extension-webm windows`. This is required to run webm videos in-game.
 7. Optional: - Run `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` to update Flixel-Addons. This fixes the transition bug for zoomed out stage cameras.
 8. Optional: - Run `haxelib git random https://github.com/jasononeil/hxrandom` to make random more random.
-9. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if defender decides to say "fuck u virus" then ignore it. **USE HAYA'S REPO TO MAKE IT WORK OR ITLL THROW A COMPILER ERROR.**
+9. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if defender decides to say "fuck u virus" then ignore it. **USE HAYA'S REPO TO MAKE IT WORK OR IT'LL THROW A COMPILER ERROR.**
 
 You should have everything ready for compiling the mod! Follow the guide below to continue!
-
-# Adding `APIStuff.hx` into `/source`
-
-The API keys of the mod were gitignored so no one could post fake high scores onto the leaderboards in Newgrounds. Unfortunately, because this mod requires the `API` and `EncKey` values to compile, you will need to add a file called `APIStuff.hx` into `/source`.
-
-1. Create a new text file called `APIStuff.hx` inside of the `/source` folder.
-2. Copy the following text:
-```haxe
-package;
-class APIStuff
-{
-	public static var API:String = "";
-	public static var EncKey:String = "";
-}
-```
-3. Paste the text into the APIStuff.hx file and save the file.
-
-You should be good from there! Now, onto compiling!
 
 # Compiling the Mod
 
@@ -181,26 +165,27 @@ You should be good from there! Now, onto compiling!
 ## HTML Building:
 
 HTML Compiling currently does not work as Mic'd Up currently requires desktop-only libraries to function properly.
+Besides, the HTML version uses Kade Engine <sub>(just like old times!)</sub>
 
 ## Desktop Building:
 
 Desktop building can be a bit tedious. Each different version requires a different setup.
 
-### Linux Building:
+### Linux Building (UNTESTED):
 
 1. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
-2. Type `lime build linux -debug` to build the Linux version of the mod.
-3. Type `lime run linux -debug` to run the Linux version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/linux/bin`)
+2. Type `lime build linux -debug` or `lime build linux -release` to build the Linux version of the mod.
+3. Type `lime run linux -debug` or `lime run linux -release` to run the Linux version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/linux/bin`)
 
-### Mac Building:
+### Mac Building (UNTESTED):
 
 1. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
-2. Type `lime build mac -debug` to build the Mac version of the mod.
-3. Type `lime run mac -debug` to run the Mac version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/mac/bin`)
+2. Type `lime build mac -debug` or `lime build mac -release` to build the Mac version of the mod.
+3. Type `lime run mac -debug` or `lime run mac -release` to run the Mac version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/mac/bin`)
 
 ### Windows Building:
-**THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE.**
-1. Install [Visual Studio Community 2019](https://visualstudio.microsoft.com/downloads/).
+**THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE. SO SAVE UP YOUR STORAGESPACE!!**
+1. Install [Visual Studio Community 2022](https://visualstudio.microsoft.com/downloads/).
 2. Open the installer and go to the individual workloads tab and download the following:
 ```
 * C++ CMake tools for windows 
@@ -219,12 +204,12 @@ Desktop building can be a bit tedious. Each different version requires a differe
 ```
 3. Wait for the install to finish, which might take a while.
 4. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
-5. Once everything is installed, type `lime build windows -debug` to build the windows version of the mod.
-6. Type `lime run windows -debug` after the mod is compiled to run the windows version of the mod. (You can also run the mod from `funkin/export/debug/windows/bin`)
+5. Once everything is installed, type `lime build windows -debug` or `lime build windows -release` to build the Windows version of the mod.
+6. Type `lime run windows -debug` or `lime run windows -release` after the mod is compiled to run the Windows version of the mod. (You can also run the mod from `funkin/export/debug/windows/bin`)
 
 # All done!
-You should have been able to compile the whole mod now! What can you do now? Well, you can mod to your heart's desire! Since this mod is open-source, the creator loves seeing what other talented artists and programmers can make!
-Special thanks to the amazing group of dedicated people that are making the original game amazing, and the modding team for making this mod possible!<!--And the person who fixed this README.md-->
+You should have been able to compile the whole mod now! What can you do now? Well, you can mod to your heart's desire! Since this mod and its engine is open-source, the creator loves seeing what other talented artists and programmers can make!
+Special thanks to the amazing group of dedicated people that are making the original game amazing, and the modding team for making this engine possible!<!--And the person who fixed this README.md-->
 
 <p align="center">
 	💖💖
