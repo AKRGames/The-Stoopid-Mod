@@ -103,6 +103,7 @@ Report major mod/engine system bugs to Github Issues.
 Theres also modcharts, but unlike Kade's, they make use of hscript, a Haxe script parser.
 This allows for arbitrary code execution while ingame, however they take up some RAM.
 Fortunately, this mod doesn't use this system and instead hardcodes all events. <sub>(just like old times!)</sub>
+
 <sub>Please don't replace any songs for a BETADCIU. Instead, use the source code.</sub>
 
 A guide for this will never come out.
