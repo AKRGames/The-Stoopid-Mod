@@ -92,7 +92,7 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
 </p>
 
 In order to load in mods, it HAS to be in the mainMods/_append folder. 
-Why? According to Verwex, this is to have backup support for when week 7 polymod actually releases.
+Why? According to Verwex, this is to have backup support for when Week 7 Polymod actually releases.
 So if you wanna put in a mod for the shared/ folder then you put it in:
 
 ```mods/mainMods/_append/shared```
@@ -100,9 +100,9 @@ So if you wanna put in a mod for the shared/ folder then you put it in:
 This is a reminder that this doesnt just work like a charm just yet. This is experimental and can lead to some issues.
 Report major mod/engine system bugs to Github Issues.
 
-Theres also modcharts, but unlike Kade's they make use of hscript, a Haxe script parser.
+Theres also modcharts, but unlike Kade's, they make use of hscript, a Haxe script parser.
 This allows for arbitrary code execution while ingame, however they take up some RAM.
-Fortunately, this mod doesn't use this system and instead hardcodes all events.
+Fortunately, this mod doesn't use this system and instead hardcodes all events. <sub>(just like old times!)</sub>
 <sub>Please don't replace any songs for a BETADCIU. Instead, use the source code.</sub>
 
 A guide for this will never come out.
