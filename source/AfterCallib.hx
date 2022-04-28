@@ -19,8 +19,8 @@ class AfterCallib extends MusicBeatState
 		super.create();
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
-		var txt:FlxText = new FlxText(0, 0, FlxG.width, "Great! Your offsets should now be properly callibrated." + "\n \nPRESS ENTER TO PROCEED", 32);
-		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		var txt:FlxText = new FlxText(0, 0, FlxG.width, "cool, your offsets are calibrated." + "\n \nPRESS ENTER TO PROCEED.", 32);
+		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
 		add(txt);
 	}

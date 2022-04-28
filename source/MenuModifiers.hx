@@ -124,7 +124,7 @@ class MenuModifiers extends MusicBeatState
 		add(name);
         name.scrollFactor.x = 0;
         name.scrollFactor.y = 0;
-        name.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, LEFT);
+        name.setFormat("Comic Sans MS", 48, FlxColor.WHITE, LEFT);
         name.x = 20;
         name.y = 600;
         name.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -132,7 +132,7 @@ class MenuModifiers extends MusicBeatState
 		add(multi);
         multi.scrollFactor.x = 0;
         multi.scrollFactor.y = 0;
-        multi.setFormat("VCR OSD Mono", 30, FlxColor.WHITE, RIGHT);
+        multi.setFormat("Comic Sans MS", 30, FlxColor.WHITE, RIGHT);
         multi.x = 20;
         multi.y = 618;
         multi.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -140,7 +140,7 @@ class MenuModifiers extends MusicBeatState
 		add(explain);
         explain.scrollFactor.x = 0;
         explain.scrollFactor.y = 0;
-        explain.setFormat("VCR OSD Mono", 20, FlxColor.WHITE, LEFT);
+        explain.setFormat("Comic Sans MS", 20, FlxColor.WHITE, LEFT);
         explain.x = 20;
         explain.y = 654;
         explain.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -148,7 +148,7 @@ class MenuModifiers extends MusicBeatState
         super.create();
 		changeItem();
 
-		niceText.setFormat("VCR OSD Mono", 52, FlxColor.WHITE, CENTER);
+		niceText.setFormat("Comic Sans MS", 52, FlxColor.WHITE, CENTER);
         niceText.x = 350;
         niceText.y = 140;
 		niceText.scrollFactor.set();
@@ -175,7 +175,7 @@ class MenuModifiers extends MusicBeatState
 
 		FlxG.camera.follow(camFollow, null, camLerp);
 
-		DiscordClient.changePresence("Settings up modifiers", null);
+		DiscordClient.changePresence("setting up the modifiers", null);
     }
 
 	var selectable:Bool = false;
@@ -301,7 +301,7 @@ class MenuModifiers extends MusicBeatState
 					FlxTween.tween(gradientBar, { alpha:0}, 0.3, { ease: FlxEase.quartInOut});
 					FlxTween.tween(side, { alpha:0}, 0.3, { ease: FlxEase.quartInOut});
 
-					DiscordClient.changePresence("Going Back!", null);
+					DiscordClient.changePresence("they headin out", null);
 
 					FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
 

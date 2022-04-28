@@ -38,8 +38,8 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 		blackBarThingie.scrollFactor.set();
 		blackBarThingie.scale.y = 750;
 
-		resultText = new FlxText(FlxG.width * 0.7, 5, 1000, "Is this okay?", 32);
-		resultText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		resultText = new FlxText(FlxG.width * 0.7, 5, 1000, "Are you sure you want to name your preset this?", 32);
+		resultText.setFormat(Paths.font("comic.ttf"), 32, FlxColor.WHITE, RIGHT);
 		resultText.alignment = CENTER;
 		resultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		resultText.screenCenter(X);
@@ -48,7 +48,7 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 		add(resultText);
 
 		resultName = new FlxText(FlxG.width * 0.7, 5, 1280, Substate_PresetSave.nameResult, 96);
-		resultName.setFormat(Paths.font("vcr.ttf"), 50, FlxColor.WHITE, RIGHT);
+		resultName.setFormat(Paths.font("comic.ttf"), 50, FlxColor.WHITE, RIGHT);
 		resultName.alignment = CENTER;
 		resultName.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		resultName.screenCenter();
@@ -63,7 +63,7 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 		{
 			#if windows
 			canOK = false;
-			resultText.text = "Please refrain from using *, ?, |, slashes, arrow parenthesis, : and double quotes as you can't name filenames like that.";
+			resultText.text = "no stop what are you doing don't use *, ?, |, slashes, arrow parenthesis, : and double quotes cuz it doesn't make sense!!!";
 			#end
 		}
 
@@ -73,11 +73,11 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 				'lpt4' | 'lpt5' | 'lpt6' | 'lpt7' | 'lpt8' | 'lpt9': // what a backdoor
 				#if windows
 				canOK = false;
-				resultText.text = "It is illegal to make a filename like that based on a device's name. Try thinking of something else.";
+				resultText.text = "QUICK THE FBI ARE COMING RENAME IT QUICKLY BY PRESSING BACKSPACE \nAÀAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAƏÆAAAAAA";
 				#end
 			case 'current':
 				canOK = false;
-				resultText.text = "Don't replace what saves on your way. It'll autosave itself.";
+				resultText.text = "don't replace what saves on your way. it'll autosave itself.";
 			default:
 		}
 

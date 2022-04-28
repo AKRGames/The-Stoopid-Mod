@@ -92,7 +92,7 @@ class PAGE2settings extends MusicBeatSubstate
 
 		FlxG.camera.follow(camFollow, null, camLerp);
 
-		DiscordClient.changePresence("Settings page: SFX", null);
+		DiscordClient.changePresence("settings page: SFX", null);
 	}
 
 	function createResults():Void
@@ -100,7 +100,7 @@ class PAGE2settings extends MusicBeatSubstate
 		add(ResultText);
 		ResultText.scrollFactor.x = 0;
 		ResultText.scrollFactor.y = 0;
-		ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+		ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
 		ResultText.x = -400;
 		ResultText.y = 350;
 		ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -110,7 +110,7 @@ class PAGE2settings extends MusicBeatSubstate
 		add(ExplainText);
 		ExplainText.scrollFactor.x = 0;
 		ExplainText.scrollFactor.y = 0;
-		ExplainText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, CENTER);
+		ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
 		ExplainText.alignment = LEFT;
 		ExplainText.x = 20;
 		ExplainText.y = 624;
@@ -168,7 +168,7 @@ class PAGE2settings extends MusicBeatSubstate
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
 				selectedSomethin = true;
 
-				DiscordClient.changePresence("Back to the main menu I go!", null);
+				DiscordClient.changePresence("they headin out", null);
 
 				menuItems.forEach(function(spr:FlxSprite)
 				{
@@ -191,28 +191,28 @@ class PAGE2settings extends MusicBeatSubstate
 		{
 			case "mvolume":
 				ResultText.text = _variables.mvolume + "%";
-				ExplainText.text = "MUSIC VOLUME:\nChange the volume of your music.";
+				ExplainText.text = "MUSIC VOLUME:\nhow much music bro?";
 			case "svolume":
 				ResultText.text = _variables.svolume + "%";
-				ExplainText.text = "SOUND VOLUME:\nChange the volume of some ambience and other sounds.";
+				ExplainText.text = "SOUND VOLUME:\nhow much sounds bro?";
 			case "vvolume":
 				ResultText.text = _variables.vvolume + "%";
-				ExplainText.text = "VOCAL VOLUME:\nChange the volume of vocals heard in songs.";
+				ExplainText.text = "VOCAL VOLUME:\nhow much voices bro?";
 			case "hvolume":
 				ResultText.text = _variables.hvolume + "%";
-				ExplainText.text = "HITSOUND VOLUME:\nChange the volume of note hitsounds.";
+				ExplainText.text = "HITSOUND VOLUME:\nhow much hitsounds bro?";
 			case "page":
 				ResultText.text = "";
-				ExplainText.text = "Previous Page: GENERAL \nNext Page: GFX";
+				ExplainText.text = "previous page: GENERAL \nnext page: GFX";
 			case "muteMiss":
 				ResultText.text = Std.string(_variables.muteMiss).toUpperCase();
-				ExplainText.text = "MUTE ON MISS:\nMute vocals when you miss a note.";
+				ExplainText.text = "MUTE VOCALS ON MISS:\nyou miss a note. do you want them to shut up?";
 			case "music":
 				ResultText.text = Std.string(_variables.music).toUpperCase();
-				ExplainText.text = "MENU MUSIC:\nChange your very own menu music.";
+				ExplainText.text = "MENU MUSIC:\nchange your menu music (it has very goated music)";
 			case "hitsound":
 				ResultText.text = Std.string(_variables.hitsound).toUpperCase();
-				ExplainText.text = "HITSOUND:\nChange what sound you want to play when you hit a note to get you into rhythm.";
+				ExplainText.text = "HITSOUND:\nyou know...dave and bambi has those...kade engine has those...psych engine has those...you get me?";
 		}
 
 		menuItems.forEach(function(spr:FlxSprite)

@@ -204,7 +204,7 @@ class TitleState extends MusicBeatState
 
 		// credGroup.add(credTextShit);
 
-		DiscordClient.changePresence("In the Title Screen", null);
+		DiscordClient.changePresence("currently in the title screen", null);
 	}
 
 	function getIntroTextShit():Array<Array<String>>
@@ -311,7 +311,7 @@ class TitleState extends MusicBeatState
 			FlxG.camera.flash(FlxColor.WHITE, 1, null, true);
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7 * _variables.svolume / 100);
 
-			DiscordClient.changePresence("Proceeding to the Main Menu", null);
+			DiscordClient.changePresence("going to the main menu.", null);
 
 			transitioning = true;
 			// FlxG.sound.music.stop();
@@ -319,7 +319,7 @@ class TitleState extends MusicBeatState
 			FlxTween.tween(FlxG.camera, {y: FlxG.height}, 1.6, {ease: FlxEase.expoIn, startDelay: 0.4});
 
 			if (_variables.music != 'classic' && MainVariables.musicList != [])
-				FlxG.sound.music.fadeOut(1.7, 0);
+				FlxG.sound.music.fadeOut(0, 0);
 
 			var isDebug:Bool = false;
 

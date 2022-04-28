@@ -19,7 +19,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	var loopNum:Int = 0;
 
-	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Exit to menu'];
+	var menuItems:Array<String> = ['Continue', 'Start Over', 'Head Out'];
 	var curSelected:Int = 0;
 
 	var pageTitle:String = "Normal";
@@ -51,7 +51,7 @@ class PauseSubState extends MusicBeatSubstate
 		var levelInfo:FlxText = new FlxText(20, 15, 0, "", 32);
 		levelInfo.text += PlayState.SONG.song;
 		levelInfo.scrollFactor.set();
-		levelInfo.setFormat(Paths.font("vcr.ttf"), 32);
+		levelInfo.setFormat(Paths.font("comic.ttf"), 32);
 		levelInfo.updateHitbox();
 		add(levelInfo);
 
@@ -63,20 +63,20 @@ class PauseSubState extends MusicBeatSubstate
 			case "Endless":
 				levelDifficulty.text = 'Loop '+loopNum;
 			case "Charting":
-				levelDifficulty.text = 'Charting State';
+				levelDifficulty.text = 'Charting Mode';
 			case "Survival":
-				levelDifficulty.text = 'Survival State';
+				levelDifficulty.text = 'Survival Mode';
 		}
 
 		levelDifficulty.scrollFactor.set();
-		levelDifficulty.setFormat(Paths.font('vcr.ttf'), 32);
+		levelDifficulty.setFormat(Paths.font('comic.ttf'), 32);
 		levelDifficulty.updateHitbox();
 		add(levelDifficulty);
 
 		var deathCounter:FlxText = new FlxText(20, 15 + 64, 0, "", 32);
-		deathCounter.text += "blue balled: "+Highscore.getDeaths(PlayState.SONG.song, PlayState.storyDifficulty);
+		deathCounter.text += "Blueballs: "+Highscore.getDeaths(PlayState.SONG.song, PlayState.storyDifficulty);
 		deathCounter.scrollFactor.set();
-		deathCounter.setFormat(Paths.font("vcr.ttf"), 32);
+		deathCounter.setFormat(Paths.font("comic.ttf"), 32);
 		deathCounter.updateHitbox();
 		add(deathCounter);
 
@@ -138,7 +138,7 @@ class PauseSubState extends MusicBeatSubstate
 				case "Normal":
 					switch (daSelected)
 					{
-						case "Resume":
+						case "Continue":
 							if (_variables.pauseCountdown)
 							{
 								startedCountdown = true;
@@ -146,7 +146,7 @@ class PauseSubState extends MusicBeatSubstate
 							}
 							else
 								close();
-						case "Restart Song":
+						case "Start Over":
 							FlxG.resetState();
 							PlayState.ended = false;
 						case "Chart":
@@ -155,7 +155,7 @@ class PauseSubState extends MusicBeatSubstate
 						case "Change Difficulty":
 							pageTitle = "Difficulty";
 							changeItems();
-						case "Exit to menu":
+						case "Head Out":
 							PlayState.curDeaths = 0;
 							PlayState.ended = false;
 							PlayState.loops = 0;
@@ -265,14 +265,14 @@ class PauseSubState extends MusicBeatSubstate
 				switch (PlayState.gameplayArea)
 				{
 					case "Marathon" | "Endless" | "Survival":
-						menuItems = ['Resume', 'Exit to menu'];
+						menuItems = ['Continue', 'Head Out'];
 						loopNum = PlayState.loops+1;
 					case 'Freeplay':
-						menuItems = ['Resume', 'Restart Song', 'Change Difficulty', 'Loop Song', 'AB Repeat', 'Chart', 'Exit to menu'];
+						menuItems = ['Continue', 'Start Over', 'Change Difficulty', 'Loop', 'AB Repeat', 'Chart', 'Head Out'];
 					case "Charting":
-						menuItems = ['Resume', 'Chart', 'Restart Song', 'Loop Song', 'AB Repeat', 'Exit to menu'];
+						menuItems = ['Continue', 'Chart', 'Start Over', 'Loop', 'AB Repeat', 'Head Out'];
 					default:
-						menuItems = ['Resume', 'Restart Song', 'Exit to menu'];
+						menuItems = ['Continue', 'Start Over', 'Head Out'];
 				}
 			case "Difficulty":
 				menuItems = CoolUtil.difficultyArray;
@@ -303,7 +303,7 @@ class PauseSubState extends MusicBeatSubstate
 			switch (loopState)
 			{
 				case NONE:
-					menuItems[3] = 'Loop Song';
+					menuItems[3] = 'Loop';
 					menuItems[4] = 'AB Repeat';
 				case REPEAT:
 					menuItems[3] = 'Stop Repeating';
@@ -312,7 +312,7 @@ class PauseSubState extends MusicBeatSubstate
 					menuItems[3] = 'Cancel AB repeat';
 					menuItems[4] = 'Confirm B Node';
 				case ABREPEAT:
-					menuItems[3] = 'Loop Song';
+					menuItems[3] = 'Loop';
 					menuItems[4] = 'Stop Repeating';
 			}
 		}

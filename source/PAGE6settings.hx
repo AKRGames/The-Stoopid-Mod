@@ -1,5 +1,8 @@
 package;
 
+import lime.app.Application;
+import lime.app.Event;
+import lime.system.System;
 import openfl.Lib;
 import sys.FileSystem;
 import Discord.DiscordClient;
@@ -86,7 +89,7 @@ class PAGE6settings extends MusicBeatSubstate
 
         FlxG.camera.follow(camFollow, null, camLerp);
 
-		DiscordClient.changePresence("Settings page: Clear", null);
+		DiscordClient.changePresence("settings page: Clear", null);
     }
 
         function createResults():Void
@@ -94,7 +97,7 @@ class PAGE6settings extends MusicBeatSubstate
                 add(ResultText);
                 ResultText.scrollFactor.x = 0;
                 ResultText.scrollFactor.y = 0;
-                ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+                ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
                 ResultText.x = -400;
                 ResultText.y = 350;
                 ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -104,7 +107,7 @@ class PAGE6settings extends MusicBeatSubstate
                 add(ExplainText);
                 ExplainText.scrollFactor.x = 0;
                 ExplainText.scrollFactor.y = 0;
-                ExplainText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, CENTER);
+                ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
                 ExplainText.alignment = LEFT;
                 ExplainText.x = 20;
                 ExplainText.y = 624;
@@ -151,7 +154,7 @@ class PAGE6settings extends MusicBeatSubstate
                             FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
                             selectedSomethin = true;
 
-			                DiscordClient.changePresence("Back to the main menu I go!", null);
+			                DiscordClient.changePresence("they headin out", null);
     
                             menuItems.forEach(function(spr:FlxSprite)
                                 {
@@ -174,13 +177,13 @@ class PAGE6settings extends MusicBeatSubstate
             {
                 case "page":
                     ResultText.text = "";
-                    ExplainText.text = "Previous Page: MISCELLANEOUS \nNext Page: GENERAL";
+                    ExplainText.text = "previous page: MISCELLANEOUS \nnext page: GENERAL";
                 case "config":
                     ResultText.text = "";
-                    ExplainText.text = "CLEAR CONFIG:\nWill reset your configuration in case anything goes wrong, which it shouldn't.";
+                    ExplainText.text = "CLEAR CONFIG:\nclears your settings in case something goes wrong, which it shouldn't (unless you're in debug).";
                 case "save":
                     ResultText.text = "";
-                    ExplainText.text = "CLEAR SAVE:\nWill reset your save file back to zero. All scores, all ranks. Gone.";
+                    ExplainText.text = "CLEAR SAVE:\nclears your save file. \n(hey i should do something related to this)";
             }
 
             switch (optionShit[curSelected])
@@ -268,10 +271,11 @@ class PAGE6settings extends MusicBeatSubstate
         switch (optionShit[curSelected])
 		{
             case 'save':
-                FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
+                FlxG.sound.play(Paths.sound('shared/clearSave'), _variables.svolume/100);
                 FlxG.save.erase();
                 FlxG.save.flush();
-                FlxG.save.bind('save', "Funkin Mic'd Up");
+                FlxG.save.bind('save', "Funkin Stoopid");
+                System.exit(32);
             case 'config':
                 FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                 FileSystem.deleteFile('config.json');

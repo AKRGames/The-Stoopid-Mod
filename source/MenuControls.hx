@@ -136,7 +136,7 @@ class MenuControls extends MusicBeatState
 				FlxTween.tween(gradientBar, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
 				FlxTween.tween(side, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
 
-				DiscordClient.changePresence("Going back!", null);
+				DiscordClient.changePresence("they headin out", null);
 
 				for (item in grpControls.members)
 					{

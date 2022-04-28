@@ -126,7 +126,7 @@ class PAGE4settings extends MusicBeatSubstate
 		add(ResultText);
 		ResultText.scrollFactor.x = 0;
 		ResultText.scrollFactor.y = 0;
-		ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+		ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
 		ResultText.x = -400;
 		ResultText.y = 350;
 		ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -136,7 +136,7 @@ class PAGE4settings extends MusicBeatSubstate
 		add(ExplainText);
 		ExplainText.scrollFactor.x = 0;
 		ExplainText.scrollFactor.y = 0;
-		ExplainText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, CENTER);
+		ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
 		ExplainText.alignment = LEFT;
 		ExplainText.x = 20;
 		ExplainText.y = 624;
@@ -193,7 +193,7 @@ class PAGE4settings extends MusicBeatSubstate
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
 				selectedSomethin = true;
 
-				DiscordClient.changePresence("Back to the main menu I go!", null);
+				DiscordClient.changePresence("they headin out", null);
 
 				menuItems.forEach(function(spr:FlxSprite)
 				{
@@ -216,64 +216,64 @@ class PAGE4settings extends MusicBeatSubstate
 		{
 			case "offset":
 				ResultText.text = _variables.noteOffset + " ms";
-				ExplainText.text = "NOTE OFFSET:\nChange the offset of your notes. The higher the time, the later they go.\nPress ENTER to enter offset callibration.";
+				ExplainText.text = "NOTE OFFSET:\nhow much the notes get offset bro?\nif you don't know, press ENTER to get calibrated.";
 			case "page":
 				ResultText.text = "";
-				ExplainText.text = "Previous Page: GFX \nNext Page: MISCELLANEOUS";
+				ExplainText.text = "previous page: GFX \nnext page: MISCELLANEOUS";
 			case "spam":
 				ResultText.text = Std.string(_variables.spamPrevention).toUpperCase();
-				ExplainText.text = "SPAM PREVENTION:\nSet your ability to spam key presses without any worries. False means you can.";
+				ExplainText.text = "SPAM PREVENTION:\nyou wanna spam or not? (false = you can spam)";
 			case "accuType":
 				ResultText.text = _variables.accuracyType;
-				ExplainText.text = "ACCURACY TYPE:\nSet how should accuracy be taken. 'Complex' will take offsets into account. 'Simple' doesn't.";
+				ExplainText.text = "ACCURACY TYPE:\nwhat do you want the accuarcy to be like: simple, rating-based, or complex?";
 			case "combo+":
 				ResultText.text = Std.string(_variables.comboP).toUpperCase();
-				ExplainText.text = "COMBO+:\nSet if your score should be affected by your combo.";
+				ExplainText.text = "COMBO+:\nyou want your combo to have to do with your score or not?";
 			case "comboH":
 				ResultText.text = Std.string(_variables.comboH).toUpperCase();
-				ExplainText.text = "COMBO HEALTH:\nSet if your health should be affected by your combo.";
+				ExplainText.text = "COMBO HEALTH:\nyou want your combo to have to do with your health or not?";
 			case "cutscene":
 				ResultText.text = Std.string(_variables.cutscene).toUpperCase();
-				ExplainText.text = "CUTSCENES:\nToggle Story Mode cutscenes on or off.";
+				ExplainText.text = "CUTSCENES:\nyou want your Story Mode cutscenes or not?";
 			case "lateD":
 				ResultText.text = Std.string(_variables.lateD).toUpperCase();
-				ExplainText.text = "LATE DAMAGE:\nChange if you want to damage your health when hitting too late.";
+				ExplainText.text = "LATE DAMAGE:\nyou want your health to go down because of you hitting a note too late or not?";
 			case "scroll":
 				ResultText.text = _variables.scroll.toUpperCase();
-				ExplainText.text = "SCROLL:\nChange the direction of how notes should scroll.";
+				ExplainText.text = "SCROLL:\nwhere do you want the notes to scroll?";
 			case "guitar":
 				ResultText.text = Std.string(_variables.guitarSustain).toUpperCase();
-				ExplainText.text = "GUITAR SUSTAIN:\nDelete sustain notes when missing the main arrow of them.";
+				ExplainText.text = "GUITAR SUSTAIN:\nyou wanna get rid of the hold lines of the notes when you miss them or not?";
 			case "5k":
 				ResultText.text = Std.string(_variables.fiveK).toUpperCase();
-				ExplainText.text = "5K LAYOUT:\nHow do you wanna play? Cassis 4 arrows or like Osu 5k?";
+				ExplainText.text = "5K LAYOUT:\nyou wanna add an extra key or not?";
 			case "skip":
 				ResultText.text = Std.string(_variables.skipGO).toUpperCase();
-				ExplainText.text = "SKIP GAME OVER:\nIt's kinda as simple as that, really.";
+				ExplainText.text = "SKIP GAME OVER:\nyou wanna skip you getting blueballed or not?";
 			case "botplay":
 				ResultText.text = Std.string(_variables.botplay).toUpperCase();
-				ExplainText.text = "BOTPLAY:\nWould you want a robot to take control of the game?";
+				ExplainText.text = "BOTPLAY:\ntake a break, and watch a bot play for you.";
 			case "autoPause":
 				ResultText.text = Std.string(_variables.autoPause).toUpperCase();
-				ExplainText.text = "AUTO PAUSE:\nWould you want your game to pause once you switch to something else, like watching youtube for example?";
+				ExplainText.text = "AUTO PAUSE:\nyou wanna pause the game when you tab out or not?";
 			case "pauseCountdown":
 				ResultText.text = Std.string(_variables.pauseCountdown).toUpperCase();
-				ExplainText.text = "PAUSE COUNTDOWN:\nHow about setting a countdown for resuming so that you can more easily come back to the game?";
+				ExplainText.text = "PAUSE COUNTDOWN:\nyou wanna have a countdown when you hit resume?";
 			case "resetButton":
 				ResultText.text = Std.string(_variables.resetButton).toUpperCase();
-				ExplainText.text = "RESET BUTTON:\nEnable a button to instantly reset your song, with a game over.";
+				ExplainText.text = "RESET BUTTON:\nyou wanna get blueballed on purpose or not?";
 			case "cheatButton":
 				ResultText.text = Std.string(_variables.cheatButton).toUpperCase();
-				ExplainText.text = "CHEAT BUTTON:\nEnable a button to cheat. We know you want to.";
+				ExplainText.text = "CHEAT BUTTON:\nwhen things are getting tough, we've got your back.";
 			case "ghostTapping":
 				ResultText.text = Std.string(_variables.ghostTapping).toUpperCase();
-				ExplainText.text = "GHOST TAPPING:\nWould you want to tap a wrong direction and not have a miss occur?";
+				ExplainText.text = "GHOST TAPPING:\nyou wanna ghost tap or not?";
 			case "speed":
 				if (_variables.speed != 0)
 					ResultText.text = Std.string(_variables.speed);
 				else
 					ResultText.text = 'CHART DEPENDANT';
-				ExplainText.text = "NOTE SPEED:\nChange how fast you want notes to go. Speed of zero will mean that notes are dependant on a chart.";
+				ExplainText.text = "NOTE SPEED:\nhow much SPEED you want the notes to go bro?";
 			case "skipCS":
 				if (_variables.skipCS == 0)
 					ResultText.text = 'ALWAYS';
@@ -282,7 +282,7 @@ class PAGE4settings extends MusicBeatSubstate
 				else
 					ResultText.text = Std.string(_variables.skipCS) + " DEATH(S)";
 
-				ExplainText.text = "SKIP CUTSCENES AFTER DEATH:\nSkip cutscenes after a certain amount of deaths. 0 is always, -1 is never";
+				ExplainText.text = "SKIP CUTSCENES AFTER DEATH:\nyou wanna skip cutscenes after you get blueballed? if so, after how much blueballs bro?";
 		}
 
 		menuItems.forEach(function(spr:FlxSprite)

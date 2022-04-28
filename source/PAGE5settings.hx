@@ -91,7 +91,7 @@ class PAGE5settings extends MusicBeatSubstate
 		add(ResultText);
 		ResultText.scrollFactor.x = 0;
 		ResultText.scrollFactor.y = 0;
-		ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+		ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
 		ResultText.x = -400;
 		ResultText.y = 350;
 		ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -101,7 +101,7 @@ class PAGE5settings extends MusicBeatSubstate
 		add(ExplainText);
 		ExplainText.scrollFactor.x = 0;
 		ExplainText.scrollFactor.y = 0;
-		ExplainText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, CENTER);
+		ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
 		ExplainText.alignment = LEFT;
 		ExplainText.x = 20;
 		ExplainText.y = 624;
@@ -164,17 +164,17 @@ class PAGE5settings extends MusicBeatSubstate
 							case 'animation':
 								FlxG.switchState(new AnimationDebug());
 
-								DiscordClient.changePresence("Viewing character's offsets.", null);
+								DiscordClient.changePresence("offset message.", null);
 							case 'chart':
 								FlxG.switchState(new ChartingState());
 
-								DiscordClient.changePresence("Charting a song.", null);
+								DiscordClient.changePresence("charting a song.", null);
 							case 'gameplay':
 								FlxG.switchState(new GameplayCustomizeState());
 							case 'keybinds':
 								FlxG.switchState(new MenuControls());
 
-								DiscordClient.changePresence("Setting up keybinds.", null);
+								DiscordClient.changePresence("keybinds.", null);
 						}
 					});
 				}
@@ -185,7 +185,7 @@ class PAGE5settings extends MusicBeatSubstate
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
 				selectedSomethin = true;
 
-				DiscordClient.changePresence("Back to the main menu I go!", null);
+				DiscordClient.changePresence("they headin out", null);
 
 				menuItems.forEach(function(spr:FlxSprite)
 				{
@@ -208,19 +208,19 @@ class PAGE5settings extends MusicBeatSubstate
 		{
 			case "page":
 				ResultText.text = "";
-				ExplainText.text = "Previous Page: GAMEPLAY \nNext Page: CLEAR";
+				ExplainText.text = "previous page: GAMEPLAY \nnext page: CLEAR";
 			case "gameplay":
 				ResultText.text = "";
-				ExplainText.text = "Customize your gameplay in a way.";
+				ExplainText.text = "customize your gameplay.";
 			case "animation":
 				ResultText.text = "";
-				ExplainText.text = "Check a character's animation offsets.";
+				ExplainText.text = "animation offsets and shit.";
 			case "chart":
 				ResultText.text = "";
-				ExplainText.text = "Chart your own favorite song however you want.";
+				ExplainText.text = "GO ON THE CHART EDITOR. \n(this is a message from Stoopid Guy to the creator)";
 			case "keybinds":
 				ResultText.text = "";
-				ExplainText.text = "Change your keybinds, however you want.";
+				ExplainText.text = "the binding of keys.";
 		}
 
 		switch (optionShit[curSelected])

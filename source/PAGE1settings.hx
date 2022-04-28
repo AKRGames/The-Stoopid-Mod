@@ -91,7 +91,7 @@ class PAGE1settings extends MusicBeatSubstate
 
 		FlxG.camera.follow(camFollow, null, camLerp);
 
-		DiscordClient.changePresence("Settings page: General", null);
+		DiscordClient.changePresence("settings page: general", null);
 	}
 
 	function createResults():Void
@@ -99,7 +99,7 @@ class PAGE1settings extends MusicBeatSubstate
 		add(ResultText);
 		ResultText.scrollFactor.x = 0;
 		ResultText.scrollFactor.y = 0;
-		ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+		ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
 		ResultText.x = -400;
 		ResultText.y = 350;
 		ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -109,7 +109,7 @@ class PAGE1settings extends MusicBeatSubstate
 		add(ExplainText);
 		ExplainText.scrollFactor.x = 0;
 		ExplainText.scrollFactor.y = 0;
-		ExplainText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, CENTER);
+		ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
 		ExplainText.alignment = LEFT;
 		ExplainText.x = 20;
 		ExplainText.y = 624;
@@ -186,7 +186,7 @@ class PAGE1settings extends MusicBeatSubstate
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
 				selectedSomethin = true;
 
-				DiscordClient.changePresence("Back to the main menu I go!", null);
+				DiscordClient.changePresence("they headin out", null);
 
 				menuItems.forEach(function(spr:FlxSprite)
 				{
@@ -209,37 +209,37 @@ class PAGE1settings extends MusicBeatSubstate
 		{
 			case "resolution":
 				ResultText.text = FlxG.width * _variables.resolution + "x" + FlxG.height * _variables.resolution;
-				ExplainText.text = "RESOLUTION:\nChange the resolution of your game.";
+				ExplainText.text = "RESOLUTION:\nchange the size of the window of your game.";
 			case "fullscreen":
 				ResultText.text = Std.string(_variables.fullscreen).toUpperCase();
-				ExplainText.text = "FULLSCREEN:\nMake your game stretch to your entire screen.";
+				ExplainText.text = "FULLSCREEN:\nmake your game window...full.";
 			case "fpsCounter":
 				ResultText.text = Std.string(_variables.fpsCounter).toUpperCase();
-				ExplainText.text = "FPS COUNTER:\nToggle your FPS counter on or off.";
+				ExplainText.text = "FPS COUNTER:\nyou want it or not?";
 			case "fps":
 				ResultText.text = _variables.fps + " FPS";
-				ExplainText.text = "FPS CAP:\nChange your FPS cap when you want some smoother footage.";
+				ExplainText.text = "FPS CAP:\nhow many FPS bro?";
 			case "page":
 				ResultText.text = "";
-				ExplainText.text = "Previous Page: CLEAR \nNext Page: SFX";
+				ExplainText.text = "previous page: CLEAR \nnext page: SFX";
 			case "filter":
 				ResultText.text = _variables.filter;
-				ExplainText.text = "FILTER: \nChange how colors of the game work, either for fun or if you're colorblind.";
+				ExplainText.text = "FILTER: \na color filter. either for fun or for anti-colorblindness.";
 			case "brightness":
 				ResultText.text = _variables.brightness / 2 + "%";
-				ExplainText.text = "BRIGHTNESS: \nChange how bright your game looks.";
+				ExplainText.text = "BRIGHTNESS: \nhow much brightness bro?";
 			case "gamma":
 				ResultText.text = _variables.gamma / 1 * 100 + "%";
-				ExplainText.text = "GAMMA: \nChange how vibrant your game looks.";
+				ExplainText.text = "GAMMA (male grindset): \nhow much γ bro?";
 			case "memory":
 				ResultText.text = Std.string(_variables.memory).toUpperCase();
-				ExplainText.text = "MEMORY: \nSee how your memory's acting in game.";
+				ExplainText.text = "RAM STATS: \nyou want it or not?";
 			case "watermark":
 				ResultText.text = Std.string(_variables.watermark).toUpperCase();
-				ExplainText.text = "WATERMARK: \nSwitch your watermark on or off.";
+				ExplainText.text = "WATERMARK: \nyou want it or not?";
 			case "hue":
 				ResultText.text = Std.string(_variables.hue);
-				ExplainText.text = "HUE: \nChange the hues of your game's colors.";
+				ExplainText.text = "HUE HUE HUE HUEEAAH: \nhow much hue bro?";
 		}
 
 		menuItems.forEach(function(spr:FlxSprite)
