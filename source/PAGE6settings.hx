@@ -271,13 +271,17 @@ class PAGE6settings extends MusicBeatSubstate
         switch (optionShit[curSelected])
 		{
             case 'save':
-                FlxG.sound.play(Paths.sound('shared/clearSave'), _variables.svolume/100);
-                FlxG.save.erase();
-                FlxG.save.flush();
-                FlxG.save.bind('save', "Funkin Stoopid");
-                System.exit(32);
+				FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume/100);
+				FlxG.save.erase();
+				FlxG.save.flush();
+				FlxG.save.bind('save', "Funkin Stoopid");
+				new FlxTimer().start(30, function(tmr:FlxTimer)
+				{
+                System.exit(0);				
+				});
+
             case 'config':
-                FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
+                FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume/100);
                 FileSystem.deleteFile('config.json');
                 FlxG.sound.music.volume = 1;
                 FlxG.sound.playMusic(Paths.music('freakyMenu'), _variables.mvolume/100);
