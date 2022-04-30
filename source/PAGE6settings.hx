@@ -97,7 +97,7 @@ class PAGE6settings extends MusicBeatSubstate
                 add(ResultText);
                 ResultText.scrollFactor.x = 0;
                 ResultText.scrollFactor.y = 0;
-                ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
+                ResultText.setFormat("Comic Sans MS", 45, FlxColor.WHITE, CENTER);
                 ResultText.x = -400;
                 ResultText.y = 350;
                 ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -107,10 +107,10 @@ class PAGE6settings extends MusicBeatSubstate
                 add(ExplainText);
                 ExplainText.scrollFactor.x = 0;
                 ExplainText.scrollFactor.y = 0;
-                ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
+                ExplainText.setFormat("Comic Sans MS", 20, FlxColor.WHITE, CENTER);
                 ExplainText.alignment = LEFT;
                 ExplainText.x = 20;
-                ExplainText.y = 624;
+                ExplainText.y = 625;
                 ExplainText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
                 ExplainText.alpha = 0;
                 FlxTween.tween(ExplainText, { alpha: 1}, 0.15, { ease: FlxEase.expoInOut });
@@ -265,7 +265,7 @@ class PAGE6settings extends MusicBeatSubstate
                     MainVariables.Save();
                 });
 		}
-    
+
     function clearStuff():Void
     {
         switch (optionShit[curSelected])
@@ -275,6 +275,14 @@ class PAGE6settings extends MusicBeatSubstate
 				FlxG.save.erase();
 				FlxG.save.flush();
 				FlxG.save.bind('save', "Funkin Stoopid");
+                menuItems.forEach(function(spr:FlxSprite)
+                {
+                    spr.animation.play('idle');
+                    FlxTween.tween(spr, { x: -1000 }, 0.15, { ease: FlxEase.expoIn });
+                });
+                FlxTween.tween(FlxG.camera, { zoom: 21 }, 0.5, { ease: FlxEase.expoIn, startDelay : 0.2 });
+                FlxTween.tween(ResultText, { alpha: 0 }, 0.15, { ease: FlxEase.expoIn });
+                FlxTween.tween(ExplainText, { alpha: 0 }, 0.15, { ease: FlxEase.expoIn });
 				new FlxTimer().start(30, function(tmr:FlxTimer)
 				{
                 System.exit(0);				
@@ -282,7 +290,7 @@ class PAGE6settings extends MusicBeatSubstate
 
             case 'config':
                 FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume/100);
-                FileSystem.deleteFile('config.json');
+                FileSystem.deleteFile('config-2.0.3.json');
                 FlxG.sound.music.volume = 1;
                 FlxG.sound.playMusic(Paths.music('freakyMenu'), _variables.mvolume/100);
                 Conductor.changeBPM(102);
