@@ -6,28 +6,31 @@ Kawaisprite - Music
 evilsk8r - Art Design
 
 BassetFilms - "Monster" Musician, Additional Character Design 
-Moawling - Week 7 Pixel Artist
+Moawling - Week 6 Pixel Artist
 JohnnyUtah - Logo redesign, Tankman voice and creator, pixel art assistant
 
 Spazkid - Additional Character Design, Additional Animation
 
-IvanAlmighty - Misc. UI Design
+IvanAlmighty - That one freeplay mod concept
 
 MtH - Additional Programming, Additional Charting
 Geokureli - Additional Programming
 
-
 M&M - Extra Programming
 
-MOD CREATORS:
+ENGINE CREATORS:
 
 Verwex - Programming, Art, Animation, Charting
 
 KadeDev - Additional Programming
-Ash237 - Additional Programming
+[REDACTED] - Additional Programming
 Haya - Additional Programming
 Rozebud - Additional Programming
 TentaRJ - Additional Programming
 
 Sector03 - Art
 cattekween - Art
+
+MOD CREATOR:
+
+AKRGames - Everything

@@ -25,12 +25,6 @@ class MenuWeek extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['Bopeebo', 'Fresh', 'Dadbattle'],
-		['Spookeez', 'South', "Monster"],
-		['Pico', 'Philly Nice', "Blammed"],
-		['Satin Panties', "High", "Milf"],
-		['Cocoa', 'Eggnog', 'Winter Horrorland'],
-		['Senpai', 'Roses', 'Thorns'],
 		["Synthwave Type Beat"]
 	];
 
@@ -38,18 +32,12 @@ class MenuWeek extends MusicBeatState
 
 	public static var curDifficulty:Int = 2;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true];
 
-	var weekCharacters:Array<String> = ["gf", "dad", "spooky", "pico", "mom", "parents-christmas", "senpai", "gf"];
+	var weekCharacters:Array<String> = ["gf", "gf"];
 
 	var weekNames:Array<String> = [
 		"Tutorial",
-		"Daddy Dearest",
-		"Spooky Month",
-		"PICO",
-		"MOMMY MUST MURDER",
-		"RED SNOW",
-		"hating simulator ft. moawling",
 		"The STOOPID Week!!"
 	];
 
@@ -469,18 +457,6 @@ class MenuWeek extends MusicBeatState
 		{
 			case 'gf':
 				characterUI.offset.set(0, 0);
-			case 'dad':
-				characterUI.offset.set(-60, 50);
-			case 'spooky':
-				characterUI.offset.set(-35, -37);
-			case 'pico':
-				characterUI.offset.set(-50, -96);
-			case 'mom':
-				characterUI.offset.set(-60, 58);
-			case 'parents-christmas':
-				characterUI.offset.set(67, 47);
-			case 'senpai':
-				characterUI.offset.set(46, 4);
 		}
 
 		#if !switch

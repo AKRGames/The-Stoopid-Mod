@@ -15,12 +15,13 @@
 |   |  | (_| (_| \/   | ) | (_) | ) |_   \/ (- (_| | ) 
                  /          _/           /             
 
-HEY
-Thanks for downloadin Friday Night FUNKIN': Mic's Up
-If you downloaded this from any other place than https://gamebanana.com/gamefiles/15309
+HEY!
+Thanks for downloadin Friday Night Funkin': The Stoopid Mod.
+If you downloaded this from any other place than [insert links here]
 You might be in DANGER!!! Unless is stated otherwise of course. 
 
-The Gamebanana release is the only official source for the desktop (PC) version of the mod!
+The GameBanana and Game Jolt releases are the only official sources for the desktop (PC) version of the mod!
+The itch.io release is the only official source for the browser (HTML) version of the mod!
 The mod is FREE! If you paid for it, you got SCAMMED!
 
 Now that that's out of the way....
@@ -37,7 +38,7 @@ If you do make any sort of video, it would be a bro move if you linked the mod a
 
 Support on Gamebanana - https://gamebanana.com/gamefiles/15309
 
-If not no biggie I don't fully hate you only kinda no biggie.
+If not FUCK YOU.
 
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -45,7 +46,7 @@ If not no biggie I don't fully hate you only kinda no biggie.
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
 
 If you wanna dig around, the mod is fully open source on Github
-https://github.com/Verwex/FunkinMicdUp
+https://github.com/AKRGames/The-Stoopid-Mod
 
 It's made in Haxe / HaxeFlixel
 
@@ -64,11 +65,15 @@ https://twitter.com/phantomarcade3k
 https://twitter.com/kawaisprite
 https://twitter.com/evilsk8r
 
-Mic'd Up is made by Verwex (mod creator), KadeDev and Ash237 (programmers)
+Mic'd Up is made by Verwex (engine creator), KadeDev, [REDACTED], Haya, TentaRJ and Rozebud (programmers).
 
 https://twitter.com/Vershift
 https://twitter.com/kadedeveloper
-https://steamcommunity.com/profiles/76561198353865795
+https://twitter.com/ash__i_guess_
+
+The Stoopid Mod is made by AKRGames
+
+https://twitter.com/AKRGames_93110
 
 Pico is created by Tom Fulp
 Skid and Pump are created by SrPelo

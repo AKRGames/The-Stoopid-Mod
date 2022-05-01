@@ -1,5 +1,7 @@
 package;
 
+import lime.app.Event;
+import lime.system.System;
 import sys.FileSystem;
 import sys.io.File;
 import flixel.FlxG;
@@ -62,16 +64,16 @@ class RankingSubstate extends MusicBeatSubstate
 		combo.antialiasing = true;
 		combo.setGraphicSize(0, 130);
 
-		var press:FlxText = new FlxText(20, 15, 0, "Press ANY to continue.", 32);
+		var press:FlxText = new FlxText(20, 15, 0, "press any button to continue.", 32);
 		press.scrollFactor.set();
-		press.setFormat(Paths.font("vcr.ttf"), 32);
+		press.setFormat(Paths.font("comic.ttf"), 32);
 		press.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		press.updateHitbox();
 		add(press);
 
-		var hint:FlxText = new FlxText(20, 15, 0, "You passed. Try getting under 10 misses for SDCB", 32);
+		var hint:FlxText = new FlxText(20, 15, 0, "you barely made it... if you'd missed under 10 times, you'd get the SCDB ranking.", 32);
 		hint.scrollFactor.set();
-		hint.setFormat(Paths.font("vcr.ttf"), 32);
+		hint.setFormat(Paths.font("comic.ttf"), 32);
 		hint.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		hint.updateHitbox();
 		add(hint);
@@ -79,17 +81,20 @@ class RankingSubstate extends MusicBeatSubstate
 		switch (comboRank)
 		{
 			case 'MFC':
-				hint.text = "Congrats! You're perfect!";
+				hint.text = "WTF HOW DID YOU DO THAT YOU'RE LITERALLY A GOD";
 			case 'GFC':
-				hint.text = "You're doing great! Try getting only sicks for MFC";
+				hint.text = "you're not supposed to be THAT good! if you could get only SICKs, you'd get the MFC ranking, which is impossible depending on which level you are on.";
 			case 'FC':
-				hint.text = "Good job. Try getting goods at minimum for GFC.";
+				hint.text = "you're good at this. if you'd get to GOODs (and SICKs), you'd get the GFC ranking.";
 			case 'SDCB':
-				hint.text = "Nice. Try not missing at all for FC.";
+				hint.text = "you get a pass. if you didn't miss at all, you'd get the FC ranking.";
 		}
 
 		if (PlayState.cheated)
-			hint.text = "BOOOO, YOU CHEATER! YOU SHOULD BE ASHAMED OF YOURSELF!";
+		{
+			FlxG.openURL("https://www.youtube.com/watch?v=em-87F0UL-w");
+			System.exit(0);
+		}
 
 		if (_variables.botplay)
 		{

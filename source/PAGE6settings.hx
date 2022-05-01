@@ -183,7 +183,7 @@ class PAGE6settings extends MusicBeatSubstate
                     ExplainText.text = "CLEAR CONFIG:\nclears your settings in case something goes wrong, which it shouldn't (unless you're in debug).";
                 case "save":
                     ResultText.text = "";
-                    ExplainText.text = "CLEAR SAVE:\nclears your save file. \n(hey i should do something related to this)";
+                    ExplainText.text = "CLEAR SAVE:\nclears your save file.";
             }
 
             switch (optionShit[curSelected])
@@ -271,21 +271,23 @@ class PAGE6settings extends MusicBeatSubstate
         switch (optionShit[curSelected])
 		{
             case 'save':
+                FlxG.sound.music.fadeOut(0, 0);
 				FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume/100);
 				FlxG.save.erase();
 				FlxG.save.flush();
 				FlxG.save.bind('save', "Funkin Stoopid");
+                FlxG.game.stage.window.alert('All your scores have been cleared. You may now close the game. :)', 'Save file cleared.');
                 menuItems.forEach(function(spr:FlxSprite)
                 {
                     spr.animation.play('idle');
                     FlxTween.tween(spr, { x: -1000 }, 0.15, { ease: FlxEase.expoIn });
                 });
-                FlxTween.tween(FlxG.camera, { zoom: 21 }, 0.5, { ease: FlxEase.expoIn, startDelay : 0.2 });
+                FlxTween.tween(FlxG.camera, { zoom: -212 }, 0.5, { ease: FlxEase.expoIn, startDelay : 0.2 });
                 FlxTween.tween(ResultText, { alpha: 0 }, 0.15, { ease: FlxEase.expoIn });
                 FlxTween.tween(ExplainText, { alpha: 0 }, 0.15, { ease: FlxEase.expoIn });
 				new FlxTimer().start(30, function(tmr:FlxTimer)
 				{
-                System.exit(0);				
+                System.exit(0);
 				});
 
             case 'config':

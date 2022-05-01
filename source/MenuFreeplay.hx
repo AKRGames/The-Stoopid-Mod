@@ -566,8 +566,6 @@ class MenuFreeplay extends MusicBeatState
 				DiscordClient.changePresence("admiring " + songs[curSelected].songName + " for:", null, null, true);
 			case 7:
 				DiscordClient.changePresence("jerking off to " + songs[curSelected].songName + " for:", null, null, true);
-			case 8:
-				DiscordClient.changePresence("fapping to the beat of " + songs[curSelected].songName + " for:", null, null, true);
 			case 9:
 				DiscordClient.changePresence("procrastinating while listening to " + songs[curSelected].songName + " for:", null, null, true);
 			case 10:

@@ -105,7 +105,7 @@ class PAGE3settings extends MusicBeatSubstate
                 add(ResultText);
                 ResultText.scrollFactor.x = 0;
                 ResultText.scrollFactor.y = 0;
-                ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
+                ResultText.setFormat("Comic Sans MS", 45, FlxColor.WHITE, CENTER);
                 ResultText.x = -400;
                 ResultText.y = 350;
                 ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -115,10 +115,10 @@ class PAGE3settings extends MusicBeatSubstate
                 add(ExplainText);
                 ExplainText.scrollFactor.x = 0;
                 ExplainText.scrollFactor.y = 0;
-                ExplainText.setFormat("Comic Sans MS", 24, FlxColor.WHITE, CENTER);
+                ExplainText.setFormat("Comic Sans MS", 20, FlxColor.WHITE, CENTER);
                 ExplainText.alignment = LEFT;
                 ExplainText.x = 20;
-                ExplainText.y = 624;
+                ExplainText.y = 632;
                 ExplainText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
                 ExplainText.alpha = 0;
                 FlxTween.tween(ExplainText, { alpha: 1}, 0.15, { ease: FlxEase.expoInOut });
