@@ -54,7 +54,7 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
 	<td>
 		<a href='https://twitter.com/kadedeveloper'><b>KadeDev</b></a>, <a href='https://steamcommunity.com/profiles/76561198353865795'><b>Ash237</b></a>, <a href='https://www.youtube.com/channel/UCqBMDBboJaBHLoxO0H3EBgw'><b>Haya</b></a>, <a href='https://twitter.com/TentaRJ'><b>TentaRJ</b></a> and <a href='https://twitter.com/helpme_thebigt'><b>Rozebud</b></a><br>
 		<img src="/art/Kade.png" alt="KadeDeveloper" width="80" height="80"></a>
-		<img src="/art/Ash.png" alt="Ash237" width="80" height="80"></a>
+		<img src="/art/Ash.png" alt="[REDACTED]" width="80" height="80"></a>
 		<img src="/art/Haya.png" alt="Haya" width="80" height="80"></a>
 		<img src="/art/TentaRJ.png" alt="TentaRJ" width="80" height="80"></a>
 		<img src="/art/Rozebud.png" alt="Rozebud" width="80" height="80"></a>
