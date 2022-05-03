@@ -2818,7 +2818,7 @@ class PlayState extends MusicBeatState
 			persistentDraw = true;
 			paused = true;
 
-			// 1 / 1000 chance for Gitaroo Man easter egg
+			// 1 / 1000 chance for Gitaroo Man easter egg (everyone forgor about that)
 			if (FlxG.random.bool(0.1))
 			{
 				// gitaroo man easter egg
@@ -2834,14 +2834,20 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.SEVEN)
 		{
-			canDie = false;
-			FlxG.switchState(new ChartingState());
-			curDeaths = 0;
-			var image = lime.graphics.Image.fromFile('assets/images/iconOG.png');
-			lime.app.Application.current.window.setIcon(image);
-			Application.current.window.title = Application.current.meta.get('name');
+			switch (curSong.toLowerCase())
+			{
+				default: 
+				{
+					canDie = false;
+					FlxG.switchState(new ChartingState());
+					curDeaths = 0;
+					var image = lime.graphics.Image.fromFile('assets/images/iconOG.png');
+					lime.app.Application.current.window.setIcon(image);
+					Application.current.window.title = Application.current.meta.get('name');
 
-			DiscordClient.changePresence("Charting a song", null, null, true);
+					DiscordClient.changePresence("charting rn", null, null, true);
+				}
+			}
 		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
@@ -3241,7 +3247,7 @@ class PlayState extends MusicBeatState
 				}
 
 				// Game Over doesn't get his own variable because it's only used here
-				DiscordClient.changePresence("Aw man, I died at " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconRPC);
+				DiscordClient.changePresence("damn i blueballed at " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconRPC);
 			}
 			else
 			{
