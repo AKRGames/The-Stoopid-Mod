@@ -427,22 +427,22 @@ class PlayState extends MusicBeatState
 		switch (gameplayArea)
 		{
 			case "Story":
-				detailsText = "Week Selection: Week " + storyWeek;
+				detailsText = "selected week: Week " + storyWeek;
 			case "Freeplay":
-				detailsText = "Freeplay:";
+				detailsText = "freeplay:";
 			case "Marathon":
-				detailsText = "Marathon:";
+				detailsText = "marathon:";
 			case "Survival":
-				detailsText = "Survival: ";
+				detailsText = "survival: ";
 			case "Endless":
-				detailsText = "Endless: Loop " + loops;
+				detailsText = "endless: loop " + loops;
 		}
 
 		// String for when the game is paused
-		detailsPausedText = "BRB - " + detailsText;
+		detailsPausedText = "Paused - " + detailsText;
 
 		if (gameplayArea == "Endless")
-			detailsPausedText = "BRB - Endless:";
+			detailsPausedText = "Paused - Endless:";
 
 		// Updating Discord Rich Presence.
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconRPC);
@@ -1138,7 +1138,7 @@ class PlayState extends MusicBeatState
 			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20, songPosBG.y, 0, SONG.song, 16);
 			if (_variables.scroll == "down")
 				songName.y -= 3;
-			songName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			songName.setFormat(Paths.font("comic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			songName.scrollFactor.set();
 			songName.screenCenter(X);
 			add(songName);
@@ -1159,8 +1159,8 @@ class PlayState extends MusicBeatState
 		// healthBar
 		add(healthBar);
 
-		botPlay = new FlxText(healthBar.x, healthBar.y, 0, "AutoPlayCPU", 20);
-		botPlay.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		botPlay = new FlxText(healthBar.x, healthBar.y, 0, "EVERYONE SHUT UP A BOT IS PLAYING", 20);
+		botPlay.setFormat(Paths.font("comic.ttf"), 20, FlxColor.WHITE, RIGHT);
 		botPlay.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		botPlay.scrollFactor.set();
 		botPlay.screenCenter(X);
@@ -1170,7 +1170,7 @@ class PlayState extends MusicBeatState
 		scoreTxt = new FlxText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y + 26, 0, "", 20);
 		if (_variables.scroll == "down")
 			scoreTxt.y = healthBarBG.y - 18;
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		scoreTxt.setFormat(Paths.font("comic.ttf"), 20, FlxColor.WHITE, RIGHT);
 		scoreTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		scoreTxt.scrollFactor.set();
 		add(scoreTxt);
@@ -1179,7 +1179,7 @@ class PlayState extends MusicBeatState
 		missTxt = new FlxText(scoreTxt.x, scoreTxt.y - 26, 0, "", 20);
 		if (_variables.scroll == "down")
 			missTxt.y = scoreTxt.y + 26;
-		missTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		missTxt.setFormat(Paths.font("comic.ttf"), 20, FlxColor.WHITE, RIGHT);
 		missTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		missTxt.scrollFactor.set();
 		add(missTxt);
@@ -1188,7 +1188,7 @@ class PlayState extends MusicBeatState
 		accuracyTxt = new FlxText(missTxt.x, missTxt.y - 26, 0, "", 20);
 		if (_variables.scroll == "down")
 			accuracyTxt.y = missTxt.y + 26;
-		accuracyTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		accuracyTxt.setFormat(Paths.font("comic.ttf"), 20, FlxColor.WHITE, RIGHT);
 		accuracyTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		accuracyTxt.scrollFactor.set();
 		add(accuracyTxt);
@@ -1197,20 +1197,20 @@ class PlayState extends MusicBeatState
 		npsTxt = new FlxText(accuracyTxt.x, accuracyTxt.y - 26, 0, "", 20);
 		if (_variables.scroll == "down")
 			npsTxt.y = accuracyTxt.y + 26;
-		npsTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, RIGHT);
+		npsTxt.setFormat(Paths.font("comic.ttf"), 20, FlxColor.WHITE, RIGHT);
 		npsTxt.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		npsTxt.scrollFactor.set();
 		add(npsTxt);
 		npsTxt.visible = _variables.nps;
 
-		scoreTxt.text = "Score: " + songScore;
-		missTxt.text = "Misses: " + misses;
-		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
+		scoreTxt.text = "score: " + songScore;
+		missTxt.text = "misses: " + misses;
+		accuracyTxt.text = "accuracy: " + truncateFloat(accuracy, 2) + "%";
 
 		if (gameplayArea == "Survival")
 		{
 			survivalCountdown = new FlxText(0, 0, "", 20);
-			survivalCountdown.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, CENTER);
+			survivalCountdown.setFormat(Paths.font("comic.ttf"), 30, FlxColor.WHITE, CENTER);
 			survivalCountdown.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 			survivalCountdown.scrollFactor.set();
 
@@ -1482,7 +1482,7 @@ class PlayState extends MusicBeatState
 			misses = 999;
 		}
 
-		accuracyTxt.text = "Accuracy: " + truncateFloat(accuracy, 2) + "%";
+		accuracyTxt.text = "accuracy: " + truncateFloat(accuracy, 2) + "%";
 	}
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
@@ -2887,10 +2887,8 @@ class PlayState extends MusicBeatState
 		/* if (FlxG.keys.justPressed.NINE)
 			FlxG.switchState(new Charting()); */
 
-		#if debug
 		if (FlxG.keys.justPressed.EIGHT)
 			FlxG.switchState(new AnimationDebug(SONG.player2));
-		#end
 
 		if (startingSong)
 		{
@@ -3149,6 +3147,22 @@ class PlayState extends MusicBeatState
 					// FlxG.switchState(new PlayState());
 			}
 		}
+
+		if (curSong == 'Synthwave Type Beat')
+		{
+			switch (curStep)
+			{
+				case 2032:
+					var blackShit : FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+					blackShit.scrollFactor.set();
+					add(blackShit);
+					camHUD.visible = false;
+					camNOTES.visible = false;
+					camSus.visible = false;
+					camNOTEHUD.visible = false;
+			}
+		}
+
 		// better streaming of shit
 
 		// RESET = Quick Game Over Screen
