@@ -49,7 +49,7 @@ class MenuModifiers extends MusicBeatState
 	var arrs:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('Modi_Arrows'));
 	var name:FlxText = new FlxText(20, 69, FlxG.width, "", 48);
 	var multi:FlxText = new FlxText(20, 69, FlxG.width, "", 48);
-	var explain:FlxText = new FlxText(20, 69, 1200, "", 48);
+	var explain:FlxText = new FlxText(20, 50, 1200, "", 48);
 	var niceText:FlxText = new FlxText(20, 69, FlxG.width, "", 48);
 
 	public static var modifierList:Array<ModifierData>;
