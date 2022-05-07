@@ -476,6 +476,9 @@ class PlayState extends MusicBeatState
 			case 'thorns':
 				curStage = 'schoolEvil';
 
+			case 'synthwave type beat':
+				curStage = 'stoopid';
+
 			default:
 				curStage = 'stage';
 				defaultCamZoom = 0.90;
@@ -834,6 +837,19 @@ class PlayState extends MusicBeatState
 						bg.animation.play('idle');
 						bg.scrollFactor.set(0.8, 0.9);
 						bg.scale.set(6, 6);
+						add(bg);
+					}
+				case 'tutorial' | 'synthwave type beat':
+					{
+						curStage = 'stoopid';
+
+						var posX = -1881;
+						var posY = -1000;
+
+						var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('stoopidBG'));
+						bg.antialiasing = false;
+						bg.scrollFactor.set(1, 1);
+						bg.active = false;
 						add(bg);
 					}
 				default:
