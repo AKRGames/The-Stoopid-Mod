@@ -3,6 +3,7 @@ package;
 import lime.app.Application;
 import lime.app.Event;
 import lime.system.System;
+import Song.SwagSong;
 import flixel.addons.ui.FlxUIInputText;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
@@ -18,6 +19,7 @@ using StringTools;
 class Substate_PresetSave extends MusicBeatSubstate
 {
 	public static var curSelected:Int = 0;
+	public static var SONG : SwagSong;
 
 	var goingBack:Bool = false;
 

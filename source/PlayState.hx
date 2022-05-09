@@ -2819,7 +2819,7 @@ class PlayState extends MusicBeatState
 
 		wiggleShit.update(elapsed);
 
-		npsTxt.text = "NPS: " + nps;
+		npsTxt.text = "notes per second: " + nps;
 
 		if (gameplayArea == "Survival")
 		{
@@ -3168,6 +3168,14 @@ class PlayState extends MusicBeatState
 		{
 			switch (curStep)
 			{
+				case 1:
+					FlxTween.tween(boyfriend, {y: 420}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(gf, {y: 420}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(dad, {y: 420}, 100, {ease: FlxEase.sineIn});
+				case 1024:
+					FlxTween.tween(boyfriend, { y: 420 }, 0.9, { ease: FlxEase.sineIn });
+					FlxTween.tween(gf, { y: 420 }, 0.9, { ease: FlxEase.sineIn });
+					FlxTween.tween(dad, { y: 420 }, 0.9, { ease: FlxEase.sineIn });
 				case 2032:
 					var blackShit : FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 					blackShit.scrollFactor.set();
@@ -4921,8 +4929,8 @@ class PlayState extends MusicBeatState
 
 	function updateScoreText()
 	{
-		scoreTxt.text = "Score: " + songScore;
-		missTxt.text = "Misses: " + misses;
+		scoreTxt.text = "score: " + songScore;
+		missTxt.text = "misses: " + misses;
 	}
 
 	function freezeBF():Void

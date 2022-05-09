@@ -81,9 +81,9 @@ class RankingSubstate extends MusicBeatSubstate
 		switch (comboRank)
 		{
 			case 'MFC':
-				hint.text = "WTF HOW DID YOU DO THAT YOU'RE LITERALLY A GOD";
+				hint.text = "WTF HOW DID YOU DO THAT YOU'RE LITERALLY A GOD!!";
 			case 'GFC':
-				hint.text = "you're not supposed to be THAT good! if you could get only SICKs, you'd get the MFC ranking, which is impossible depending on which level you are on.";
+				hint.text = "you're not supposed to be THAT good! \nif you could get only SICKs, you'd get the MFC ranking, which is impossible depending on which level you are on.";
 			case 'FC':
 				hint.text = "you're good at this. if you'd get to GOODs (and SICKs), you'd get the GFC ranking.";
 			case 'SDCB':
@@ -99,7 +99,7 @@ class RankingSubstate extends MusicBeatSubstate
 		if (_variables.botplay)
 		{
 			hint.y -= 35;
-			hint.text = "If you wanna gather that rank, disable botplay.";
+			hint.text = "you have botplay on you don't get this LOL!!";
 		}
 
 		if (PlayState.curDeaths >= 30)
@@ -116,7 +116,7 @@ class RankingSubstate extends MusicBeatSubstate
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(press, {alpha: 1, y: 690 - press.height}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
-		FlxTween.tween(hint, {alpha: 1, y: 645 - hint.height}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(hint, {alpha: 1, y: 640 - hint.height}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 	}
@@ -205,23 +205,42 @@ class RankingSubstate extends MusicBeatSubstate
 
 		// WIFE TIME :)))) (based on Wife3)
 
-		var wifeConditions:Array<Bool> = [
-			PlayState.accuracy >= 99.9935, // P
-			PlayState.accuracy >= 99.980, // X
-			PlayState.accuracy >= 99.950, // X-
-			PlayState.accuracy >= 99.90, // SS+
-			PlayState.accuracy >= 99.80, // SS
-			PlayState.accuracy >= 99.70, // SS-
-			PlayState.accuracy >= 99.50, // S+
-			PlayState.accuracy >= 99, // S
-			PlayState.accuracy >= 96.50, // S-
-			PlayState.accuracy >= 93, // A+
-			PlayState.accuracy >= 90, // A
-			PlayState.accuracy >= 85, // A-
-			PlayState.accuracy >= 80, // B
-			PlayState.accuracy >= 70, // C
-			PlayState.accuracy >= 60, // D
-			PlayState.accuracy < 60 // E
+		// var wifeConditions:Array<Bool> = [
+			// PlayState.accuracy >= 99.9935, // P
+			// PlayState.accuracy >= 99.980, // X
+			// PlayState.accuracy >= 99.950, // X-
+			// PlayState.accuracy >= 99.90, // SS+
+			// PlayState.accuracy >= 99.80, // SS
+			// PlayState.accuracy >= 99.70, // SS-
+			// PlayState.accuracy >= 99.50, // S+
+			// PlayState.accuracy >= 99, // S
+			// PlayState.accuracy >= 96.50, // S-
+			// PlayState.accuracy >= 93, // A+
+			// PlayState.accuracy >= 90, // A
+			// PlayState.accuracy >= 85, // A-
+			// PlayState.accuracy >= 80, // B
+			// PlayState.accuracy >= 70, // C
+			// PlayState.accuracy >= 60, // D
+			// PlayState.accuracy < 60 // E
+		// ];
+
+		var wifeConditions : Array<Bool> = [
+			PlayState.accuracy >= 99, // P
+			PlayState.accuracy >= 95, // X
+			PlayState.accuracy >= 92.5, // X-
+			PlayState.accuracy >= 90, // SS+
+			PlayState.accuracy >= 85, // SS
+			PlayState.accuracy >= 80, // SS-
+			PlayState.accuracy >= 75, // S+
+			PlayState.accuracy >= 70, // S
+			PlayState.accuracy >= 69, // S-
+			PlayState.accuracy >= 65, // A+
+			PlayState.accuracy >= 60, // A
+			PlayState.accuracy >= 55, // A-
+			PlayState.accuracy >= 50, // B
+			PlayState.accuracy >= 40, // C
+			PlayState.accuracy >= 30, // D
+			PlayState.accuracy < 30 // E
 		];
 
 		for (i in 0...wifeConditions.length)
