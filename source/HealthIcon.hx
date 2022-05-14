@@ -19,15 +19,13 @@ class HealthIcon extends FlxSprite
 
 	public var usingFallback:Bool;
 
-	var style = _variables.iconStyle;
-
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
 
-		if (FileSystem.exists('assets/shared/images/icons/$style/icon-' + char + '.png') || FileSystem.exists('mods/mainMods/_append/shared/images/icons/$style/icon-' + char + '.png'))
+		if (FileSystem.exists('assets/shared/images/icons/icon-' + char + '.png') || FileSystem.exists('mods/mainMods/_append/shared/images/icons/icon-' + char + '.png'))
 		{
-			loadGraphic(Paths.image('icons/$style/icon-' + char, 'shared'), true, 150, 150);
+			loadGraphic(Paths.image('icons/icon-' + char, 'shared'), true, 150, 150);
 
 			trace('exists');
 			usingFallback = false;

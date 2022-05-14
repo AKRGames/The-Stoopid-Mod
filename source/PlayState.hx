@@ -3,6 +3,8 @@ package;
 import cpp.abi.Abi;
 import lime.graphics.Image;
 import lime.app.Application;
+import lime.app.Event;
+import lime.system.System;
 import sys.FileSystem;
 import Discord.DiscordClient;
 import sys.io.File;
@@ -3169,13 +3171,13 @@ class PlayState extends MusicBeatState
 			switch (curStep)
 			{
 				case 1:
-					FlxTween.tween(boyfriend, {y: 420}, 100, {ease: FlxEase.sineIn});
-					FlxTween.tween(gf, {y: 420}, 100, {ease: FlxEase.sineIn});
-					FlxTween.tween(dad, {y: 420}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(boyfriend, {y: 1000}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(gf, {y: 1000}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(dad, {y: 1000}, 100, {ease: FlxEase.sineIn});
 				case 1024:
-					FlxTween.tween(boyfriend, { y: 420 }, 0.9, { ease: FlxEase.sineIn });
-					FlxTween.tween(gf, { y: 420 }, 0.9, { ease: FlxEase.sineIn });
-					FlxTween.tween(dad, { y: 420 }, 0.9, { ease: FlxEase.sineIn });
+					FlxTween.tween(boyfriend, {y: 450}, 0.9, {ease: FlxEase.sineIn});
+					FlxTween.tween(gf, {y: 130}, 0.9, {ease: FlxEase.sineIn});
+					FlxTween.tween(dad, {y: 100}, 0.9, {ease: FlxEase.sineIn});
 				case 2032:
 					var blackShit : FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 					blackShit.scrollFactor.set();

@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': The Stoopid Mod" file="Funkin Stoopid" packageName="com.AKR.stoopid" package="com.AKR.stoopid" main="Main" version="MU 2.0.3, SM 0" company="AKR" />
+	<app title="Friday Night Funkin': The Stoopid Mod" file="Funkin Stoopid" packageName="com.AKR.stoopid" package="com.AKR.stoopid" main="Main" version="MU 2.0.3 (modified build), SM 0.0.3" company="AKR" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />

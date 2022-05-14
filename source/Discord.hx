@@ -31,7 +31,7 @@ class DiscordClient
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "Booting up",
+			details: "starting...",
 			state: null,
 			largeImageKey: 'iconpresence',
 			largeImageText: "FNF: Mic'd Up"
@@ -75,7 +75,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'iconpresence',
-			largeImageText: "FNF: Mic'd Up",
+			largeImageText: "Friday Night Funkin: The Stoopid Mod",
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),

@@ -76,7 +76,6 @@ typedef Variables =
 	var hpColors:Bool;
 	var hpIcons:Bool;
 	var hpAnims:Bool;
-	var iconStyle:String;
 	var ghostTapping:Bool;
 }
 
@@ -91,7 +90,6 @@ class MainVariables
 
 	public static var musicList:Array<String> = [];
 	public static var hitList:Array<String> = [];
-	public static var iconList:Array<String> = [];
 
 	public static var configVersion:String = '2.0.3';
 
@@ -107,9 +105,6 @@ class MainVariables
 		hitList = FileSystem.readDirectory('assets/shared/sounds/hitsounds');
 		hitList.unshift('none.ogg');
 
-		iconList = FileSystem.readDirectory('assets/shared/images/icons');
-		iconList.unshift('template.png');
-
 		for (i in 0...musicList.length)
 		{
 			if (musicList[i].contains('_BPM.txt'))
@@ -124,12 +119,6 @@ class MainVariables
 		for (i in 0...hitList.length)
 		{
 			hitList[i] = hitList[i].substring(0, hitList[i].length - 4);
-		}
-
-		for (i in 0...iconList.length)
-		{
-			if (iconList[i].contains('template.png'))
-				iconList.remove(iconList[i]);
 		}
 
 		if (!FileSystem.exists('config-$configVersion.json'))
@@ -198,7 +187,6 @@ class MainVariables
 				hpColors: true,
 				hpIcons: true,
 				hpAnims: true,
-				iconStyle: iconList[iconList.length],
 				ghostTapping: true
 			};
 

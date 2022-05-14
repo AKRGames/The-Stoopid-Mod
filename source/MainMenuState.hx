@@ -120,7 +120,7 @@ class MainMenuState extends MusicBeatState
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0, Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
-		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit.setFormat("Comic Sans MS", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
 		// NG.core.calls.event.logEvent('swag').send();
@@ -204,7 +204,7 @@ class MainMenuState extends MusicBeatState
 				{
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume / 100);
-					DiscordClient.changePresence("Chosen: " + optionShit[curSelected].toUpperCase(), null);
+					DiscordClient.changePresence("chosen: " + optionShit[curSelected].toUpperCase(), null);
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{
@@ -225,10 +225,10 @@ class MainMenuState extends MusicBeatState
 							{
 								case 'play':
 									FlxG.switchState(new PlaySelection());
-									DiscordClient.changePresence("Going to the play selection.", null);
+									DiscordClient.changePresence("playing", null);
 								case 'options':
 									FlxG.switchState(new SettingsState());
-									DiscordClient.changePresence("Gonna set some options brb.", null);
+									DiscordClient.changePresence("they setting, they chads", null);
 							}
 						});
 					});
@@ -269,6 +269,6 @@ class MainMenuState extends MusicBeatState
 			spr.updateHitbox();
 		});
 
-		DiscordClient.changePresence("Main Menu: " + optionShit[curSelected].toUpperCase(), null);
+		DiscordClient.changePresence("main menu: " + optionShit[curSelected].toUpperCase(), null);
 	}
 }

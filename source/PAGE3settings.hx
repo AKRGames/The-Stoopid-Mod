@@ -21,7 +21,7 @@ class PAGE3settings extends MusicBeatSubstate
 {
 
     var menuItems:FlxTypedGroup<FlxSprite>;
-    var optionShit:Array<String> = ['page', 'chromakeyM', 'iconZoom', 'cameraZoom', 'cameraSpeed', 'noteSplashes', 'noteGlow', 'eNoteGlow', 'hpIcons', 'iconStyle', 'hpAnims', 'hpColors', 'distractions', 'bgAlpha', 'enemyAlpha', 'rainbow', 'missAnims', 'score', 'misses', 'accuracy', 'nps', 'rating', 'timing', 'combo', 'songPos'];
+    var optionShit:Array<String> = ['page', 'chromakeyM', 'iconZoom', 'cameraZoom', 'cameraSpeed', 'noteSplashes', 'noteGlow', 'eNoteGlow', 'hpIcons', 'hpAnims', 'hpColors', 'distractions', 'bgAlpha', 'enemyAlpha', 'rainbow', 'missAnims', 'score', 'misses', 'accuracy', 'nps', 'rating', 'timing', 'combo', 'songPos'];
 
     private var grpSongs:FlxTypedGroup<Alphabet>;
     var selectedSomethin:Bool = false;
@@ -88,16 +88,9 @@ class PAGE3settings extends MusicBeatSubstate
 
         createResults();
 
-        updateResults();
-
         FlxG.camera.follow(camFollow, null, camLerp);
 
-        DiscordClient.changePresence("Settings page: GFX", null);
-    }
-
-    function updateResults():Void
-    {
-        style = MainVariables.iconList.indexOf(_variables.iconStyle.toLowerCase());
+        DiscordClient.changePresence("settings page: graphics", null);
     }
 
     function createResults():Void
@@ -284,9 +277,6 @@ class PAGE3settings extends MusicBeatSubstate
                 case "hpAnims":
                     ResultText.text = Std.string(_variables.hpAnims).toUpperCase();
                     ExplainText.text = "HEALTH ICON ANIMATIONS:\nyou wanna see them cute icons get animated or not?";
-                case "iconStyle":
-				    ResultText.text = Std.string(_variables.iconStyle).toUpperCase();
-				    ExplainText.text = "WE WILL BE GETTING RID OF THIS OPTION.";
             }
 
             menuItems.forEach(function(spr:FlxSprite)
@@ -466,16 +456,6 @@ class PAGE3settings extends MusicBeatSubstate
                 case "hpColors":
                     _variables.hpColors = !_variables.hpColors;
                     
-                    FlxG.sound.play(Paths.sound('scrollMenu'), _variables.svolume/100);
-                case "iconStyle":
-				    style += Change;
-				    if (style > MainVariables.iconList.length - 1)
-				    	style = 0;
-				    if (style < 0)
-				    	style = MainVariables.iconList.length - 1;
-
-				    _variables.iconStyle = MainVariables.iconList[style];
-
                     FlxG.sound.play(Paths.sound('scrollMenu'), _variables.svolume/100);
 			}
 
