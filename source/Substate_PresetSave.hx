@@ -83,6 +83,9 @@ class Substate_PresetSave extends MusicBeatSubstate
 				System.exit(0);
 			case 'error':
 				FlxG.game.stage.window.alert('Got you!', 'Boo!');
+			case 'the n word'
+				FlxG.openURL("https://www.youtube.com/watch?v=NWWn6aBZGWs");
+				System.exit(0);
 		}
 
 		if (trol)
