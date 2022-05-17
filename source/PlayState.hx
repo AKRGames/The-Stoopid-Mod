@@ -2751,14 +2751,6 @@ class PlayState extends MusicBeatState
 		else if (!_variables.nps)
 			nps = 0; // shut up
 
-		/**
-		 * it lags a lil so its only if you dont have a choice
-		**/
-		if (FileSystem.exists('assets/data/' + SONG.song.toLowerCase() + '/scripts/chart.hx') && startedCountdown)
-		{
-			loadScript();
-		}
-
 		switch (curStage)
 		{
 			case 'philly':
