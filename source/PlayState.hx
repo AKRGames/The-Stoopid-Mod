@@ -38,7 +38,6 @@ import ModifierVariables._modifiers;
 import Endless_Substate._endless;
 import Survival_GameOptions._survivalVars;
 import seedyrng.Random;
-import hscript.plus.ScriptState;
 
 using StringTools;
 using Std;
@@ -234,8 +233,6 @@ class PlayState extends MusicBeatState
 	var zoomLerp:Float = 0.09;
 
 	var susWiggle:ShaderFilter;
-
-	var modState = new ScriptState();
 
 	var hittingNote:Bool = false;
 

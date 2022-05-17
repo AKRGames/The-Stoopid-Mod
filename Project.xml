@@ -115,8 +115,8 @@
 
 	<!--In case you want to use the addons package-->
 	<haxelib name="flixel-addons" />
-	<haxelib name="hscript" />
-	<haxelib name="hscript-plus" />
+	<!--<haxelib name="hscript" />-->
+	<!--<haxelib name="hscript-plus" />-->
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
