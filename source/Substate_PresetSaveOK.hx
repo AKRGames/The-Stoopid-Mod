@@ -50,7 +50,7 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 		add(resultText);
 
 		resultName = new FlxText(FlxG.width * 0.7, 5, 1280, Substate_PresetSave.nameResult, 96);
-		resultName.setFormat(Paths.font("comic.ttf"), 50, FlxColor.WHITE, RIGHT);
+		resultName.setFormat(Paths.font("calibri.ttf"), 50, FlxColor.WHITE, RIGHT);
 		resultName.alignment = CENTER;
 		resultName.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		resultName.screenCenter();

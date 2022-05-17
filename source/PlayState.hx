@@ -3171,9 +3171,9 @@ class PlayState extends MusicBeatState
 			switch (curStep)
 			{
 				case 1:
-					FlxTween.tween(boyfriend, {y: 1000}, 100, {ease: FlxEase.sineIn});
-					FlxTween.tween(gf, {y: 1000}, 100, {ease: FlxEase.sineIn});
-					FlxTween.tween(dad, {y: 1000}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(boyfriend, {y: -2022}, 100, {ease: FlxEase.none});
+					FlxTween.tween(gf, {y: -2022}, 100, {ease: FlxEase.none});
+					FlxTween.tween(dad, {y: -2022}, 100, {ease: FlxEase.none});
 				case 1024:
 					FlxTween.tween(boyfriend, {y: 450}, 0.9, {ease: FlxEase.sineIn});
 					FlxTween.tween(gf, {y: 130}, 0.9, {ease: FlxEase.sineIn});

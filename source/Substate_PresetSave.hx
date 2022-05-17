@@ -50,7 +50,7 @@ class Substate_PresetSave extends MusicBeatSubstate
 		add(chooseName);
 
 		name = new FlxUIInputText(10, 10, FlxG.width, '', 8);
-		name.setFormat(Paths.font("comic.ttf"), 50, FlxColor.WHITE, RIGHT);
+		name.setFormat(Paths.font("calibri.ttf"), 50, FlxColor.WHITE, RIGHT);
 		name.alignment = CENTER;
 		name.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		name.screenCenter();
