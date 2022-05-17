@@ -1607,44 +1607,12 @@ class PlayState extends MusicBeatState
 				{
 					item.x -= 50;
 				}
-				if (FileSystem.exists('assets/data/' + SONG.song.toLowerCase() + '/scripts/chart.hx'))
-				{
-					modState.set("strum0", strumLineNotes.members[0]);
-					modState.set("strum1", strumLineNotes.members[1]);
-					modState.set("strum2", strumLineNotes.members[2]);
-					modState.set("strum3", strumLineNotes.members[3]);
-					modState.set("strum4", strumLineNotes.members[4]);
-					modState.set("strum5", strumLineNotes.members[5]);
-					modState.set("strum6", strumLineNotes.members[6]);
-					modState.set("strum7", strumLineNotes.members[7]);
-					modState.set("strum8", strumLineNotes.members[8]);
-					modState.set("strum9", strumLineNotes.members[9]);
-					hscript();
-					if (FileSystem.exists('assets/data/' + SONG.song.toLowerCase() + '/scripts/start.hx'))
-						loadStartScript();
-					trace('SOME MODIFIERS ARE DISABLED! THEY WONT WORK PROPERLY WITH MODCHARTS');
-				}
 			}
 			else
 			{
 				if (_variables.scroll != 'left' && _variables.scroll != 'right')
 					generateStaticArrows(0);
 				generateStaticArrows(1);
-				if (FileSystem.exists('assets/data/' + SONG.song.toLowerCase() + '/scripts/chart.hx'))
-				{
-					modState.set("strum0", strumLineNotes.members[0]);
-					modState.set("strum1", strumLineNotes.members[1]);
-					modState.set("strum2", strumLineNotes.members[2]);
-					modState.set("strum3", strumLineNotes.members[3]);
-					modState.set("strum4", strumLineNotes.members[4]);
-					modState.set("strum5", strumLineNotes.members[5]);
-					modState.set("strum6", strumLineNotes.members[6]);
-					modState.set("strum7", strumLineNotes.members[7]);
-					hscript();
-					if (FileSystem.exists('assets/data/' + SONG.song.toLowerCase() + '/scripts/start.hx'))
-						loadStartScript();
-					trace('SOME MODIFIERS ARE DISABLED! THEY WONT WORK PROPERLY WITH MODCHARTS');
-				}
 			}
 		}
 
@@ -3168,9 +3136,9 @@ class PlayState extends MusicBeatState
 			switch (curStep)
 			{
 				case 1:
-					FlxTween.tween(boyfriend, {y: -2022}, 100, {ease: FlxEase.none});
-					FlxTween.tween(gf, {y: -2022}, 100, {ease: FlxEase.none});
-					FlxTween.tween(dad, {y: -2022}, 100, {ease: FlxEase.none});
+					FlxTween.tween(boyfriend, {y: -2022}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(gf, {y: -2022}, 100, {ease: FlxEase.sineIn});
+					FlxTween.tween(dad, {y: -2022}, 100, {ease: FlxEase.sineIn});
 				case 1024:
 					FlxTween.tween(boyfriend, {y: 450}, 0.9, {ease: FlxEase.sineIn});
 					FlxTween.tween(gf, {y: 130}, 0.9, {ease: FlxEase.sineIn});
@@ -5495,63 +5463,6 @@ class PlayState extends MusicBeatState
 		return string;
 	}
 
-	/**
-	 * NOTICE: If lua aint enough to do ur wacky shit, use hscript :troll:
-	 * Its haxe but you dont need to compile it
-	**/
-	public function hscript()
-	{
-		if (FileSystem.exists('assets/data/' + SONG.song.toLowerCase() + '/scripts/chart.hx'))
-		{
-			// sets most of the variables
-			modState.set("FlxSprite", flixel.FlxSprite);
-			modState.set("FlxTimer", FlxTimer);
-			modState.set("File", sys.io.File);
-			modState.set("fs", FileSystem);
-			modState.set("Math", Math);
-			modState.set("Std", Std);
-			modState.set("FlxTween", FlxTween);
-			modState.set("FlxText", FlxText);
-			modState.set("camera", FlxG.camera);
-			modState.set("hud", camHUD);
-			modState.set("noteCamera", camNOTES);
-			modState.set("sustainCamera", camSus);
-			modState.set("noteHudCam", camNOTEHUD);
-			modState.set("gf", gf);
-			modState.set("dad", dad);
-			modState.set("boyfriend", boyfriend);
-			modState.set("beatHit", beatHit);
-			modState.set("stepHit", stepHit);
-			modState.set("add", addObject);
-			// beat shit
-			modState.set("step", curStep);
-			modState.set("beat", curBeat);
-
-			notes.forEachAlive(function(daNote:Note)
-			{
-				var mania:Int = 4;
-				if (_variables.fiveK)
-					mania = 5;
-				for (i in 0...mania)
-				{
-					if (daNote.noteData == i)
-						modState.set("note" + i, daNote);
-				}
-
-				modState.set("allNotes", daNote);
-			});
-		}
-	}
-
-	public function loadScript()
-	{
-		modState.executeString(File.getContent('assets/data/' + SONG.song.toLowerCase() + '/scripts/chart.hx'));
-	}
-
-	public function loadStartScript()
-	{
-		modState.executeString(File.getContent('assets/data/' + SONG.song.toLowerCase() + '/scripts/start.hx'));
-	}
 
 	public function addObject(object:flixel.FlxBasic) // fallback
 	{
