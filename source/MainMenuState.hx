@@ -120,7 +120,7 @@ class MainMenuState extends MusicBeatState
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0, Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
-		versionShit.setFormat("Comic Sans MS", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit.setFormat("Calibri", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
 		// NG.core.calls.event.logEvent('swag').send();
@@ -194,9 +194,9 @@ class MainMenuState extends MusicBeatState
 				if (optionShit[curSelected] == 'support')
 				{
 					#if linux
-					Sys.command('/usr/bin/xdg-open', ["https://ninja-muffin24.itch.io/funkin", "&"]);
+					Sys.command('/usr/bin/xdg-open', ["https://github.com/AKRGames/The-Stoopid-Mod", "&"]);
 					#else
-					FlxG.openURL('https://ninja-muffin24.itch.io/funkin');
+					FlxG.openURL('https://github.com/AKRGames/The-Stoopid-Mod');
 					#end
 					DiscordClient.changePresence("Pogger people donate, like me.", null);
 				}
