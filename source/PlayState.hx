@@ -3132,7 +3132,7 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(gf, {y: -2022}, 100, {ease: FlxEase.sineInOut});
 					FlxTween.tween(dad, {y: -2022}, 100, {ease: FlxEase.sineInOut});
 				case 128:
-					FlxG.camera.focusOn(camfollow.getPosition());
+					FlxG.camera.focusOn(camFollow.getPosition());
 					FlxTween.tween(FlxG.camera, {zoom: 0.005}, 1, {ease: FlxEase.sineOut});
 				case 1024:
 					FlxTween.tween(boyfriend, {y: 450}, 0.9, {ease: FlxEase.sineIn});
