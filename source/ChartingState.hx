@@ -159,9 +159,9 @@ class ChartingState extends MusicBeatState
 		add(dummyArrow);
 
 		var tabs = [
-			{name: "Song", label: 'Song'},
-			{name: "Section", label: 'Section'},
-			{name: "Note", label: 'Note'}
+			{name: "song", label: 'Song'},
+			{name: "section", label: 'Section'},
+			{name: "note", label: 'Note'}
 		];
 
 		UI_box = new FlxUITabMenu(null, tabs, true);
@@ -190,7 +190,7 @@ class ChartingState extends MusicBeatState
 		var UI_songTitle = new FlxUIInputText(10, 10, 70, _song.song, 8);
 		typingShit = UI_songTitle;
 
-		var check_voices = new FlxUICheckBox(10, 25, null, null, "Has voice track", 100);
+		var check_voices = new FlxUICheckBox(10, 25, null, null, "does it have a voice track?", 100);
 		check_voices.checked = _song.needsVoices;
 		// _song.needsVoices = check_voices.checked;
 		check_voices.callback = function()
@@ -199,7 +199,7 @@ class ChartingState extends MusicBeatState
 			trace('CHECKED!');
 		};
 
-		var check_mute_inst = new FlxUICheckBox(10, 200, null, null, "Mute Instrumental (in editor)", 100);
+		var check_mute_inst = new FlxUICheckBox(10, 200, null, null, "mute instrumental (in editor)", 100);
 		check_mute_inst.checked = false;
 		check_mute_inst.callback = function()
 		{
@@ -211,27 +211,27 @@ class ChartingState extends MusicBeatState
 			FlxG.sound.music.volume = vol;
 		};
 
-		var saveButton:FlxButton = new FlxButton(110, 8, "Save", function()
+		var saveButton:FlxButton = new FlxButton(110, 8, "save", function()
 		{
 			saveLevel();
 		});
 
-		var loadButton:FlxButton = new FlxButton(saveButton.x, saveButton.y + 30, "Load", function()
+		var loadButton:FlxButton = new FlxButton(saveButton.x, saveButton.y + 30, "load", function()
 		{
 			load();
 		});
 
-		var reloadSong:FlxButton = new FlxButton(saveButton.x + saveButton.width + 10, saveButton.y, "Reload Audio", function()
+		var reloadSong:FlxButton = new FlxButton(saveButton.x + saveButton.width + 10, saveButton.y, "reload audio", function()
 		{
 			loadSong(_song.song);
 		});
 
-		var reloadSongJson:FlxButton = new FlxButton(reloadSong.x, saveButton.y + 30, "Reload JSON", function()
+		var reloadSongJson:FlxButton = new FlxButton(reloadSong.x, saveButton.y + 30, "reload JSON", function()
 		{
 			loadJson(_song.song.toLowerCase());
 		});
 
-		var restart = new FlxButton(10, 140, "Reset", function()
+		var restart = new FlxButton(10, 140, "reset", function()
 		{
 			for (ii in 0..._song.notes.length)
 			{
@@ -319,14 +319,14 @@ class ChartingState extends MusicBeatState
 
 		var stepperCopy:FlxUINumericStepper = new FlxUINumericStepper(110, 130, 1, 1, -999, 999, 0);
 
-		var copyButton:FlxButton = new FlxButton(10, 130, "Copy last section", function()
+		var copyButton:FlxButton = new FlxButton(10, 130, "copy the last section", function()
 		{
 			copySection(Std.int(stepperCopy.value));
 		});
 
-		var clearSectionButton:FlxButton = new FlxButton(10, 150, "Clear", clearSection);
+		var clearSectionButton:FlxButton = new FlxButton(10, 150, "clear", clearSection);
 
-		var swapSection:FlxButton = new FlxButton(10, 170, "Swap section", function()
+		var swapSection:FlxButton = new FlxButton(10, 170, "swap section", function()
 		{
 			var mania = 4;
 			if (_variables.fiveK)
@@ -340,18 +340,18 @@ class ChartingState extends MusicBeatState
 			}
 		});
 
-		check_mustHitSection = new FlxUICheckBox(10, 30, null, null, "Must hit section", 100);
+		check_mustHitSection = new FlxUICheckBox(10, 30, null, null, "player side?", 100);
 		check_mustHitSection.name = 'check_mustHit';
 		check_mustHitSection.checked = true;
 		// _song.needsVoices = check_mustHit.checked;
 
-		check_altAnim = new FlxUICheckBox(10, 400, null, null, "Alt Animation", 100);
+		check_altAnim = new FlxUICheckBox(10, 400, null, null, "alt animation", 100);
 		check_altAnim.name = 'check_altAnim';
 
 		check_changeBPM = new FlxUICheckBox(10, 60, null, null, 'Change BPM', 100);
 		check_changeBPM.name = 'check_changeBPM';
 
-		var refreshSection:FlxButton = new FlxButton(200, 30, "Refresh Section", function()
+		var refreshSection:FlxButton = new FlxButton(200, 30, "refresh section", function()
 		{
 			updateGrid();
 		});
@@ -382,13 +382,13 @@ class ChartingState extends MusicBeatState
 		tab_group_note.name = 'Note';
 
 		writingNotesText = new FlxUIText(20, 100, 0, "");
-		writingNotesText.setFormat("Arial", 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		writingNotesText.setFormat("Calibri", 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 		stepperSusLength = new FlxUINumericStepper(10, 10, Conductor.stepCrochet / 2, 0, 0, Conductor.stepCrochet * _song.notes[curSection].lengthInSteps * 4);
 		stepperSusLength.value = 0;
 		stepperSusLength.name = 'note_susLength';
 
-		noteRollCheckmark = new FlxUICheckBox(10, 40, null, null, "Are sustain notes rolls?", 100);
+		noteRollCheckmark = new FlxUICheckBox(10, 40, null, null, "are sustain notes rolls?", 100);
 		noteRollCheckmark.name = 'note_isSusRoll';
 		noteRollCheckmark.checked = false;
 
@@ -464,9 +464,9 @@ class ChartingState extends MusicBeatState
 				case 'Change BPM':
 					_song.notes[curSection].changeBPM = check.checked;
 					FlxG.log.add('changed bpm shit');
-				case "Alt Animation":
+				case "alt animation":
 					_song.notes[curSection].altAnim = check.checked;
-				case "Are sustain notes rolls?":
+				case "are sustain notes rolls?":
 					if (curSelectedNote == null)
 						return;
 
@@ -827,9 +827,9 @@ class ChartingState extends MusicBeatState
 		bpmTxt.text = bpmTxt.text = Std.string(FlxMath.roundDecimal(Conductor.songPosition / 1000, 2))
 			+ " / "
 			+ Std.string(FlxMath.roundDecimal(FlxG.sound.music.length / 1000, 2))
-			+ "\nSection: "
+			+ "\nsection: "
 			+ curSection
-			+ "\nCurStep: "
+			+ "\ncurStep: "
 			+ curStep;
 		super.update(elapsed);
 	}

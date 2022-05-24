@@ -43,8 +43,8 @@ class VideoState extends MusicBeatState
 	public var videoFrames:Int = 0;
 	public var defaultText:String = "";
 	public var doShit:Bool = false;
-	public var pauseText:String = "Press P to pause/unpause.";
-	public var skipText:String = "Press to skip.";
+	public var pauseText:String = "press P to pause/unpause.";
+	public var skipText:String = "press to skip.";
 	public var autoPause:Bool = false;
 	public var musicPaused:Bool = false;
 	public var file:String = "";
@@ -72,14 +72,14 @@ class VideoState extends MusicBeatState
 
 		if (skip)
 		{
-			skipText = "Press "
+			skipText = "press "
 				+ Controls.keyboardMap.get("ACCEPT").toString()
 				+ " or "
 				+ Controls.keyboardMap.get("ACCEPT (ALTERNATE)").toString()
 				+ " to end the video. ";
 				
 			if (loadWEBM)
-				skipText + "Press E to load a webm file. (ONLY ACCEPTS WEBMS IN MODS/WEBMS/ FOLDER)";
+				skipText + "press E to load a webm file. (ONLY ACCEPTS WEBMS IN MODS/WEBMS/ FOLDER)";
 		}
 	}
 
@@ -121,18 +121,18 @@ class VideoState extends MusicBeatState
 		#end
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
-		var html5Text:String = "You Are Not Using HTML5...\nThe Video Didnt Load!";
+		var html5Text:String = "you are not using HTML5...\nthe video didn't load.";
 		if (isHTML)
 		{
-			html5Text = "You Are Using HTML5!";
+			html5Text = "you are using HTML5!";
 		}
-		defaultText = "If Your On HTML5\nTap Anything...\nThe Bottom Text Indicates If You\nAre Using HTML5...\n\n" + html5Text;
+		defaultText = "if you're on HTML5\ntap anything...\nthe bottom text indicates if you\nare using HTML5...\n\n" + html5Text;
 		txt = new FlxText(0, 0, FlxG.width, defaultText, 32);
 		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
 
 		txt2 = new FlxText(3, FlxG.height - 18, 0, skipText, 32);
-		txt2.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, CENTER);
+		txt2.setFormat("Calibri", 16, FlxColor.WHITE, CENTER);
 		txt2.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		// txt2.screenCenter();
 
@@ -363,7 +363,7 @@ class VideoState extends MusicBeatState
 		_load.removeEventListener(Event.COMPLETE, onLoadComplete);
 		_load.removeEventListener(IOErrorEvent.IO_ERROR, onLoadError);
 		_load = null;
-		FlxG.log.error("Problem loading webm data");
+		FlxG.log.error("Problem loading WEBM data");
 	}
 
 	function onLoadComplete(_):Void

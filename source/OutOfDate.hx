@@ -27,16 +27,16 @@ class OutOfDate extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
-			"Uh oh! Your version of the mod seems to be outdated.\n"
-			+ "Fortunatly, you can update the game from "
+			"uh oh! your version of the mod seems to be outdated.\n"
+			+ "fortunatly, you can update the game from "
 			+ Application.current.meta.get('version')
 			+ " to "
 			+ needVer
 			+ " for free. "
-			+ "New features include:\n"
+			+ "new features include:\n"
 			+ changelog
-			+ " All you have to do is press ENTER to go to its official page and grab the latest build from there."
-			+ "!\nYou can always ignore this by pressing BACK.",
+			+ " all you have to do is press ENTER to go to its official page and grab the latest build from there."
+			+ "!\nyou can always ignore this by pressing BACK.",
 			32);
 		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();

@@ -69,7 +69,7 @@ class MainMenuState extends MusicBeatState
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
-		bg.angle = 179;
+		bg.angle = 180;
 		add(bg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
