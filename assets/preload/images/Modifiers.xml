@@ -4,8 +4,8 @@
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Accelerant Notes Idle0000" x="2" y="2" width="194" height="186"/>
 	<SubTexture name="Accelerant Notes Select0000" x="198" y="2" width="194" height="186"/>
-	<SubTexture name="Only your GF can be a BADdie! (GFC)" x="394" y="2" width="194" height="183"/>
-	<SubTexture name="Only your GF can be a BADdie! (GFC)" x="590" y="2" width="194" height="183"/>
+	<SubTexture name="Only your GF can be a BADdie! (GFC) Idle0000" x="394" y="2" width="194" height="183"/>
+	<SubTexture name="Only your GF can be a BADdie! (GFC) Select0000 " x="590" y="2" width="194" height="183"/>
 	<SubTexture name="Across the Ass Idle0000" x="786" y="2" width="194" height="186"/>
 	<SubTexture name="Across the Ass Select0000" x="982" y="2" width="194" height="186"/>
 	<SubTexture name="Brightness Idle0000" x="1178" y="2" width="194" height="186"/>

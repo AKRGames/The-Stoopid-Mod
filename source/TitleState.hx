@@ -98,7 +98,7 @@ class TitleState extends MusicBeatState
 		else
 			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 
-		FlxG.sound.music.fadeIn(4, 0, 0.7 * _variables.mvolume / 100);
+		FlxG.sound.music.fadeIn(4, 0, 0f * _variables.mvolume / 100);
 
 		Conductor.changeBPM(102);
 		persistentUpdate = true;

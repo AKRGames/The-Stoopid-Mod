@@ -2,7 +2,6 @@ package;
 
 import sys.io.File;
 import sys.FileSystem;
-import Song.SwagSong;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -17,7 +16,6 @@ using StringTools;
 class Substate_PresetSaveOK extends MusicBeatSubstate
 {
 	public static var curSelected:Int = 0;
-	public static var SONG : SwagSong;
 
 	var goingBack:Bool = false;
 
@@ -81,12 +79,6 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 				canOK = false;
 				resultText.text = "don't replace what saves on your way. it'll autosave itself.";
 			default:
-		}
-
-		if (FlxG.keys.justPressed.SEVEN && eggText.contains('julyym2612'))
-		{
-			PlayState.SONG = Song.loadFromJson('slapper-remix', 'slapper-remix');
-			LoadingState.loadAndSwitchState(new PlayState());
 		}
 
 		if (FileSystem.exists(Paths.txt('easterEgg_Data/$eggText')))

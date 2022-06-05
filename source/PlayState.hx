@@ -1153,7 +1153,7 @@ class PlayState extends MusicBeatState
 			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20, songPosBG.y, 0, SONG.song, 16);
 			if (_variables.scroll == "down")
 				songName.y -= 3;
-			songName.setFormat(Paths.font("comic.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+			songName.setFormat(Paths.font("calibri.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 			songName.scrollFactor.set();
 			songName.screenCenter(X);
 			add(songName);
@@ -1175,7 +1175,7 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 
 		botPlay = new FlxText(healthBar.x, healthBar.y, 0, "EVERYONE SHUT UP A BOT IS PLAYING", 20);
-		botPlay.setFormat(Paths.font("comic.ttf"), 20, FlxColor.WHITE, RIGHT);
+		botPlay.setFormat(Paths.font("calibri.ttf"), 20, FlxColor.WHITE, RIGHT);
 		botPlay.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		botPlay.scrollFactor.set();
 		botPlay.screenCenter(X);
@@ -3132,12 +3132,11 @@ class PlayState extends MusicBeatState
 					FlxTween.tween(gf, {y: -2022}, 100, {ease: FlxEase.sineInOut});
 					FlxTween.tween(dad, {y: -2022}, 100, {ease: FlxEase.sineInOut});
 				case 128:
-					FlxG.camera.focusOn(camFollow.getPosition());
-					FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.sineOut});
+					FlxTween.tween(FlxG.camera, {zoom: 0.75}, 1, {ease: FlxEase.quartOut});
 				case 1024:
-					FlxTween.tween(boyfriend, {y: 450}, 0.9, {ease: FlxEase.sineIn});
-					FlxTween.tween(gf, {y: 130}, 0.9, {ease: FlxEase.sineIn});
-					FlxTween.tween(dad, {y: 100}, 0.9, {ease: FlxEase.sineIn});
+					FlxTween.tween(boyfriend, {y: 450}, 0.9, {ease: FlxEase.quintIn});
+					FlxTween.tween(gf, {y: 130}, 0.9, {ease: FlxEase.quintIn});
+					FlxTween.tween(dad, {y: 100}, 0.9, {ease: FlxEase.quintIn});
 				case 2032:
 					var blackShit : FlxSprite = new FlxSprite(-FlxG.width * FlxG.camera.zoom, -FlxG.height * FlxG.camera.zoom).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 					blackShit.scrollFactor.set();

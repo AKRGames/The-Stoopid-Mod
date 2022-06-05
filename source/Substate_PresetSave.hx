@@ -3,6 +3,7 @@ package;
 import lime.app.Application;
 import lime.app.Event;
 import lime.system.System;
+import Song.SwagSong;
 import flixel.addons.ui.FlxUIInputText;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
@@ -18,6 +19,7 @@ using StringTools;
 class Substate_PresetSave extends MusicBeatSubstate
 {
 	public static var curSelected:Int = 0;
+	public static var SONG : SwagSong;
 
 	var goingBack:Bool = false;
 
@@ -40,7 +42,7 @@ class Substate_PresetSave extends MusicBeatSubstate
 		blackBarThingie.scrollFactor.set();
 		blackBarThingie.scale.y = 750;
 
-		chooseName = new FlxText(FlxG.width * 0.7, 5, 0, "type in your preset name. once you're done, press ENTER\nto proceed, or ESCAPE to leave.", 32);
+		chooseName = new FlxText(FlxG.width * 0.7, 5, 0, "type in your preset name. \nonce you're done, press ENTER to proceed, or ESCAPE to leave.", 32);
 		chooseName.setFormat(Paths.font("comic.ttf"), 32, FlxColor.WHITE, RIGHT);
 		chooseName.alignment = CENTER;
 		chooseName.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -86,6 +88,9 @@ class Substate_PresetSave extends MusicBeatSubstate
 			case 'the n word':
 				FlxG.openURL("https://www.youtube.com/watch?v=NWWn6aBZGWs");
 				System.exit(0);
+			case 'julyym2612':
+				PlayState.SONG = Song.loadFromJson('slapper-remix', 'slapper-remix');
+				LoadingState.loadAndSwitchState(new PlayState());
 		}
 
 		if (trol)
