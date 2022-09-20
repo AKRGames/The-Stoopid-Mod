@@ -3,7 +3,6 @@ package;
 import lime.app.Application;
 import lime.app.Event;
 import lime.system.System;
-import Song.SwagSong;
 import flixel.addons.ui.FlxUIInputText;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
@@ -19,7 +18,6 @@ using StringTools;
 class Substate_PresetSave extends MusicBeatSubstate
 {
 	public static var curSelected:Int = 0;
-	public static var SONG : SwagSong;
 
 	var goingBack:Bool = false;
 
@@ -88,9 +86,6 @@ class Substate_PresetSave extends MusicBeatSubstate
 			case 'the n word':
 				FlxG.openURL("https://www.youtube.com/watch?v=NWWn6aBZGWs");
 				System.exit(0);
-			case 'julyym2612':
-				PlayState.SONG = Song.loadFromJson('slapper-remix', 'slapper-remix');
-				LoadingState.loadAndSwitchState(new PlayState());
 		}
 
 		if (trol)
@@ -108,9 +103,9 @@ class Substate_PresetSave extends MusicBeatSubstate
 			{
 				goingBack = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
-				FlxTween.tween(blackBarThingie, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
-				FlxTween.tween(name, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
-				FlxTween.tween(chooseName, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
+				FlxTween.tween(blackBarThingie, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
+				FlxTween.tween(name, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
+				FlxTween.tween(chooseName, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
 				new FlxTimer().start(0.5, function(tmr:FlxTimer)
 				{
 					FlxG.state.closeSubState();
@@ -128,17 +123,16 @@ class Substate_PresetSave extends MusicBeatSubstate
 
 			if (FlxG.keys.justPressed.ENTER && name.text != '')
 			{
-				if (name.text.toLowerCase() == 'fm no.42 pcm no.04 da no.21') //Sonic CD reference???? :flushed:
-				{
-					FlxG.switchState(new EasterEggImages());
-					EasterEggImages.song = '';
-					EasterEggImages.image = 'Daddy';
-				}
-				else
-				{
-					nameResult = name.text;
-					FlxG.state.closeSubState();
-					FlxG.state.openSubState(new Substate_PresetSaveOK());
+				switch (name.text)
+				{ 
+					case "fm no.42 pcm no.04 da no.21" | "daddy dearest - endless": //Sonic CD reference???? :flushed:
+						FlxG.switchState(new EasterEggImages());
+						EasterEggImages.song = 'endless';
+						EasterEggImages.image = 'Daddy';
+					default:
+						nameResult = name.text;
+						FlxG.state.closeSubState();
+						FlxG.state.openSubState(new Substate_PresetSaveOK());
 				}
 			}
 		}

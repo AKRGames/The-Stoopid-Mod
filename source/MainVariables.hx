@@ -205,18 +205,18 @@ class MainVariables
 				if (FlxG.random.bool(50))
 				{
 					if (FlxG.random.bool(50))
-						randomShit = "There was an error reading the config file.";
+						randomShit = "we couldn't read the config file.";
 					else
-						randomShit = "Skill issue.";
+						randomShit = "skill issue.";
 				}
 				else
 				{
 					if (FlxG.random.bool(50))
-						randomShit = "There were some troubles reading the config file.";
+						randomShit = "your config file was IMPOSSIBLE to comprehend.";
 					else
-						randomShit = "m8 u forgot something";
+						randomShit = "m8 u forgot something.";
 				}
-				Application.current.window.alert(randomShit + '\nDETAILS: ' + error, 'Error');
+				Application.current.window.alert(randomShit + '\nDETAILS: ' + error, 'uh oh');
 			}
 		}
 

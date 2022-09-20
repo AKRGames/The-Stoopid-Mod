@@ -61,7 +61,7 @@ class PlaySelection extends MusicBeatState
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
-		bg.y -= bg.height;
+		bg.y = -30;
 		add(bg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
@@ -95,8 +95,7 @@ class PlaySelection extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " select", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.alpha = 0;
-			FlxTween.tween(menuItem, { alpha: 1}, 1.3, { ease: FlxEase.expoInOut });
+			menuItem.alpha = 1;
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set(1, 0);
 			menuItem.antialiasing = true;
@@ -105,12 +104,9 @@ class PlaySelection extends MusicBeatState
 
 		FlxG.camera.follow(camFollow, null, camLerp);
 
-		FlxG.camera.zoom = 3;
-		side.alpha = checker.alpha = 0;
-		FlxTween.tween(FlxG.camera, { zoom: 1}, 1.2, { ease: FlxEase.expoInOut });
-		FlxTween.tween(bg, { y:-30}, 1, { ease: FlxEase.quartInOut,});
-		FlxTween.tween(side, { alpha:1}, 1, { ease: FlxEase.quartInOut});
-		FlxTween.tween(checker, { alpha:1}, 1.15, { ease: FlxEase.quartInOut});
+		FlxG.camera.zoom = 2.5;
+		FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.circOut});
+		side.alpha = checker.alpha = 1;
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -118,7 +114,7 @@ class PlaySelection extends MusicBeatState
 
 		super.create();
 
-		new FlxTimer().start(1.1, function(tmr:FlxTimer)
+		new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				selectable = true;
 			});
@@ -172,11 +168,6 @@ class PlaySelection extends MusicBeatState
 
 				DiscordClient.changePresence("Back to the Main Menu.",  null);
 
-				FlxTween.tween(FlxG.camera, { zoom: 2}, 0.4, { ease: FlxEase.expoIn});
-				FlxTween.tween(bg, { y: 0-bg.height}, 0.4, { ease: FlxEase.expoIn });
-				FlxTween.tween(side, { alpha:0}, 0.4, { ease: FlxEase.quartInOut});
-				FlxTween.tween(checker, { alpha:0}, 0.4, { ease: FlxEase.quartInOut});
-
 				selectedSomethin = true;
 			}
 
@@ -189,21 +180,21 @@ class PlaySelection extends MusicBeatState
 
 				menuItems.forEach(function(spr:FlxSprite)
 				{
-					FlxTween.tween(FlxG.camera, { zoom: 12}, 0.8, { ease: FlxEase.expoIn, startDelay: 0.4});
-					FlxTween.tween(bg, { y: 0-bg.height}, 1.6, { ease: FlxEase.expoIn });
-					FlxTween.tween(side, { alpha:0}, 0.6, { ease: FlxEase.quartInOut, startDelay: 0.3});
-					FlxTween.tween(checker, { alpha:0}, 0.6, { ease: FlxEase.quartInOut, startDelay: 0.3});
+					FlxTween.tween(FlxG.camera, {zoom: 12.5}, 0.6, {ease: FlxEase.circIn, startDelay: 0.4});
+					FlxTween.tween(bg, {y: 0-bg.height}, 1, {ease: FlxEase.circIn});
+					FlxTween.tween(side, {alpha:0}, 0.5, {ease: FlxEase.circIn, startDelay: 0.3});
+					FlxTween.tween(checker, {alpha:0}, 0.5, {ease: FlxEase.circIn, startDelay: 0.3});
 
-					FlxTween.tween(spr, {y: -48000}, 2.5, {
-						ease: FlxEase.expoIn,
+					FlxTween.tween(spr, {y: -50000, alpha: 0}, 2.5, {
+						ease: FlxEase.sineOut,
 						onComplete: function(twn:FlxTween)
 						{
 							spr.scale.y = 20;
 						}
 					});
-					FlxTween.tween(spr, {'scale.y': 2000}, 1.4, {ease: FlxEase.cubeIn});
+					FlxTween.tween(spr, {'scale.y': 2500, alpha: 0}, 1, {ease: FlxEase.sineIn});
 
-					new FlxTimer().start(0.7, function(tmr:FlxTimer)
+					new FlxTimer().start(1, function(tmr:FlxTimer)
 						{
 							var daChoice:String = optionShit[curSelected];
 
@@ -211,22 +202,24 @@ class PlaySelection extends MusicBeatState
 							{
 								case 'week':
 									FlxG.switchState(new MenuWeek());
-									DiscordClient.changePresence("Going to select a week.",  null);
+									DiscordClient.changePresence("story moding rn.",  null);
 								case 'freeplay':
 									FlxG.switchState(new MenuFreeplay());
-									DiscordClient.changePresence("Am bored, so I freeplay.",  null);
+									DiscordClient.changePresence("i hate stories so i freeplay.",  null);
 								case 'modifier':
 									FlxG.switchState(new MenuModifiers());
-									DiscordClient.changePresence("Time to spice the game.",  null);
+									DiscordClient.changePresence("how flexible can the game be?.",  null);
 								case 'marathon':
 									FlxG.switchState(new MenuMarathon());
-									DiscordClient.changePresence("I wanna make a marathon.",  null);
+									DiscordClient.changePresence("splitathon.",  null);
 								case 'survival':
 									FlxG.switchState(new MenuSurvival());
-									DiscordClient.changePresence("This feels like Total Drama Island already.",  null);
+									DiscordClient.changePresence("minecraft.",  null);
 								case 'endless':
+									FlxG.sound.music.fadeOut(0, 0);
+									FlxG.sound.music.stop();
 									FlxG.switchState(new MenuEndless());
-									DiscordClient.changePresence("Endless easy SMM2 moment.",  null);
+									DiscordClient.changePresence("majin sonic moment.",  null);
 							}
 						});
 				});
@@ -238,7 +231,7 @@ class PlaySelection extends MusicBeatState
 				if (spr.ID == curSelected)
 				{
 					camFollow.y = spr.getGraphicMidpoint().y;
-					camFollow.x = FlxMath.lerp(camFollow.x, spr.getGraphicMidpoint().x + 43, camLerp/(_variables.fps/60));
+					camFollow.x = FlxMath.lerp(camFollow.x, spr.getGraphicMidpoint().x + 32, camLerp/(_variables.fps/60));
 				}
 			});
 
@@ -266,6 +259,6 @@ class PlaySelection extends MusicBeatState
 			spr.updateHitbox();
 		});
 
-		DiscordClient.changePresence("Play Selection: "+optionShit[curSelected].toUpperCase(),  null);
+		DiscordClient.changePresence("play selection: "+optionShit[curSelected].toUpperCase(),  null);
 	}
 }

@@ -21,7 +21,7 @@ class EasterEggImages extends MusicBeatState
         add(eggImage);
 
         if (song != '')
-            FlxG.sound.play(song);
+            FlxG.sound.playMusic(Paths.music(song));
     }
 
     override function update(elapsed:Float)

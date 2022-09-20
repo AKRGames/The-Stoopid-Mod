@@ -30,7 +30,7 @@ class Marathon_Edit extends MusicBeatSubstate
 		add(blackBarThingie);
         blackBarThingie.scrollFactor.set();
         blackBarThingie.scale.x = 0;
-        FlxTween.tween(blackBarThingie, { 'scale.x': 900}, 0.5, { ease: FlxEase.expoOut});
+        FlxTween.tween(blackBarThingie, { 'scale.x': 1000}, 0.5, { ease: FlxEase.circOut});
 
         grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -69,10 +69,10 @@ class Marathon_Edit extends MusicBeatSubstate
                 {
                     goingBack = true;
                     FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
-                    FlxTween.tween(blackBarThingie, { 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                    FlxTween.tween(blackBarThingie, { 'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
                     for (item in grpSongs.members)
                         {
-                            FlxTween.tween(item, { 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                            FlxTween.tween(item, { 'scale.x': 0}, 0.25, {ease: FlxEase.expoIn});
                         }
                     new FlxTimer().start(0.6, function(tmr:FlxTimer)
                         {

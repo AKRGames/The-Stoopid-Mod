@@ -189,9 +189,11 @@ class Note extends FlxSprite
 						}
 
 					default:
-						// thanks catte
-						loadGraphic(Paths.image('arrowMINE', 'shared'), true, 153, 153);
-						animation.add('mineScroll', [0]);
+						// sorry catte
+						// loadGraphic(Paths.image('arrowMINE', 'shared'), true, 153, 153);
+						// animation.add('mineScroll', [0]);
+						frames = Paths.getSparrowAtlas('arrowMINE', 'shared');
+						animation.addByPrefix('mineScroll', 'mineScroll');
 						setGraphicSize(Std.int(width * 0.7));
 						updateHitbox();
 						antialiasing = true;
@@ -232,9 +234,11 @@ class Note extends FlxSprite
 									}		
 							}
 					default:
-						// thanks catte
-						loadGraphic(Paths.image('arrowDEATH', 'shared'), true, 153, 153);
-						animation.add('deathScroll', [0]);
+						// sorry catte
+						// loadGraphic(Paths.image('arrowDEATH', 'shared'), true, 153, 153);
+						// animation.add('deathScroll', [0]);
+						frames = Paths.getSparrowAtlas('arrowDEATH', 'shared');
+						animation.addByPrefix('deathScroll', 'deathScroll');
 						setGraphicSize(Std.int(width * 0.7));
 						updateHitbox();
 						antialiasing = true;

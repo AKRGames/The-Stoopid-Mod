@@ -24,7 +24,7 @@ class AutoOffsetState extends MusicBeatState
 
 	public static var forceEasterEgg:Int = 0;
 
-	var font:Array<String> = [Paths.font("Funkin-Bold.otf"), Paths.font("vcr.ttf")];
+	var font:Array<String> = [Paths.font("comic.ttf"), Paths.font("calibri.ttf")];
 
 	var hitBeats:Int = 0;
 	var offsetCalc:Int = 0;
@@ -81,21 +81,21 @@ class AutoOffsetState extends MusicBeatState
 		add(speakers);
 
 		// Init Text
-		offsetText = new FlxText(0, 235, 1280, "", 58);
+		offsetText = new FlxText(0, 235, 1280, "", 50);
 		offsetText.scrollFactor.set(0, 0);
-		offsetText.setFormat(font[easterEgg ? 1 : 0], 58, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		offsetText.setFormat(font[easterEgg ? 1 : 0], 50, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		offsetText.borderSize = 3;
 		offsetText.borderQuality = 1;
 		offsetText.alpha = 0;
 
-		previousText = new FlxText(0, 400, 1280, "", 58);
+		previousText = new FlxText(0, 400, 1280, "", 50);
 		previousText.scrollFactor.set(0, 0);
-		previousText.setFormat(font[easterEgg ? 1 : 0], 58, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		previousText.setFormat(font[easterEgg ? 1 : 0], 50, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		previousText.borderSize = 3;
 		previousText.borderQuality = 1;
 		previousText.alpha = 0;
 
-		descText = new FlxText(320, 540, 640, "Tap any key to the beat of the music!\n", 40);
+		descText = new FlxText(320, 540, 600, "tap any key to the beat of the music.\n", 40);
 		descText.scrollFactor.set(0, 0);
 		descText.setFormat(font[1], 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.borderSize = 2;
@@ -106,8 +106,8 @@ class AutoOffsetState extends MusicBeatState
 		add(previousText);
 		add(descText);
 
-		offsetText.text = "OFFSET\n" + offsetCalc + "ms\n";
-		previousText.text = "PREVIOUS\n0ms\n";
+		offsetText.text = "offset\n" + offsetCalc + "ms\n";
+		previousText.text = "previous\n0ms\n";
 
 		FlxG.camera.fade(FlxColor.BLACK, 0.5, true, function()
 		{
@@ -119,15 +119,15 @@ class AutoOffsetState extends MusicBeatState
 
 			offsetText.y -= 10;
 			offsetText.alpha = 0;
-			FlxTween.tween(offsetText, {y: offsetText.y + 10, alpha: 1}, 0.4, {ease: FlxEase.circOut, startDelay: 0});
+			FlxTween.tween(offsetText, {y: offsetText.y + 10, alpha: 1}, 1, {ease: FlxEase.backOut, startDelay: 0});
 
 			previousText.y -= 10;
 			previousText.alpha = 0;
-			FlxTween.tween(previousText, {y: previousText.y + 10, alpha: 1}, 0.4, {ease: FlxEase.circOut, startDelay: 0.6});
+			FlxTween.tween(previousText, {y: previousText.y + 10, alpha: 1}, 1, {ease: FlxEase.backOut, startDelay: 0.6});
 
 			descText.y -= 10;
 			descText.alpha = 0;
-			FlxTween.tween(descText, {y: descText.y + 10, alpha: 1}, 0.4, {ease: FlxEase.circOut, startDelay: 1.2});
+			FlxTween.tween(descText, {y: descText.y + 10, alpha: 1}, 1, {ease: FlxEase.backOut, startDelay: 1.2});
 		});
 	}
 
@@ -202,8 +202,8 @@ class AutoOffsetState extends MusicBeatState
 
 		offsetCalc = Std.int(offsetTotal / hitBeats);
 
-		offsetText.text = "OFFSET\n" + offsetCalc + "ms\n";
-		previousText.text = "PREVIOUS\n" + offsetAdd + "ms\n";
+		offsetText.text = "offset:\n" + offsetCalc + "ms\n";
+		previousText.text = "previous:\n" + offsetAdd + "ms\n";
 
 		speakers.animation.play("bump", true);
 
@@ -212,15 +212,16 @@ class AutoOffsetState extends MusicBeatState
 
 	function updateOverrideText():Void
 	{
-		offsetText.text = "OFFSET\n" + offsetCalc;
+		offsetText.text = "offset:\n" + offsetCalc;
 	}
 
-	function endSong():Void
+	function endSong() : Void
 	{
-		FlxTween.tween(offsetText, {y: offsetText.y - 10, alpha: 0}, 0.4, {ease: FlxEase.circOut, startDelay: 0.6});
-		FlxTween.tween(previousText, {y: previousText.y - 10, alpha: 0}, 0.4, {ease: FlxEase.circOut, startDelay: 0.3});
-		FlxTween.tween(descText, {y: descText.y - 10, alpha: 0}, 0.4, {ease: FlxEase.circOut, startDelay: 0});
-		new FlxTimer().start(0.9, function(tmr:FlxTimer)
+		FlxG.camera.fade(FlxColor.BLACK, 2);
+		FlxTween.tween(offsetText, {y: offsetText.y - 10, alpha: 0}, 1, {ease: FlxEase.backIn, startDelay: 0.6});
+		FlxTween.tween(previousText, {y: previousText.y - 10, alpha: 0}, 1, {ease: FlxEase.backIn, startDelay: 0.3});
+		FlxTween.tween(descText, {y: descText.y - 10, alpha: 0}, 1, {ease: FlxEase.backIn, startDelay: 0});
+		new FlxTimer().start(2, function(tmr:FlxTimer)
 		{
 			exit();
 		});

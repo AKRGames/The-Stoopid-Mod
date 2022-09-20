@@ -48,8 +48,8 @@ class Substate_ChartType extends MusicBeatSubstate
 		checker.scrollFactor.set(0.07, 0.07);
 
         gradientBar.alpha = checker.alpha = 0;
-        FlxTween.tween(checker, { alpha:1}, 1.2, { ease: FlxEase.quartInOut});
-        FlxTween.tween(gradientBar, { alpha:1}, 1.2, { ease: FlxEase.quartInOut});
+        FlxTween.tween(checker, { alpha:1}, 1.2, { ease: FlxEase.expoOut});
+        FlxTween.tween(gradientBar, { alpha:1}, 1.2, { ease: FlxEase.expoOut});
 
         menuItems = new FlxTypedGroup<FlxSprite>();
         add(menuItems);
@@ -72,7 +72,7 @@ class Substate_ChartType extends MusicBeatSubstate
             menuItem.scrollFactor.y = 1;
 
             menuItem.x = 2000;
-            FlxTween.tween(menuItem, { x: 800}, 0.15, { ease: FlxEase.expoInOut });
+            FlxTween.tween(menuItem, {x: 800}, 0.125, {ease: FlxEase.backOut});
         }
 
         camFollow = new FlxObject(0, 0, 1, 1);
@@ -80,6 +80,7 @@ class Substate_ChartType extends MusicBeatSubstate
 
         new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
+                FlxG.camera.fade(FlxColor.BLACK, 0.25, true);
 				selectable = true;
                 FlxG.camera.follow(camFollow, null, camLerp);
 			});
@@ -110,16 +111,21 @@ class Substate_ChartType extends MusicBeatSubstate
             }
 
             if (controls.BACK)
+            {
+                FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
+                FlxG.camera.fade(FlxColor.BLACK, 0.25);
+                new FlxTimer().start(1, function(tmr:FlxTimer)
                 {
                     FlxG.resetState();
                     selectedSomethin = true;
-                }
+                });
+            }
         
             if (controls.ACCEPT)
             {
                 selectedSomethin = true;
 
-                FlxG.sound.playMusic(Paths.music("titleShoot"), _variables.mvolume/100);
+                FlxG.sound.playMusic(Paths.music("titleShoot"), _variables.mvolume/100, false);
 
                 var random = null;
 
@@ -166,27 +172,30 @@ class Substate_ChartType extends MusicBeatSubstate
                     else
                         PlayState.arrowLane2 = 3;
 
-                FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
+				DiscordClient.changePresence("LES GO", null);
 
-				DiscordClient.changePresence("Time to play!", null);
-
-                FlxG.sound.music.fadeOut(2.1, 0);
-
-                FlxTween.tween(FlxG.camera, { zoom:1.4}, 1.3, { ease: FlxEase.quartInOut});
-                FlxTween.tween(camFollow, { y:5000}, 1.3, { ease: FlxEase.quartInOut});
+                FlxTween.tween(FlxG.camera, {zoom:1.4}, 2, {ease: FlxEase.circOut});
+                FlxTween.tween(camFollow, {y:5000}, 2, {ease: FlxEase.circOut});
 
                 add(boombox);
 			    boombox.scale.set(0,0);
                 boombox.scrollFactor.set();
 			    boombox.alpha = 0;
+                boombox.angle = 69;
 
                 PlayState.chartType = Std.string(optionShit[curSelected]);
 
-				FlxTween.tween(boombox, { alpha:1, 'scale.x':0.5, 'scale.y':0.5}, 1.3, { ease: FlxEase.quartInOut});
+				FlxTween.tween(boombox, {alpha:1, 'scale.x':1, 'scale.y':1, angle: 0}, 2.5, {ease: FlxEase.backOut});
+                new FlxTimer().start(3.2, function(tmr:FlxTimer)
+                {
+                    FlxG.camera.fade(FlxColor.BLACK, 5);
+                });
 
-			    new FlxTimer().start(2.1, function(tmr:FlxTimer)
+			    new FlxTimer().start(10, function(tmr:FlxTimer)
 				{
+                    FlxG.sound.music.fadeOut(0.123, 0);
                     FlxG.sound.music.stop();
+                    // did this just in case lol
                     FlxG.sound.music.kill();
 					boombox.visible = false;
 					LoadingState.loadAndSwitchState(new PlayState(), true);

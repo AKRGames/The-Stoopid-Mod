@@ -39,7 +39,7 @@ class Marathon_Substate extends MusicBeatSubstate
 		add(blackBarThingie);
         blackBarThingie.scrollFactor.set();
         blackBarThingie.scale.x = 0;
-        FlxTween.tween(blackBarThingie, { 'scale.x': 300}, 0.5, { ease: FlxEase.expoOut});
+        FlxTween.tween(blackBarThingie, { 'scale.x': 300}, 0.5, { ease: FlxEase.circOut});
 
         presets = FileSystem.readDirectory('presets/marathon');
         presets.remove('current');
@@ -119,7 +119,7 @@ class Marathon_Substate extends MusicBeatSubstate
                 {
                     goingBack = true;
                     FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
-                    FlxTween.tween(blackBarThingie, { 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                    FlxTween.tween(blackBarThingie, { 'scale.x': 0}, 0.5, { ease: FlxEase.circIn});
                     new FlxTimer().start(0.6, function(tmr:FlxTimer)
                         {
                             FlxG.state.closeSubState();
@@ -156,7 +156,7 @@ class Marathon_Substate extends MusicBeatSubstate
 			            PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
                         PlayState.campaignScore = 0;
                                 
-                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 1500}, 0.5, { ease: FlxEase.expoIn});
+                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 1500}, 0.5, { ease: FlxEase.expoOut});
         
                         FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                         new FlxTimer().start(0.6, function(tmr:FlxTimer)
@@ -167,11 +167,11 @@ class Marathon_Substate extends MusicBeatSubstate
                     case 'exit':
                         goingBack = true;
                                 
-                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 1500}, 0.5, { ease: FlxEase.expoIn});
-                        FlxTween.tween(FlxG.camera, { 'zoom': 0.6, 'alpha': 0}, 0.5, { ease: FlxEase.expoIn});
+                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 1500}, 0.125, { ease: FlxEase.expoIn});
+                        FlxG.camera.fade(FlxColor.BLACK, 0.25);
         
                         FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
-                        new FlxTimer().start(0.6, function(tmr:FlxTimer)
+                        new FlxTimer().start(0.5, function(tmr:FlxTimer)
                         {
                             FlxG.switchState(new PlaySelection());
                         });
@@ -206,14 +206,14 @@ class Marathon_Substate extends MusicBeatSubstate
                                 menuItem.scale.set(0,0);
                             }
 
-                        FlxG.camera.flash(0xFFFF0000, 0.4, null, true);
+                        FlxG.camera.flash(0xFFFFFFFF, 0.5, null, true);
 
                         FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                     case 'save':
                         goingBack = true;
                         Substate_PresetSave.coming = "Marathon";
                             
-                        FlxTween.tween(blackBarThingie, { 'scale.x': 1500}, 0.5, { ease: FlxEase.expoIn});
+                        FlxTween.tween(blackBarThingie, { 'scale.x': 1500}, 0.5, { ease: FlxEase.expoOut});
     
                         FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                         new FlxTimer().start(0.6, function(tmr:FlxTimer)
@@ -225,7 +225,7 @@ class Marathon_Substate extends MusicBeatSubstate
                         goingBack = true;
                         Substate_PresetLoad.coming = "Marathon";
                                 
-                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 0}, 0.5, { ease: FlxEase.expoOut });
         
                         FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                         new FlxTimer().start(0.6, function(tmr:FlxTimer)
@@ -236,7 +236,7 @@ class Marathon_Substate extends MusicBeatSubstate
                     case 'edit':
                         goingBack = true;
                                     
-                        FlxTween.tween(blackBarThingie, { 'scale.y': 1500, 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                        FlxTween.tween(blackBarThingie, {'scale.x': 0}, 0.5, { ease: FlxEase.expoOut });
             
                         FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                         new FlxTimer().start(0.6, function(tmr:FlxTimer)

@@ -62,10 +62,11 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		if (PlayState.gameplayArea == "Marathon" || PlayState.gameplayArea == "Endless" || PlayState.gameplayArea == "Survival")
 		{
-			var press:FlxText = new FlxText(20, 15, 1200, "GAME OVER!\nGo back to try again.", 32);
+			bf.visible = false;
+			var press:FlxText = new FlxText(20, 15, 1200, "GAME OVER!\ntry again?", 32);
 			press.alignment = CENTER;
 			press.scrollFactor.set();
-			press.setFormat(Paths.font("vcr.ttf"), 72);
+			press.setFormat(Paths.font("comic.ttf"), 72);
 			press.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 			press.updateHitbox();
 			add(press);
@@ -73,7 +74,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			press.cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
 			press.alpha = 0;
-			FlxTween.tween(press, {alpha: 1, y: 550 - press.height}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+			FlxTween.tween(press, {alpha: 1, y: 550 - press.height}, 1, {ease: FlxEase.backOut, startDelay: 0.3});
 		}
 	}
 
@@ -87,25 +88,27 @@ class GameOverSubstate extends MusicBeatSubstate
 		}
 
 		if (controls.BACK)
-		{
+		{	
+			iHopeThisWorks();
 			PlayState.curDeaths = 0;
-			FlxG.sound.music.stop();
-
-			switch (PlayState.gameplayArea)
+			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				case "Story":
-					FlxG.switchState(new MenuWeek());
-				case "Freeplay":
-					FlxG.switchState(new MenuFreeplay());
-				case "Marathon":
-					FlxG.switchState(new MenuMarathon());
-				case "Endless":
-					FlxG.switchState(new MenuEndless());
-				case "Survival":
-					FlxG.switchState(new MenuSurvival());
-				case "Charting":
-					FlxG.switchState(new ChartingState());
-			}
+				switch (PlayState.gameplayArea)
+				{
+					case "Story":
+						FlxG.switchState(new MenuWeek());
+					case "Freeplay":
+						FlxG.switchState(new MenuFreeplay());
+					case "Marathon":
+						FlxG.switchState(new MenuMarathon());
+					case "Endless":
+						FlxG.switchState(new MenuEndless());
+					case "Survival":
+						FlxG.switchState(new MenuSurvival());
+					case "Charting":
+						FlxG.switchState(new ChartingState());
+				}
+			});
 		}
 
 		FlxG.camera.zoom = FlxMath.lerp(FlxG.camera.zoom, 1, zoomLerp/(_variables.fps/60));
@@ -147,13 +150,16 @@ class GameOverSubstate extends MusicBeatSubstate
 			bf.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
 			FlxG.sound.play(Paths.music('gameOverEnd' + stageSuffix, 'shared'), _variables.mvolume/100);
-			new FlxTimer().start(0.7, function(tmr:FlxTimer)
+			FlxG.camera.fade(FlxColor.BLACK, 5, false, function()
 			{
-				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()
-				{
-					LoadingState.loadAndSwitchState(new PlayState());
-				});
+				LoadingState.loadAndSwitchState(new PlayState());
 			});
 		}
+	}
+
+	function iHopeThisWorks():Void
+	{
+		FlxG.camera.fade(FlxColor.BLACK, 1);
+		FlxG.sound.music.fadeOut(1, 0);
 	}
 }

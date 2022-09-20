@@ -1,13 +1,10 @@
-# RIGHT NOW THE MODS FOLDER DOES NOT WORK ENTIRELY JUST YET!!!
-## THIS IS WORK IN PROGRESS!!!
+**MODS FOLDER GUIDE**
 
-# QUICK AND DIRTY MOD GUIDE
+In order to load in mods, it HAS to be in the mainMods/_append folder. 
+Why? This is to have backup support for when week 7 polymod actually releases.
+So if you wanna put in a mod for the shared/ folder then you put it in:
 
-With the 0.2.6 update, I added a bit of a slightly nicer mod support backend.
+```mods/mainMods/_append/shared```
 
-It's POLYMOD, which is made by Lars Doucet: https://github.com/larsiusprime/polymod
-
-You may have noticed that there's a new folder in the assets. MODS. Within it you will see 2 files. modList.txt, and a folder called introMod.
-modList.txt will load any folder into the game. Put the folder you want to load into a new line in modList.txt, and reboot the game.
-
-Now you may be wondering, what do I put in the folder? Well later down it'll get a bit more complicated, especially as I'll make the IN-GAME mod loader nicer.
+A reminder that this doesnt just work like a charm just yet!!!! This is experimental and can lead to some issues.
+Report major mod system bugs to Github Issues.

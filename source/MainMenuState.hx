@@ -83,12 +83,6 @@ class MainMenuState extends MusicBeatState
 		add(checker);
 		checker.scrollFactor.set(0, 0.07);
 
-		var side:FlxSprite = new FlxSprite(0).loadGraphic(Paths.image('Main_Side'));
-		side.scrollFactor.x = 0;
-		side.scrollFactor.y = 0;
-		side.antialiasing = true;
-		add(side);
-
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -96,13 +90,13 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var menuItem:FlxSprite = new FlxSprite(-800, 40 + (i * 200));
+			var menuItem:FlxSprite = new FlxSprite(0, -50 + (i * 200));
 			menuItem.frames = tex;
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " select", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			FlxTween.tween(menuItem, {x: menuItem.width / 4 + (i * 210) - 30}, 1.3, {ease: FlxEase.expoInOut});
+			FlxTween.tween(menuItem, {x: menuItem.width / 4 + (i * 200) - 30}, 1, {ease: FlxEase.backOut});
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
@@ -113,10 +107,8 @@ class MainMenuState extends MusicBeatState
 		FlxG.camera.follow(camFollow, null, camLerp);
 
 		FlxG.camera.zoom = 3;
-		side.alpha = 0;
-		FlxTween.tween(FlxG.camera, {zoom: 1}, 1.1, {ease: FlxEase.expoInOut});
-		FlxTween.tween(bg, {angle: 0}, 1, {ease: FlxEase.quartInOut});
-		FlxTween.tween(side, {alpha: 1}, 0.9, {ease: FlxEase.quartInOut});
+		FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.circOut});
+		FlxTween.tween(bg, {angle: 0}, 1, {ease: FlxEase.expoOut});
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0, Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
@@ -198,7 +190,7 @@ class MainMenuState extends MusicBeatState
 					#else
 					FlxG.openURL('https://github.com/AKRGames/The-Stoopid-Mod');
 					#end
-					DiscordClient.changePresence("Pogger people donate, like me.", null);
+					DiscordClient.changePresence("gigachads donate, like me.", null);
 				}
 				else
 				{
@@ -208,9 +200,9 @@ class MainMenuState extends MusicBeatState
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{
-						FlxTween.tween(FlxG.camera, {zoom: 5}, 0.8, {ease: FlxEase.expoIn});
-						FlxTween.tween(bg, {angle: 45}, 0.8, {ease: FlxEase.expoIn});
-						FlxTween.tween(spr, {x: -600}, 0.6, {
+						FlxTween.tween(FlxG.camera, {zoom: 2.5}, 1, {ease: FlxEase.expoIn});
+						FlxTween.tween(bg, {angle: 45}, 1, {ease: FlxEase.expoIn});
+						FlxTween.tween(spr, {x: -600}, 1, {
 							ease: FlxEase.backIn,
 							onComplete: function(twn:FlxTween)
 							{

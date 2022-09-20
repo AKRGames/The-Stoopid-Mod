@@ -3,7 +3,7 @@ DIALOGUE SYSTEM TUTORIAL:
 :: - character data, can range from bf to senpai or even the ones you make. To create a new character, make a file in assets/shared/images/portraits and name it however you want, then make an xml file named the same, it will be useful for animations. There are no limits to this one.
 
 !! - character's emotion, signified by an animation name. To make one, make a graphic for it inside of an image representing the character and then declare it inside of its xml file. There are no limits to this one.
-WARNING: IF YOU HAVE SPRITES THAT VERY EITHER IN WIDTH, OR HEIGHT, MAKE A BOUNDING BOx FOR THEM FIRST OR THEY'LL SINK, FLOAT, AND/OR SHIFT!
+WARNING: IF YOU HAVE SPRITES THAT VARY EITHER IN WIDTH OR HEIGHT, MAKE A BOUNDING BOx FOR THEM FIRST OR THEY'LL SINK, FLOAT, AND/OR SHIFT!
 
 [[ - font name. If you don't know what font you could use, check your fonts folder and check what name they have when you open them. NOTE: IF THEY DON'T DISPLAY PROPERLY, THIS MEANS YOU DON'T HAVE THAT FONT INSTALLED. INSTALL A FONT TO FIX THIS ISSUE. MOD MAKERS: IF YOU HAVE A FONT SUPPLIED THAT MOST PEOPLE WOULDN'T HAVE INSTALLED, MAKE SURE TO PACK THEM WITH YOUR RELEASE!
 
@@ -23,7 +23,7 @@ WARNING: IF YOU HAVE SPRITES THAT VERY EITHER IN WIDTH, OR HEIGHT, MAKE A BOUNDI
 
 ;; - writing speed of the dialogue, whenever you want to make them speak more intimidatingly or something. Be wary, as it will write another character per the duration you set it to, so it's best to have it around 0.04 as a base.
 
-|| - whether you want to flip your character to another side or not. Can be true, or false.
+|| - whether you want to flip your character to another side or not. Can be set to true or false.
 
 ## - dialogue box, can be anything. To create a new box, make a file in assets/shared/images/dialogueBoxes and name it however you want, then make an xml file named the same with two animations: 'open' and 'normal'. There are no limits to this one.
 
@@ -56,27 +56,27 @@ DEFAULT VALUES:
 
 THERE ARE ALSO CERTAIN VARIABLES YOU CAN CHANGE AT THE BEGGINING OF DIALOGUE TO SET IT GLOBALLY:
 
-[[ - Background color. There are 4 parameters to this. In order they are: alpha, red, green, blue. Must be an intenger from 0 to 255.
+[[ - Background color. There are 4 parameters to this. In order they are: alpha, red, green, blue. You can set the values from 0 to 255. It can't be a decimal value.
 
 || - Music name. To get a custom one in, make a music file and put it in assets/shared/music/dialogueMusic
 
 ** - music volume. Accepted values: 0-100, but it can go higher if you want to.
 
-== - character scale. Can be any float.
+== - character scale. It can be a decimal value.
 
 ## - dialogue box, can be anything. To create a new box, make a file in assets/shared/images/dialogueBoxes and name it however you want, then make an xml file named the same with two animations: 'open' and 'normal'. There are no limits to this one.
 
-<< - fade in time of many objects per some amount. Can be a float.
+<< - fade in time of many objects per some amount. It can be a decimal value.
 
->> - times a fade in of objects should occur per certain time. Must be higher than 0, and an intenger.
+>> - times a fade in of objects should occur per certain time. Must be higher than 0, and it can't be a decimal value.
 
-(( - fade out time of many objects per some amount. Can be a float
+(( - fade out time (divided by 2) of many objects per some amount. It can be a decimal value.
 
-)) - times a fade out of objects should occur per certain time. Must be higher than 0, and an intenger.
+)) - times the fade out of the objects should occur (divided by 2) per certain time. Must be higher than 0, and it can't be a decimal value.
 
-{{ - fade in time of the background per some amount. Can be a float.
+{{ - fade in time (divided by 2) of the background per some amount. It can be a decimal value.
 
-}} - times a fade in of the background should occur per certain time. Must be higher than 0, and an intenger.
+}} - times the fade in of the background should occur (divided by 2) per certain time. Must be higher than 0, and it can't be a decimal value.
 
 `` - textbox hand sprite
 

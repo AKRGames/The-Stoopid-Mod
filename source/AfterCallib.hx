@@ -10,16 +10,12 @@ class AfterCallib extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
-	public static var needVer:String = "IDFK LOL";
-
-	public static var changelog:String = "qwertyuiop";
-
 	override function create()
 	{
 		super.create();
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
-		var txt:FlxText = new FlxText(0, 0, FlxG.width, "cool, your offsets are calibrated." + "\n \nPRESS ENTER TO PROCEED.", 32);
+		var txt:FlxText = new FlxText(0, 0, FlxG.width, "cool, your offsets are calibrated." + "\n \npress enter to proceed.", 32);
 		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
 		add(txt);

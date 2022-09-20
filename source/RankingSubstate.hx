@@ -37,8 +37,8 @@ class RankingSubstate extends MusicBeatSubstate
 			Highscore.saveRank(PlayState.SONG.song, rankingNum, PlayState.storyDifficulty);
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
-		pauseMusic.volume = 0;
-		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
+		pauseMusic.volume = 1;
+		pauseMusic.play(false, 0);
 
 		FlxG.sound.list.add(pauseMusic);
 
@@ -64,17 +64,19 @@ class RankingSubstate extends MusicBeatSubstate
 		combo.antialiasing = true;
 		combo.setGraphicSize(0, 130);
 
-		var press:FlxText = new FlxText(20, 15, 0, "press any button to continue.", 32);
+		var press:FlxText = new FlxText(20, 15, 0, "press any button to continue.", 20);
 		press.scrollFactor.set();
-		press.setFormat(Paths.font("comic.ttf"), 32);
+		press.setFormat(Paths.font("comic.ttf"), 20);
 		press.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
+		press.y = 690 - press.height;
 		press.updateHitbox();
 		add(press);
 
-		var hint:FlxText = new FlxText(20, 15, 0, "you barely made it... if you'd missed under 10 times, you'd get the SCDB ranking.", 32);
+		var hint:FlxText = new FlxText(20, 15, 0, "you barely made it... if you'd missed under 10 times, you'd get the SCDB ranking.", 25);
 		hint.scrollFactor.set();
-		hint.setFormat(Paths.font("comic.ttf"), 32);
+		hint.setFormat(Paths.font("comic.ttf"), 25);
 		hint.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
+		hint.y = 640 - hint.height;
 		hint.updateHitbox();
 		add(hint);
 
@@ -83,9 +85,9 @@ class RankingSubstate extends MusicBeatSubstate
 			case 'MFC':
 				hint.text = "WTF HOW DID YOU DO THAT YOU'RE LITERALLY A GOD!!";
 			case 'GFC':
-				hint.text = "you're not supposed to be THAT good! \nif you could get only SICKs, you'd get the MFC ranking, which is impossible depending on which level you are on.";
+				hint.text = "you're not supposed to be THAT good! if you could get only SICKs, you'd get the MFC ranking.";
 			case 'FC':
-				hint.text = "you're good at this. if you'd get to GOODs (and SICKs), you'd get the GFC ranking.";
+				hint.text = "you're good at this. if you could get to GOODs (and SICKs), you'd get the GFC ranking.";
 			case 'SDCB':
 				hint.text = "you get a pass. if you didn't miss at all, you'd get the FC ranking.";
 		}
@@ -99,7 +101,7 @@ class RankingSubstate extends MusicBeatSubstate
 		if (_variables.botplay)
 		{
 			hint.y -= 35;
-			hint.text = "you have botplay on you don't get this LOL!!";
+			hint.text = "you have botplay on, this doesn't count, LOL!!";
 		}
 
 		if (PlayState.curDeaths >= 30)
@@ -114,18 +116,15 @@ class RankingSubstate extends MusicBeatSubstate
 		press.screenCenter();
 		press.y = 670 - press.height;
 
-		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(press, {alpha: 1, y: 690 - press.height}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
-		FlxTween.tween(hint, {alpha: 1, y: 640 - hint.height}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
+		FlxTween.tween(bg, {alpha: 0.5}, 2.5, {ease: FlxEase.expoOut});
+		FlxTween.tween(press, {alpha: 1}, 2.5, {ease: FlxEase.circOut, startDelay: 0.3});
+		FlxTween.tween(hint, {alpha: 1}, 2.5, {ease: FlxEase.circOut, startDelay: 0.3});
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 	}
 
 	override function update(elapsed:Float)
 	{
-		if (pauseMusic.volume < 0.5 * _variables.mvolume / 100)
-			pauseMusic.volume += 0.01 * _variables.mvolume / 100 * elapsed;
-
 		super.update(elapsed);
 
 		if (FlxG.keys.justPressed.ANY || _modifiers.Practice)
@@ -174,7 +173,6 @@ class RankingSubstate extends MusicBeatSubstate
 
 						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 						FlxG.sound.music.stop();
-
 						LoadingState.loadAndSwitchState(new PlayState());
 					}
 				case "Freeplay":

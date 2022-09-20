@@ -104,17 +104,15 @@ class DialogueBox extends FlxSpriteGroup
 					switch (_modifiers.Vibe)
 					{
 						case 0.8:
-							FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic + '_HIFI'), 0);
+							FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic + '_HIFI'), 1);
 						case 1.2:
-							FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic + '_LOFI'), 0);
+							FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic + '_LOFI'), 1);
 						default:
-							FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic), 0);
+							FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic), 1);
 					}
 				}
 				else
-					FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic), 0);
-
-			FlxG.sound.music.fadeIn(1, 0, 0.8 * Std.parseInt(curVolume) / 100 * _variables.mvolume / 100);
+					FlxG.sound.playMusic(Paths.music('dialogueMusic/' + curMusic), 1);
 		}
 
 		bgFade = new FlxSprite(-200,
@@ -123,9 +121,9 @@ class DialogueBox extends FlxSpriteGroup
 		bgFade.alpha = 0;
 		add(bgFade);
 
-		new FlxTimer().start(bgFIT, function(tmr:FlxTimer)
+		new FlxTimer().start(bgFIT / 2, function(tmr:FlxTimer)
 		{
-			bgFade.alpha += (1 / bgFIL);
+			bgFade.alpha += (1 / bgFIL / 2);
 			if (bgFade.alpha > 1)
 				bgFade.alpha = 1;
 		}, bgFIL);
@@ -204,8 +202,7 @@ class DialogueBox extends FlxSpriteGroup
 	{
 		if (dialogueStarted)
 		{
-			FlxG.sound.music.volume = FlxMath.lerp(FlxG.sound.music.volume, 0.8 * Std.parseInt(curVolume) / 100 * _variables.mvolume / 100,
-				camLerp / (_variables.fps / 60));
+			FlxG.sound.music.volume = 1;
 			if (curFlip == 'true')
 				portrait.x = FlxMath.lerp(portrait.x, 580 - portrait.width, (camLerp * 2) / (_variables.fps / 60));
 			else
@@ -394,9 +391,9 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			portrait.alpha = 0;
 
-			new FlxTimer().start(fadeInTime, function(tmr:FlxTimer)
+			new FlxTimer().start(fadeInTime / 2, function(tmr:FlxTimer)
 			{
-				portrait.alpha += 1 / fadeInLoop;
+				portrait.alpha += 1 / fadeInLoop / 2;
 			}, fadeInLoop);
 
 			if (curFlip == 'true')

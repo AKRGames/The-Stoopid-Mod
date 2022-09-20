@@ -45,7 +45,8 @@ class ChartingState extends MusicBeatState
 
 	public static var lastSection : Int = 0;
 
-	var bpmTxt : FlxText;
+	var bpmTxt:FlxText;
+	var motivation:FlxText;
 
 	var strumLine : FlxSprite;
 	var curSong : String = 'Dadbattle';
@@ -133,7 +134,7 @@ class ChartingState extends MusicBeatState
 		}
 
 		FlxG.mouse.visible = true;
-		FlxG.save.bind('save', "Funkin Mic'd Up");
+		FlxG.save.bind('save', "Stoopid Save File");
 
 		tempBpm = _song.bpm;
 
@@ -147,10 +148,16 @@ class ChartingState extends MusicBeatState
 		Conductor.changeBPM(_song.bpm);
 		Conductor.mapBPMChanges(_song);
 
-		bpmTxt = new FlxText(1000, 50, 0, "", 16);
+		bpmTxt = new FlxText(1000, 50, 0, "", 15);
 		bpmTxt.scrollFactor.set();
-		bpmTxt.x += 80;
+		bpmTxt.font = Paths.font("calibri.ttf");
 		add(bpmTxt);
+
+		motivation = new FlxText(1000, 50, 0, "", 10);
+		motivation.scrollFactor.set();
+		motivation.font = Paths.font("calibri.ttf");
+		motivation.y += bpmTxt.y;
+		add(motivation);
 
 		strumLine = new FlxSprite(0, 50).makeGraphic(Std.int(FlxG.width / 2), 4);
 		add(strumLine);
@@ -159,9 +166,9 @@ class ChartingState extends MusicBeatState
 		add(dummyArrow);
 
 		var tabs = [
-		{name: "Song", label : 'Song'},
-		{ name: "Section", label : 'Section' },
-		{ name: "Note", label : 'Note' }
+		{name: "Song", label: 'Song'},
+		{name: "Section", label: 'Section'},
+		{name: "Note", label: 'Note'}
 		];
 
 		UI_box = new FlxUITabMenu(null, tabs, true);
@@ -190,7 +197,7 @@ class ChartingState extends MusicBeatState
 		var UI_songTitle = new FlxUIInputText(10, 10, 70, _song.song, 8);
 		typingShit = UI_songTitle;
 
-		var check_voices = new FlxUICheckBox(10, 25, null, null, "Has voice track", 100);
+		var check_voices = new FlxUICheckBox(10, 32, null, null, "Has a voice track?", 100);
 		check_voices.checked = _song.needsVoices;
 		// _song.needsVoices = check_voices.checked;
 		check_voices.callback = function()
@@ -199,16 +206,29 @@ class ChartingState extends MusicBeatState
 			trace('CHECKED!');
 		};
 
-		var check_mute_inst = new FlxUICheckBox(10, 200, null, null, "Mute Instrumental (in editor)", 100);
+		var check_mute_inst = new FlxUICheckBox(10, 200, null, null, "Mute instrumental (in editor)", 100);
 		check_mute_inst.checked = false;
 		check_mute_inst.callback = function()
 		{
-			var vol : Float = 1;
+			var vol:Float = 1;
 
 			if (check_mute_inst.checked)
 				vol = 0;
 
 			FlxG.sound.music.volume = vol;
+		}
+
+		var check_mute_voices = new FlxUICheckBox(10, 200, null, null, "Mute vocals (in editor)", 100);
+		check_mute_voices.y += check_mute_inst.y / 8;
+		check_mute_voices.checked = false;
+		check_mute_voices.callback = function()
+		{
+			var vol:Float = 1;
+
+			if (check_mute_voices.checked)
+				vol = 0;
+
+			vocals.volume = vol;
 		};
 
 		var saveButton : FlxButton = new FlxButton(110, 8, "Save", function()
@@ -243,7 +263,7 @@ class ChartingState extends MusicBeatState
 			resetSection(true);
 		});
 
-		var loadAutosaveBtn : FlxButton = new FlxButton(reloadSongJson.x, reloadSongJson.y + 30, 'load autosave', loadAutosave);
+		var loadAutosaveBtn : FlxButton = new FlxButton(reloadSongJson.x, reloadSongJson.y + 30, 'Load Autosave', loadAutosave);
 
 		var stepperSpeed : FlxUINumericStepper = new FlxUINumericStepper(10, 80, 0.1, 1, 0.1, 10, 1);
 		stepperSpeed.value = _song.speed;
@@ -276,6 +296,7 @@ class ChartingState extends MusicBeatState
 		tab_group_song.add(restart);
 		tab_group_song.add(check_voices);
 		tab_group_song.add(check_mute_inst);
+		tab_group_song.add(check_mute_voices);
 		tab_group_song.add(saveButton);
 		tab_group_song.add(loadButton);
 		tab_group_song.add(reloadSong);
@@ -340,15 +361,15 @@ class ChartingState extends MusicBeatState
 			}
 		});
 
-		check_mustHitSection = new FlxUICheckBox(10, 30, null, null, "Must hit section", 100);
+		check_mustHitSection = new FlxUICheckBox(10, 30, null, null, "BF's turn?", 100);
 		check_mustHitSection.name = 'check_mustHit';
 		check_mustHitSection.checked = true;
 		// _song.needsVoices = check_mustHit.checked;
 
-		check_altAnim = new FlxUICheckBox(10, 400, null, null, "Alt Animation", 100);
+		check_altAnim = new FlxUICheckBox(10, 400, null, null, "Alternate Animation", 100);
 		check_altAnim.name = 'check_altAnim';
 
-		check_changeBPM = new FlxUICheckBox(10, 60, null, null, 'Change BPM', 100);
+		check_changeBPM = new FlxUICheckBox(10, 60, null, null, 'Change BPM?', 100);
 		check_changeBPM.name = 'check_changeBPM';
 
 		var refreshSection : FlxButton = new FlxButton(200, 30, "Refresh Section", function()
@@ -381,18 +402,18 @@ class ChartingState extends MusicBeatState
 		tab_group_note = new FlxUI(null, UI_box);
 		tab_group_note.name = 'Note';
 
-		writingNotesText = new FlxUIText(20, 100, 0, "");
-		writingNotesText.setFormat("Arial", 20, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		writingNotesText = new FlxUIText(15, 100, 0, "");
+		writingNotesText.setFormat("Calibri", 15, FlxColor.WHITE, FlxTextAlign.LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 		stepperSusLength = new FlxUINumericStepper(10, 10, Conductor.stepCrochet / 2, 0, 0, Conductor.stepCrochet * _song.notes[curSection].lengthInSteps * 4);
 		stepperSusLength.value = 0;
 		stepperSusLength.name = 'note_susLength';
 
-		noteRollCheckmark = new FlxUICheckBox(10, 40, null, null, "Are sustain notes rolls?", 100);
+		noteRollCheckmark = new FlxUICheckBox(10, 40, null, null, "Turn sustain line into rolls", 100);
 		noteRollCheckmark.name = 'note_isSusRoll';
 		noteRollCheckmark.checked = false;
 
-		var applyLength : FlxButton = new FlxButton(100, 10, 'Apply');
+		var applyLength : FlxButton = new FlxButton(100, 10, 'Apply sustain length');
 
 		tab_group_note.add(writingNotesText);
 		tab_group_note.add(stepperSusLength);
@@ -429,7 +450,7 @@ class ChartingState extends MusicBeatState
 		};
 	}
 
-		function generateUI() :Void
+	function generateUI():Void
 	{
 		while (bullshitUI.members.length > 0)
 		{
@@ -448,24 +469,24 @@ class ChartingState extends MusicBeatState
 	}
 
 		override function getEvent(id:String, sender : Dynamic, data : Dynamic, ? params : Array<Dynamic>)
-	{
+		{
 		if (id == FlxUICheckBox.CLICK_EVENT)
 		{
 			var check : FlxUICheckBox = cast sender;
 			var label = check.getLabel().text;
 			switch (label)
 			{
-			case 'Must hit section':
+			case "BF's turn?":
 				_song.notes[curSection].mustHitSection = check.checked;
 
 				updateHeads();
 
-			case 'Change BPM':
+			case 'Change BPM?':
 				_song.notes[curSection].changeBPM = check.checked;
 				FlxG.log.add('changed bpm shit');
-			case "Alt Animation":
+			case "Alternate Animation":
 				_song.notes[curSection].altAnim = check.checked;
-			case "Are sustain notes rolls?":
+			case "Turn sustain line into rolls":
 				if (curSelectedNote == null)
 					return;
 
@@ -577,7 +598,7 @@ class ChartingState extends MusicBeatState
 		}
 
 		if (writingNotes)
-			writingNotesText.text = "WRITING NOTES";
+			writingNotesText.text = "recording notes as you playback the song...";
 		else
 			writingNotesText.text = "";
 
@@ -823,13 +844,16 @@ class ChartingState extends MusicBeatState
 			if (FlxG.keys.justPressed.DOWN)
 				Conductor.changeBPM(Conductor.bpm - 1); */
 
-		bpmTxt.text = bpmTxt.text = Std.string(FlxMath.roundDecimal(Conductor.songPosition / 1000, 2))
+		bpmTxt.text = "Time: "
+			+ Std.string(FlxMath.roundDecimal(Conductor.songPosition / 1000, 2))
 			+ " / "
 			+ Std.string(FlxMath.roundDecimal(FlxG.sound.music.length / 1000, 2))
-			+ "\nSection: "
+			+ " seconds\nSection: "
 			+ curSection
-			+ "\nCurStep: "
+			+ "\nStep: "
 			+ curStep;
+
+		motivation.text = "you are not useless <3";
 		super.update(elapsed);
 	}
 

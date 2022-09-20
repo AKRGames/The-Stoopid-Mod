@@ -91,11 +91,11 @@ class Substate_PresetLoad extends MusicBeatSubstate
                 {
                     goingBack = true;
                     FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
-                    FlxTween.tween(blackBarThingie, { 'scale.y': 0, 'scale.x': 2200}, 0.5, { ease: FlxEase.expoIn});
+                    FlxTween.tween(blackBarThingie, { 'scale.y': 0, 'scale.x': 2200}, 1, {ease: FlxEase.expoOut});
 
                     grpPresets.kill();
 
-                    new FlxTimer().start(0.5, function(tmr:FlxTimer)
+                    new FlxTimer().start(1, function(tmr:FlxTimer)
                         {
                             FlxG.state.closeSubState();
                             switch (coming)
@@ -125,8 +125,8 @@ class Substate_PresetLoad extends MusicBeatSubstate
 
                 goingBack = true;
                         
-                FlxTween.tween(blackBarThingie, { 'scale.y': 750, 'scale.x': 2200}, 0.5, { ease: FlxEase.expoIn});
-                FlxTween.tween(FlxG.camera, { y:-720 }, 0.5, { ease: FlxEase.expoIn});
+                FlxTween.tween(blackBarThingie, { 'scale.y': 750, 'scale.x': 2200}, 0.5, {ease: FlxEase.expoOut});
+                FlxTween.tween(FlxG.camera, { y:-720 }, 0.5, {ease: FlxEase.expoOut});
 
                 FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
                 new FlxTimer().start(0.5, function(tmr:FlxTimer)

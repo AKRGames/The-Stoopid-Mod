@@ -4,6 +4,7 @@ import lime.app.Application;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import openfl.Lib;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
 import flixel.addons.transition.Transition;
 import flixel.FlxG;
@@ -24,17 +25,20 @@ class FirstTimeState extends MusicBeatState
 
 	override function create()
 	{
-		var lol = (cast(Lib.current.getChildAt(0), Main)).lastY;
-		FlxTween.tween(Application.current.window, {y: lol}, 0.5, {ease: FlxEase.circOut});
+		// var lol = (cast(Lib.current.getChildAt(0), Main)).lastY;
+		// FlxTween.tween(Application.current.window, {y: lol}, 0.5, {ease: FlxEase.circOut});
+		// the code above is horrendous
+
+		transOut = FlxTransitionableState.defaultTransOut;
 		
 		DiscordClient.changePresence("guys don't jugde them it's their first time :(", null);
 
-		txt = new FlxText(0, 360, FlxG.width,
-			"Heads up!\nFriday Night Funkin: The Stoopid Mod contains a lot of stoopid memes. Viewer discretion is advised.\n\n"
-			+ "The Stoopid Mod is cool. You should agree. "
-			+ "Also, STOOPID GUY IS NOT LITTLE MAN ON STEROIDS. That's the only argument I can make. "
-			+ "Anyway, shoutout to Verwex for making this engine.\n\n"
-			+ "Thanks for reading. I hope you enjoy this mod.\n(you should also play little man and bob mod)\nPress ENTER to proceed.",
+		txt = new FlxText(0, 100, FlxG.width,
+			"heads up!\nFriday Night Funkin: The Stoopid Mod contains a lot of stoopid memes. viewer discretion is advised.\n\n"
+			+ "you should set your options before you play.\n"
+			+ "also, STOOPID GUY IS NOT LITTLE MAN ON STEROIDS AND WAS MADE BEFORE THE YIPPEE CREATURE WENT VIRAL.\n"
+			+ "anyway, shoutout to Verwex for making this engine.\n\n"
+			+ "thanks for reading. i hope you enjoy this mod.\n(you should also play little man and bob mod)\npress ENTER to proceed.",
 			32);
 		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		add(txt);
@@ -45,8 +49,6 @@ class FirstTimeState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		var no:Bool = false;
-		sinMod += 0.007;
-		txt.y = Math.sin(sinMod) * 60 + 100;
 
 		if (FlxG.keys.justPressed.ENTER)
 		{

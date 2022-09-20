@@ -13,6 +13,7 @@ import flixel.input.keyboard.FlxKey;
 import flixel.system.macros.FlxMacroUtil;
 import flixel.addons.display.FlxBackdrop;
 import flixel.text.FlxText;
+import flixel.util.FlxColor;
 import MainVariables._variables;
 
 class MenuControls extends MusicBeatState
@@ -46,7 +47,7 @@ class MenuControls extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = true;
 		add(bg);
-		bg.alpha = 0;
+		bg.alpha = 1;
 
 		gradientBar = FlxGradient.createGradientFlxSprite(Math.round(FlxG.width), 512, [0x00ff0000, 0x55FFBDF8, 0xAAFFFDF3], 1, 90, true);
 		gradientBar.y = FlxG.height - gradientBar.height;
@@ -57,16 +58,12 @@ class MenuControls extends MusicBeatState
 		checker.scrollFactor.set(0, 0.07);
 
 		add(side);
-		side.alpha = 0;
+		side.alpha = 1;
 
-		FlxTween.tween(bg, {alpha: 1}, 0.5, {ease: FlxEase.quartInOut});
-		FlxTween.tween(side, {alpha: 1}, 0.5, {ease: FlxEase.quartInOut});
+		FlxG.camera.zoom = 1;
+		FlxG.camera.alpha = 1;
 
-		FlxG.camera.zoom = 0.6;
-		FlxG.camera.alpha = 0;
-		FlxTween.tween(FlxG.camera, {zoom: 1, alpha: 1}, 0.5, {ease: FlxEase.quartInOut});
-
-		new FlxTimer().start(0.5, function(tmr:FlxTimer)
+		new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				selectable = true;
 			});
@@ -130,18 +127,12 @@ class MenuControls extends MusicBeatState
 				controls.setKeyboardScheme(Solo, true);
 				selectable = false;
 
-				FlxTween.tween(FlxG.camera, {zoom: 0.6, alpha: -0.6}, 0.7, {ease: FlxEase.quartInOut});
-				FlxTween.tween(bg, {alpha: 0}, 0.7, {ease: FlxEase.quartInOut});
-				FlxTween.tween(checker, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-				FlxTween.tween(gradientBar, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-				FlxTween.tween(side, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
+				// FlxTween.tween(bg, {alpha: 0}, 0.25, {ease: FlxEase.sineInOut});
+				// FlxTween.tween(checker, {alpha: 0}, 0.25, {ease: FlxEase.sineInOut});
+				// FlxTween.tween(gradientBar, {alpha: 0}, 0.25, {ease: FlxEase.sineInOut});
+				// FlxTween.tween(side, {alpha: 0}, 0.25, {ease: FlxEase.sineInOut});
 
 				DiscordClient.changePresence("they headin out", null);
-
-				for (item in grpControls.members)
-					{
-						FlxTween.tween(item, { x: 1500}, 0.5, { ease: FlxEase.expoIn});
-					}
 
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
 			}

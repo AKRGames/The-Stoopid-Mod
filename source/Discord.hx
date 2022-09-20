@@ -34,7 +34,7 @@ class DiscordClient
 			details: "starting...",
 			state: null,
 			largeImageKey: 'iconpresence',
-			largeImageText: "FNF: Mic'd Up"
+			largeImageText: "Friday Night Funkin': The Stoopid Mod"
 		});
 	}
 

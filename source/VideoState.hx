@@ -29,7 +29,7 @@ class VideoState extends MusicBeatState
 {
 	static private var nativeFramecount:String->Int = cpp.Lib.load("webmHelper", "GetFramecount", 1);
 
-	public var filePath:String;
+	public var TheFilePath:String;
 	public var _load:FileReference;
 	public var transClass:FlxState;
 	public var txt:FlxText;
@@ -43,7 +43,7 @@ class VideoState extends MusicBeatState
 	public var videoFrames:Int = 0;
 	public var defaultText:String = "";
 	public var doShit:Bool = false;
-	public var pauseText:String = "press P to pause/unpause.";
+	public var pauseText:String = "press SPACE to pause/unpause.";
 	public var skipText:String = "press to skip.";
 	public var autoPause:Bool = false;
 	public var musicPaused:Bool = false;
@@ -52,18 +52,29 @@ class VideoState extends MusicBeatState
 	public var looping:Bool = false;
 	public var loadWEBM:Bool = false;
 	public var skip:Bool = true;
-
-	public function new(fileName:String, toTrans:FlxState, frameSkipLimit:Int = -1, autopause:Bool = false, ?looped:Bool = false, ?loadWebm:Bool = false, ?skippable:Bool = true)
+	
+	/**
+	* i will try to explain to you beginner coders what it does.
+	* 
+	* filePath: where the video file is.
+	* toTrans: the state to go to when the video ends.
+	* frameSkipLimit: idk what this is exactly...
+	* autopause: it automatically pauses, i think.
+	* looped: gives the option whether to loop this video.
+	* loadWebm: gives the option to load a WEBM file.
+	* skippable: gives the option to skip this video.
+	*/
+	public function new(filePath:String, toTrans:FlxState, frameSkipLimit:Int = -1, autopause:Bool = false, ?looped:Bool = false, ?loadWebm:Bool = false, ?skippable:Bool = true)
 	{
 		super();
 
 		looping = looped;
 		autoPause = autopause;
-		file = fileName;
+		file = filePath;
 		loadWEBM = loadWebm;
 		skip = skippable;
 
-		filePath = "assets/videos/" + fileName + ".webm";
+		TheFilePath = filePath;
 		transClass = toTrans;
 		if (frameSkipLimit != -1 && GlobalVideo.isWebm)
 		{
@@ -79,13 +90,13 @@ class VideoState extends MusicBeatState
 				+ " to end the video. ";
 				
 			if (loadWEBM)
-				skipText + "press E to load a webm file. (ONLY ACCEPTS WEBMS IN MODS/WEBMS/ FOLDER)";
+				skipText + "press E to load a webm file.";
 		}
 	}
 
 	public function frameCount():Int
 	{
-		return nativeFramecount(filePath);
+		return nativeFramecount(TheFilePath);
 	}
 
 	var funnySprite:FlxSprite;
@@ -106,7 +117,7 @@ class VideoState extends MusicBeatState
 			if (videoFrames == 0)
 			{
 			#end
-				videoFrames = Std.parseInt(Assets.getText(filePath.replace(".webm", ".txt")));
+				videoFrames = Std.parseInt(Assets.getText(TheFilePath.replace(".webm", ".txt")));
 
 			#if cpp
 			}
@@ -126,9 +137,9 @@ class VideoState extends MusicBeatState
 		{
 			html5Text = "you are using HTML5!";
 		}
-		defaultText = "if you're on HTML5\ntap anything...\nthe bottom text indicates if you\nare using HTML5...\n\n" + html5Text;
+		defaultText = "if you're on HTML5,\ntap anything.\nthe bottom text indicates if you\nare using HTML5.\n\n" + html5Text;
 		txt = new FlxText(0, 0, FlxG.width, defaultText, 32);
-		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		txt.setFormat("Comic Sans MS", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
 
 		txt2 = new FlxText(3, FlxG.height - 18, 0, skipText, 32);
@@ -138,14 +149,14 @@ class VideoState extends MusicBeatState
 
 		if (GlobalVideo.isWebm)
 		{
-			if (Assets.exists(filePath.replace(".webm", ".ogg"), MUSIC) || Assets.exists(filePath.replace(".webm", ".ogg"), SOUND))
+			if (Assets.exists(TheFilePath.replace(".webm", ".ogg"), MUSIC) || Assets.exists(TheFilePath.replace(".webm", ".ogg"), SOUND))
 			{
 				useSound = true;
-				vidSound = FlxG.sound.play(Sound.fromFile(filePath.replace(".webm", ".ogg")));
+				vidSound = FlxG.sound.play(Sound.fromFile(TheFilePath.replace(".webm", ".ogg")));
 			}
 		}
 
-		GlobalVideo.get().source(filePath);
+		GlobalVideo.get().source(TheFilePath);
 		GlobalVideo.get().clearPause();
 		if (GlobalVideo.isWebm)
 		{
@@ -179,7 +190,7 @@ class VideoState extends MusicBeatState
 
 		/*if (useSound)
 			{ */
-		// vidSound = FlxG.sound.play(filePath.replace(".webm", ".ogg"));
+		// vidSound = FlxG.sound.play(TheFilePath.replace(".webm", ".ogg"));
 
 		/*new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{ */
@@ -278,7 +289,7 @@ class VideoState extends MusicBeatState
 				FlxG.switchState(transClass);
 		}
 
-		if (FlxG.keys.justPressed.E && loadWEBM)
+		if (FlxG.keys.justPressed.SPACE && loadWEBM)
 		{
 			load();
 			txt.text = pauseText;
@@ -288,7 +299,7 @@ class VideoState extends MusicBeatState
 			funnySprite.alpha = 0.2;
 		}
 
-		if (FlxG.keys.justPressed.P)
+		if (FlxG.keys.justPressed.SPACE)
 		{
 			txt.text = pauseText;
 			trace("PRESSED PAUSE");

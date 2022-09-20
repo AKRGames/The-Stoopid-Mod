@@ -54,7 +54,7 @@ class Song
 		}
 		catch (error)
 		{
-			Application.current.window.alert('Chart is unreadable!\nDETAILS: ' + error, 'Er....');
+			Application.current.window.alert('either we cannot read this chart or it does not exist.\nDETAILS: ' + error, 'uh oh');
 			rawJson = sys.io.File.getContent(Paths.json('test' + '/' + 'test.json')).trim();
 		}
 		#end

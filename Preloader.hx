@@ -47,10 +47,10 @@ class Preloader extends FlxBasePreloader
 
 		Font.registerFont(CustomFont);
 		text = new TextField();
-		text.defaultTextFormat = new TextFormat("VCR OSD Mono", 12, 0xffffff);
+		text.defaultTextFormat = new TextFormat("Comic Sans MS", 12, 0xffffff);
 		text.embedFonts = true;
 
-		text.text = "Preloading assets...";
+		text.text = "loading, please wait...";
 		addChild(text);
 
 		super.create();
@@ -64,11 +64,11 @@ class Preloader extends FlxBasePreloader
 		switch (Percent)
 		{
 			case 50:
-				text.text = "Halfway there...";
+				text.text = "halfway loaded, please wait...";
 			case 70:
-				text.text = "Almost there...";
+				text.text = "almost loaded, please wait...";
 			case 80:
-				text.text = "Done!";
+				text.text = "we're good now.";
 			case 90:
 				FlxTween.tween(text, {alpha: 0, y: text.y - 50}, 0.5, {ease: FlxEase.cubeInOut});
 				FlxTween.tween(logo, {alpha: 0, y: text.y - 50}, 0.5, {ease: FlxEase.cubeInOut});

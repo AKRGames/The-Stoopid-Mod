@@ -42,6 +42,7 @@ class HealthIcon extends FlxSprite
 			usingFallback = true;
 
 			animation.add('bf', [0, 1, 2], 0, false, isPlayer);
+			animation.add('bf-stoopid', [0, 1, 2], 0, false, isPlayer);
 			animation.add('bf-car', [0, 1, 2], 0, false, isPlayer);
 			animation.add('bf-christmas', [0, 1, 2], 0, false, isPlayer);
 			animation.add('bf-pixel', [33, 34, 35], 0, false, isPlayer);
@@ -57,13 +58,13 @@ class HealthIcon extends FlxSprite
 			animation.add('spirit', [40, 41, 42], 0, false, isPlayer);
 			animation.add('bf-old', [21, 22, 23], 0, false, isPlayer);
 			animation.add('gf', [24, 25, 26], 0, false, isPlayer);
+			animation.add('gf-stoopid', [24, 25, 26], 0, false, isPlayer);
 			animation.add('gf-car', [24, 25, 26], 0, false, isPlayer);
 			animation.add('gf-christmas', [24, 25, 26], 0, false, isPlayer);
 			animation.add('gf-pixel', [24, 25, 26], 0, false, isPlayer);
 			animation.add('parents-christmas', [27, 28, 29], 0, false, isPlayer);
 			animation.add('monster', [30, 31, 32], 0, false, isPlayer);
 			animation.add('monster-christmas', [30, 31, 32], 0, false, isPlayer);
-			animation.add('stoopidguy', [15, 16, 17], 0, false, isPlayer);
 
 			animation.play(char);
 		}

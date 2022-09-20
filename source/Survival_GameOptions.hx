@@ -66,7 +66,7 @@ class Survival_GameOptions extends MusicBeatSubstate
 		navi.scrollFactor.set();
         navi.alpha = 0;
 		add(navi);
-        FlxTween.tween(navi, {alpha: 1}, 0.15, {ease: FlxEase.expoInOut});
+        FlxTween.tween(navi, {alpha: 1}, 0.15, {ease: FlxEase.expoOut});
 
         menuItems = new FlxTypedGroup<FlxSprite>();
         add(menuItems);
@@ -107,21 +107,21 @@ class Survival_GameOptions extends MusicBeatSubstate
             add(ResultText);
             ResultText.scrollFactor.x = 0;
             ResultText.scrollFactor.y = 0;
-            ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+            ResultText.setFormat("Comic Sans MS", 48, FlxColor.WHITE, CENTER);
             ResultText.x = 100;
             ResultText.screenCenter(Y);
             ResultText.alpha = 0;
-            FlxTween.tween(ResultText, {alpha: 1}, 0.15, {ease: FlxEase.expoInOut});
+            FlxTween.tween(ResultText, {alpha: 1}, 0.15, {ease: FlxEase.expoOut});
     
             add(ExplainText);
             ExplainText.scrollFactor.x = 0;
             ExplainText.scrollFactor.y = 0;
-            ExplainText.setFormat("VCR OSD Mono", 20, FlxColor.WHITE, CENTER);
+            ExplainText.setFormat("Calibri", 20, FlxColor.WHITE, CENTER);
             ExplainText.alignment = LEFT;
             ExplainText.x = 20;
             ExplainText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
             ExplainText.alpha = 0;
-            FlxTween.tween(ExplainText, {alpha: 1}, 0.15, {ease: FlxEase.expoInOut});
+            FlxTween.tween(ExplainText, {alpha: 1}, 0.15, {ease: FlxEase.expoOut});
         }
 
     var selectable:Bool = false;
@@ -168,11 +168,11 @@ class Survival_GameOptions extends MusicBeatSubstate
                 {
                     goingBack = true;
                     FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
-                    FlxTween.tween(blackBarThingie, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoIn});
-                    FlxTween.tween(navi, { alpha: 0}, 0.5, { ease: FlxEase.expoIn});
-                    FlxTween.tween(ExplainText, { alpha: 0}, 0.5, { ease: FlxEase.expoIn});
-                    FlxTween.tween(ResultText, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoIn});
-                    new FlxTimer().start(0.6, function(tmr:FlxTimer)
+                    FlxTween.tween(blackBarThingie, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoOut});
+                    FlxTween.tween(navi, { alpha: 0}, 0.5, { ease: FlxEase.expoOut});
+                    FlxTween.tween(ExplainText, { alpha: 0}, 0.5, { ease: FlxEase.expoOut});
+                    FlxTween.tween(ResultText, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoOut});
+                    new FlxTimer().start(0.5, function(tmr:FlxTimer)
                         {
                             FlxG.state.closeSubState();
                             FlxG.state.openSubState(new Survival_Substate());

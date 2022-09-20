@@ -10,6 +10,7 @@ import Discord.DiscordClient;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.FlxSprite;
 import flixel.FlxG;
+import flixel.util.FlxColor;
 import MainVariables._variables;
 
 class GameplayCustomizeState extends MusicBeatState
@@ -109,8 +110,8 @@ class GameplayCustomizeState extends MusicBeatState
 
         FlxG.camera.alpha = camHUD.alpha = 0;
 
-        FlxTween.tween(FlxG.camera, {zoom: 0.9, alpha: 1}, 0.3, {ease: FlxEase.quartOut});
-        FlxTween.tween(camHUD, {zoom: 1, alpha: 1}, 0.3, {ease: FlxEase.quartOut});
+        FlxTween.tween(FlxG.camera, {zoom: 0.9, alpha: 1}, 0.3, {ease: FlxEase.backOut});
+        FlxTween.tween(camHUD, {zoom: 1, alpha: 1}, 0.3, {ease: FlxEase.backOut});
     }
 
     override function update(elapsed:Float) {
@@ -142,8 +143,8 @@ class GameplayCustomizeState extends MusicBeatState
             FlxG.sound.play(Paths.sound('cancelMenu'));
 			FlxG.switchState(new SettingsState());
 
-            FlxTween.tween(FlxG.camera, {zoom: 0.45, alpha: 0}, 0.5, {ease: FlxEase.quartIn});
-            FlxTween.tween(camHUD, {zoom: 0.5, alpha: 0}, 0.5, {ease: FlxEase.quartIn});
+            FlxG.camera.fade(FlxColor.BLACK, 0.5);
+            FlxTween.tween(camHUD, {zoom: 0.5, alpha: 0}, 0.5, {ease: FlxEase.backIn});
         }
 
     }

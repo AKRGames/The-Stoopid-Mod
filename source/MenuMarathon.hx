@@ -116,13 +116,13 @@ class MenuMarathon extends MusicBeatState
 		side.screenCenter();
 		add(side);
 
-		side.y = FlxG.height;
-		FlxTween.tween(side, {y: FlxG.height - side.height}, 0.6, {ease: FlxEase.quartInOut});
+		side.y = FlxG.height - side.height;
+		// FlxTween.tween(side, {y: FlxG.height - side.height}, 0.5, {ease: FlxEase.expoOut});
 
-		FlxTween.tween(bg, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxG.camera.zoom = 0.6;
-		FlxG.camera.alpha = 0;
-		FlxTween.tween(FlxG.camera, {zoom: 1, alpha: 1}, 0.7, {ease: FlxEase.quartInOut});
+		// FlxTween.tween(bg, {alpha: 1}, 1, {ease: FlxEase.expoOut});
+		FlxG.camera.zoom = 1;
+		FlxG.camera.alpha = 1;
+		// FlxTween.tween(FlxG.camera, {zoom: 1, alpha: 1}, 1, {ease: FlxEase.expoOut});
 
 		var diffTex = Paths.getSparrowAtlas('difficulties');
 		sprDifficulty = new FlxSprite(130, 0);
@@ -139,22 +139,22 @@ class MenuMarathon extends MusicBeatState
 		add(sprDifficulty);
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		scoreText.setFormat(Paths.font("comic.ttf"), 32, FlxColor.WHITE, RIGHT);
 		scoreText.alignment = CENTER;
 		scoreText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		scoreText.screenCenter(X);
 		scoreText.y = sprDifficulty.y - 38;
 		add(scoreText);
 
-		tracksUsed = new FlxText(FlxG.width * 0.7, 680, 0, "0 TRACKS USED", 20);
-		tracksUsed.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		tracksUsed = new FlxText(FlxG.width * 0.7, 666, 0, "0 TRACKS USED", 20);
+		tracksUsed.setFormat(Paths.font("comic.ttf"), 32, FlxColor.WHITE, RIGHT);
 		tracksUsed.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		add(tracksUsed);
 
 		changeSelection();
 		changeDiff();
 
-		new FlxTimer().start(0.7, function(tmr:FlxTimer)
+		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
 			selectable = true;
 		});
@@ -191,14 +191,14 @@ class MenuMarathon extends MusicBeatState
 		}
 
 		tracksUsed.text = PlayState.storyPlaylist.length + " TRACKS USED";
-		tracksUsed.x = 1240 - tracksUsed.width;
+		tracksUsed.x = 1200 - tracksUsed.width;
 
 		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.5 / (_variables.fps / 60)));
 
 		if (Math.abs(lerpScore - intendedScore) <= 10)
 			lerpScore = intendedScore;
 
-		scoreText.text = "PERSONAL BEST:" + lerpScore;
+		scoreText.text = "HIGHSCORE:" + lerpScore;
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;

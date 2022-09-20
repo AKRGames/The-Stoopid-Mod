@@ -34,7 +34,7 @@ class MenuWeek extends MusicBeatState
 
 	public static var weekUnlocked:Array<Bool> = [true, true];
 
-	var weekCharacters:Array<String> = ["gf", "gf"];
+	var weekCharacters:Array<String> = ["gf", "stoopid guy"];
 
 	var weekNames:Array<String> = [
 		"Tutorial",
@@ -100,6 +100,7 @@ class MenuWeek extends MusicBeatState
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
+		bg.alpha = 1;
 		add(bg);
 
 		gradientBar = FlxGradient.createGradientFlxSprite(Math.round(FlxG.width), 512, [0x00ff0000, 0x55F8FFAB, 0xAAFFDEF2], 1, 90, true);
@@ -130,7 +131,7 @@ class MenuWeek extends MusicBeatState
 		side.antialiasing = true;
 		side.screenCenter();
 		add(side);
-		side.y = 0 - side.height;
+		side.y = 0;
 		side.x = FlxG.width / 2 - side.width / 2;
 
 		bottom.scrollFactor.x = 0;
@@ -138,12 +139,12 @@ class MenuWeek extends MusicBeatState
 		bottom.antialiasing = true;
 		bottom.screenCenter();
 		add(bottom);
-		bottom.y = FlxG.height + bottom.height;
+		bottom.y = FlxG.height - bottom.height;
 
-		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
+		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 42);
 		scoreText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		scoreText.alignment = CENTER;
-		scoreText.setFormat("Comic Sans MS", 32);
+		scoreText.setFormat("Comic Sans MS", 42);
 		scoreText.screenCenter(X);
 		scoreText.y = 10;
 
@@ -179,16 +180,17 @@ class MenuWeek extends MusicBeatState
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, 200, 0, "THE BANGERS:\n\n", 32);
 		txtTracklist.alignment = CENTER;
-		txtTracklist.font = scoreText.font;
+		txtTracklist.font = Paths.font("calibri.ttf");
 		txtTracklist.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		txtTracklist.color = 0xFFFCB697;
-		txtTracklist.y = bottom.y + 60;
+		txtTracklist.y = characterUI.y + 420;
 		add(txtTracklist);
 		add(scoreText);
 		add(txtWeekTitle);
 
 		var tex = Paths.getSparrowAtlas('Week_CharUI');
 		characterUI.frames = tex;
+		characterUI.x = FlxG.width;
 		characterUI.antialiasing = true;
 		add(characterUI);
 
@@ -199,22 +201,13 @@ class MenuWeek extends MusicBeatState
 
 		super.create();
 
-		FlxTween.tween(bg, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(side, {y: 0}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(bottom, {y: FlxG.height - bottom.height}, 0.8, {ease: FlxEase.quartInOut});
+		scoreText.alpha = sprDifficulty.alpha = characterUI.alpha = 1;
+		txtWeekTitle.alpha = 0.75;
 
-		scoreText.alpha = sprDifficulty.alpha = characterUI.alpha = txtWeekTitle.alpha = 0;
-		FlxTween.tween(scoreText, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(sprDifficulty, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(txtTracklist, {y: characterUI.y + 300}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(characterUI, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(txtWeekTitle, {alpha: 0.7}, 0.8, {ease: FlxEase.quartInOut});
+		FlxG.camera.zoom = 1;
+		FlxG.camera.alpha = 1;
 
-		FlxG.camera.zoom = 0.6;
-		FlxG.camera.alpha = 0;
-		FlxTween.tween(FlxG.camera, {zoom: 1, alpha: 1}, 0.7, {ease: FlxEase.quartInOut});
-
-		new FlxTimer().start(0.7, function(tmr:FlxTimer)
+		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
 			selectable = true;
 		});
@@ -235,7 +228,7 @@ class MenuWeek extends MusicBeatState
 		if (Math.abs(lerpScore - intendedScore) <= 10)
 			lerpScore = intendedScore;
 
-		scoreText.text = "WEEK SCORE:" + lerpScore;
+		scoreText.text = "WEEK SCORE: " + lerpScore;
 
 		scoreText.x = side.x + side.width / 2 - scoreText.width / 2;
 
@@ -272,12 +265,12 @@ class MenuWeek extends MusicBeatState
 
 			DiscordClient.changePresence("they headin' out", null);
 
-			FlxTween.tween(FlxG.camera, {zoom: 0.6, alpha: -0.6}, 0.8, {ease: FlxEase.quartInOut});
-			FlxTween.tween(bg, {alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
-			FlxTween.tween(checker, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-			FlxTween.tween(gradientBar, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-			FlxTween.tween(side, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-			FlxTween.tween(bottom, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
+			// FlxG.camera.fade(FlxColor.BLACK, 0.375);
+			// FlxTween.tween(bg, {alpha: 0}, 0.5, {ease: FlxEase.expoOut});
+			// FlxTween.tween(checker, {alpha: 0}, 0.25, {ease: FlxEase.expoOut});
+			// FlxTween.tween(gradientBar, {alpha: 0}, 0.25, {ease: FlxEase.expoOut});
+			// FlxTween.tween(side, {alpha: 0}, 0.25, {ease: FlxEase.expoOut});
+			// FlxTween.tween(bottom, {alpha: 0}, 0.25, {ease: FlxEase.expoOut});
 		}
 
 		super.update(elapsed);
@@ -321,30 +314,30 @@ class MenuWeek extends MusicBeatState
 			PlayState.storyWeek = curWeek;
 			PlayState.campaignScore = 0;
 
-			FlxTween.tween(bg, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
-			FlxTween.tween(checker, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
-			FlxTween.tween(characterUI, {x: 3700}, 0.6, {ease: FlxEase.quartInOut});
-			FlxTween.tween(txtTracklist, {x: -2600}, 0.6, {ease: FlxEase.quartInOut});
-			FlxTween.tween(gradientBar, {alpha: 0}, 0.6, {ease: FlxEase.quartInOut});
-			FlxTween.tween(side, {alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
-			FlxTween.tween(bottom, {alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
-			FlxTween.tween(scoreText, {y: -50, alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
-			FlxTween.tween(txtWeekTitle, {y: -50, alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
-			FlxTween.tween(sprDifficulty, {y: -120, alpha: 0}, 0.8, {ease: FlxEase.quartInOut});
+			FlxG.camera.fade(FlxColor.BLACK, 0.25);
+			FlxTween.tween(checker, {alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(characterUI, {alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(txtTracklist, {alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(gradientBar, {alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(side, {alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(bottom, {alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(scoreText, {y: -50, alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(txtWeekTitle, {y: -50, alpha: 0}, 1, {ease: FlxEase.quintIn});
+			FlxTween.tween(sprDifficulty, {y: -69, alpha: 0}, 1, {ease: FlxEase.quintIn});
 
 			for (item in ranks.members)
 			{
-				FlxTween.tween(item, {x: 2600}, 0.6, {ease: FlxEase.quartInOut});
+				FlxTween.tween(item, {x: 2023}, 1, {ease: FlxEase.expoIn});
 			}
 
 			DiscordClient.changePresence("they choosing a chart type", null);
 
 			for (item in grpWeekText.members)
 			{
-				FlxTween.tween(item, {alpha: 0}, 0.9, {ease: FlxEase.quartInOut});
+				FlxTween.tween(item, {alpha: 0}, 1, {ease: FlxEase.expoOut});
 			}
 
-			new FlxTimer().start(0.9, function(tmr:FlxTimer)
+			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				FlxG.state.openSubState(new Substate_ChartType());
 			});
@@ -420,7 +413,7 @@ class MenuWeek extends MusicBeatState
 			if (item.targetY == Std.int(0) && weekUnlocked[curWeek])
 				item.alpha = 1;
 			else
-				item.alpha = 0.6;
+				item.alpha = 0.5;
 			bullShit++;
 		}
 
@@ -450,13 +443,15 @@ class MenuWeek extends MusicBeatState
 		characterUI.animation.addByPrefix(weekCharacters[curWeek], weekCharacters[curWeek], 24);
 		characterUI.animation.play(weekCharacters[curWeek]);
 		characterUI.scale.set(300 / characterUI.height, 300 / characterUI.height);
-		characterUI.x = 1240 - characterUI.width;
+		characterUI.x = 2000 - FlxG.width;
 		characterUI.y = 150;
 
 		switch (characterUI.animation.curAnim.name)
 		{
 			case 'gf':
-				characterUI.offset.set(0, 0);
+				characterUI.offset.set(32, 0);
+			case 'stoopid guy':
+				characterUI.offset.set(-50, 0);
 		}
 
 		#if !switch

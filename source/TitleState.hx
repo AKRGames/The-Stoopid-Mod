@@ -62,6 +62,8 @@ class TitleState extends MusicBeatState
 		#end
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
+		transIn = FlxTransitionableState.defaultTransIn;
+
 		setSeed = new Random(1, new Xorshift64Plus());
 		setSeed.setStringSeed("aaandthegamehasbeenwon1038");
 
@@ -69,7 +71,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('save', "Funkin Mic'd Up");
+		FlxG.save.bind('save', "Stoopid Save File");
 
 		Highscore.load();
 
@@ -93,21 +95,13 @@ class TitleState extends MusicBeatState
 
 		if (FileSystem.exists(Paths.music('menu/classic')))
 		{
-			FlxG.sound.playMusic(Paths.music('menu/classic'), 0);
+			FlxG.sound.playMusic(Paths.music('menu/classic'), 1);
 		}
 		else
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-
-		FlxG.sound.music.fadeIn(4, 0, 0f * _variables.mvolume / 100);
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1);
 
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
-
-		if (!OutOfDate.leftState || !FirstTimeState.leftState)
-		{
-			var lol = (cast(Lib.current.getChildAt(0), Main)).lastY;
-			FlxTween.tween(Application.current.window, {y: lol}, 0.5, {ease: FlxEase.circOut});
-		}
 
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		// bg.antialiasing = true;
@@ -152,7 +146,7 @@ class TitleState extends MusicBeatState
 		gradientBar.scale.y = 0;
 		gradientBar.updateHitbox();
 		add(gradientBar);
-		FlxTween.tween(gradientBar, {'scale.y': 1.3}, 4, {ease: FlxEase.quadInOut});
+		FlxTween.tween(gradientBar, {'scale.y': 1.3}, 4, {ease: FlxEase.circOut});
 
 		credTextShit = new Alphabet(0, 0, "ninjamuffin99\nPhantomArcade\nkawaisprite\nevilsk8er", true);
 		credTextShit.screenCenter();
@@ -198,7 +192,7 @@ class TitleState extends MusicBeatState
 		add(titleText);
 		titleText.visible = false;
 
-		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
+		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.circOut, type: PINGPONG});
 
 		FlxG.mouse.visible = false;
 
@@ -299,6 +293,17 @@ class TitleState extends MusicBeatState
 			MainVariables.Save();
 		}
 
+		if (controls.BACK)
+		{
+			FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
+			FlxG.camera.fade(FlxColor.BLACK, 1);
+			FlxG.sound.music.fadeOut(1, 0);
+			new FlxTimer().start(1.23, function(tmr:FlxTimer)
+			{
+				System.exit(0);
+			});
+		}
+
 		if (FlxG.keys.pressed.CONTROL && FlxG.keys.justPressed.R)
 		{
 			restart();
@@ -316,7 +321,7 @@ class TitleState extends MusicBeatState
 			transitioning = true;
 			// FlxG.sound.music.stop();
 
-			FlxTween.tween(FlxG.camera, {y: FlxG.height}, 1.6, {ease: FlxEase.expoIn, startDelay: 0.4});
+			FlxTween.tween(FlxG.camera, {y: FlxG.height}, 1, {ease: FlxEase.circIn, startDelay: 0.5});
 
 			if (_variables.music != 'classic' && MainVariables.musicList != [])
 				FlxG.sound.music.fadeOut(0, 0);
@@ -327,7 +332,7 @@ class TitleState extends MusicBeatState
 			isDebug = true;
 			#end
 
-			new FlxTimer().start(1.7, function(tmr:FlxTimer)
+			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
 				// FlxG.switchState(new GameplayCustomization());
 				if (_variables.music != 'classic' && MainVariables.musicList != [])
@@ -351,7 +356,7 @@ class TitleState extends MusicBeatState
 		{
 			var money:Alphabet = new Alphabet(0, 0, textArray[i], true, false);
 			money.x = -1500;
-			FlxTween.quadMotion(money, -300, -100, 30 + (i * 70), 150 + (i * 130), 100 + (i * 70), 80 + (i * 130), 0.4, true, {ease: FlxEase.quadInOut});
+			FlxTween.quadMotion(money, -300, -100, 30 + (i * 70), 150 + (i * 130), 100 + (i * 70), 80 + (i * 130), 0.5, true, {ease: FlxEase.circOut});
 			credGroup.add(money);
 			textGroup.add(money);
 		}
@@ -366,8 +371,8 @@ class TitleState extends MusicBeatState
 			+ (textGroup.length * 130), 30
 			+ (textGroup.length * 40),
 			80
-			+ (textGroup.length * 130), 0.4, true, {
-				ease: FlxEase.quadInOut
+			+ (textGroup.length * 130), 0.5, true, {
+				ease: FlxEase.circOut
 			});
 		credGroup.add(coolText);
 		textGroup.add(coolText);
@@ -404,18 +409,8 @@ class TitleState extends MusicBeatState
 			// credTextShit.addText();
 			case 6:
 				deleteCoolText();
-				createCoolText(['You already know']);
 			case 7:
-				fnfSpr.x = -1500;
-				fnfSpr.visible = true;
-				FlxTween.quadMotion(fnfSpr, -700, -700, 50
-					+ (textGroup.length * 130), 150
-					+ (textGroup.length * 50), 100
-					+ (textGroup.length * 130),
-					80
-					+ (textGroup.length * 50), 0.4, true, {
-						ease: FlxEase.quadInOut
-					});
+				createCoolText(['You already know']);
 			// credTextShit.text += '\nNewgrounds';
 			case 8:
 				deleteCoolText();
@@ -440,9 +435,9 @@ class TitleState extends MusicBeatState
 			// credTextShit.text += '\nlmao';
 			case 12:
 				deleteCoolText();
-				FlxTween.tween(FNF_Logo, {y: 120, x: 210}, 0.8, {ease: FlxEase.backOut});
+				FlxTween.tween(FNF_Logo, {y: 120, x: 210}, 1, {ease: FlxEase.backOut});
 			case 14:
-				FlxTween.tween(FNF_EX, {y: 48, x: 403}, 0.8, {ease: FlxEase.backOut});
+				FlxTween.tween(FNF_EX, {y: 48, x: 403}, 1, {ease: FlxEase.backOut});
 
 			case 16:
 				skipIntro();
@@ -465,8 +460,8 @@ class TitleState extends MusicBeatState
 				'scale.y': 0.45,
 				x: -165,
 				y: -125
-			}, 1.3, {ease: FlxEase.expoInOut, startDelay: 1.3});
-			FlxTween.tween(gfDance, {y: 20}, 2.3, {ease: FlxEase.expoInOut, startDelay: 0.8});
+			}, 1.25, {ease: FlxEase.backInOut, startDelay: 1.25});
+			FlxTween.tween(gfDance, {y: 20}, 1.25, {ease: FlxEase.backOut, startDelay: 1.5});
 			remove(credGroup);
 			titleText.visible = true;
 			logoBl.visible = true;

@@ -69,12 +69,12 @@ class Survival_Edit extends MusicBeatSubstate
                 {
                     goingBack = true;
                     FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
-                    FlxTween.tween(blackBarThingie, { 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                    FlxTween.tween(blackBarThingie, { 'scale.x': 0}, 0.5, { ease: FlxEase.expoOut});
                     for (item in grpSongs.members)
                         {
-                            FlxTween.tween(item, { 'scale.x': 0}, 0.5, { ease: FlxEase.expoIn});
+                            FlxTween.tween(item, { 'scale.x': 0}, 0.5, { ease: FlxEase.circOut});
                         }
-                    new FlxTimer().start(0.6, function(tmr:FlxTimer)
+                    new FlxTimer().start(0.5, function(tmr:FlxTimer)
                         {
                             FlxG.state.closeSubState();
                             FlxG.state.openSubState(new Survival_Substate());

@@ -25,7 +25,7 @@ class SettingsState extends MusicBeatState
 	public static var page:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
-	var pageArray:Array<String> = ['general', 'sfx', 'gfx', 'gameplay', 'miscellaneous', 'clear'];
+	var pageArray:Array<String> = ['general', 'sounds', 'graphics', 'gameplay', 'miscellaneous', 'clear'];
 	var pageText:FlxText = new FlxText(20, 69, FlxG.width, "", 48);
 
 	override public function create():Void
@@ -97,15 +97,15 @@ class SettingsState extends MusicBeatState
 		add(pageText);
 		pageText.scrollFactor.x = 0;
 		pageText.scrollFactor.y = 0;
-		pageText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT);
+		pageText.setFormat("Calibri", 24, FlxColor.WHITE, LEFT);
 		pageText.x = 10;
 		pageText.y = 65;
 		pageText.setBorderStyle(OUTLINE, 0xFF000000, 2, 1);
 
-		FlxG.camera.zoom = 3;
-		FlxTween.tween(FlxG.camera, {zoom: 1}, 1.5, {ease: FlxEase.expoInOut});
+		FlxG.camera.zoom = 2.5;
+		FlxTween.tween(FlxG.camera, {zoom: 1}, 1, {ease: FlxEase.circOut});
 
-		new FlxTimer().start(0.75, function(tmr:FlxTimer)
+		new FlxTimer().start(0.25, function(tmr:FlxTimer)
 		{
 			startIntro(page);
 		}); // gotta wait for a trnsition to be over because that apparently breaks it.

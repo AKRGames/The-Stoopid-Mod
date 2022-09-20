@@ -7,7 +7,6 @@ import sys.io.File;
 #if desktop
 import Discord.DiscordClient;
 #end
-
 import flixel.FlxSubState;
 import flixel.util.FlxGradient;
 import flixel.text.FlxText;
@@ -76,7 +75,7 @@ class ChromaSettings extends MusicBeatSubstate
             menuItem.scrollFactor.y = 1;
 
             menuItem.x = 2000;
-            FlxTween.tween(menuItem, { x: 800}, 0.15, { ease: FlxEase.expoInOut });
+            FlxTween.tween(menuItem, {x: 800}, 0.5, {ease: FlxEase.expoInOut});
         }
 
         var nTex = Paths.getSparrowAtlas('Options_Navigation');
@@ -91,7 +90,7 @@ class ChromaSettings extends MusicBeatSubstate
 
         camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
-        
+
         changeItem();
 
         createResults();
@@ -99,6 +98,12 @@ class ChromaSettings extends MusicBeatSubstate
         // updateResults();
 
         FlxG.camera.follow(camFollow, null, camLerp);
+
+        if (!FlxG.sound.music.playing)
+        {
+            FlxG.sound.playMusic(Paths.music('ChromaSettingsLoop'), _variables.mvolume / 100);
+            Conductor.changeBPM(162);
+        }
 
         #if desktop
 			DiscordClient.changePresence("Settings page: Chromakey", null);
@@ -116,23 +121,23 @@ class ChromaSettings extends MusicBeatSubstate
                 add(ResultText);
                 ResultText.scrollFactor.x = 0;
                 ResultText.scrollFactor.y = 0;
-                ResultText.setFormat("VCR OSD Mono", 48, FlxColor.WHITE, CENTER);
+                ResultText.setFormat("Calibri", 45, FlxColor.WHITE, CENTER);
                 ResultText.x = -400;
                 ResultText.y = 350;
                 ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
                 ResultText.alpha = 0;
-                FlxTween.tween(ResultText, { alpha: 1}, 0.15, { ease: FlxEase.expoInOut });
+                FlxTween.tween(ResultText, { alpha: 1}, 0.15, { ease: FlxEase.sineInOut });
         
                 add(ExplainText);
                 ExplainText.scrollFactor.x = 0;
                 ExplainText.scrollFactor.y = 0;
-                ExplainText.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, CENTER);
+                ExplainText.setFormat("Comic Sans MS", 20, FlxColor.WHITE, CENTER);
                 ExplainText.alignment = LEFT;
                 ExplainText.x = 20;
                 ExplainText.y = 624;
                 ExplainText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
                 ExplainText.alpha = 0;
-                FlxTween.tween(ExplainText, { alpha: 1}, 0.15, { ease: FlxEase.expoInOut });
+                FlxTween.tween(ExplainText, { alpha: 1}, 0.15, { ease: FlxEase.sineInOut });
             }
 
     override function update(elapsed:Float)
@@ -171,15 +176,17 @@ class ChromaSettings extends MusicBeatSubstate
                             menuItems.forEach(function(spr:FlxSprite)
                                 {
                                     spr.animation.play('idle');
-                                    FlxTween.tween(spr, { x: -1000}, 0.15, { ease: FlxEase.expoIn });
+                                    FlxTween.tween(spr, { x: -1000}, 0.25, {ease: FlxEase.circOut});
                                 });
         
 
-                            FlxTween.tween(ResultText, { alpha: 0}, 0.15, { ease: FlxEase.expoIn });
-                            FlxTween.tween(ExplainText, { alpha: 0}, 0.15, { ease: FlxEase.expoIn });
+                            FlxTween.tween(ResultText, { alpha: 0}, 0.15, {ease: FlxEase.sineInOut});
+                            FlxTween.tween(ExplainText, { alpha: 0}, 0.15, {ease: FlxEase.sineInOut});
     
                             new FlxTimer().start(0.3, function(tmr:FlxTimer)
                                 {
+                                    FlxG.sound.music.fadeOut(0, 0);
+                                    FlxG.sound.music.stop();
                                     navi.kill();
                                     openSubState(new PAGE3settings());
                                 });
@@ -193,16 +200,16 @@ class ChromaSettings extends MusicBeatSubstate
                 //     ExplainText.text = "Previous Page: DEVELOPER \nNext Page: GENERAL";
                 case "chromakey":
                     ResultText.text = Std.string(_variables.chromakey).toUpperCase();
-                    ExplainText.text = "ChromaKey:\nAdds a colored screen to the background for convienence";
+                    ExplainText.text = "CHROMA KEY:\nfills the screen with a solid color.";
                 // case "color":
                 //     ResultText.text = Std.string(_variables.color).toUpperCase();
                 //     ExplainText.text = "Color:\nChange the color of the screen";
                 case "characters":
                     ResultText.text = Std.string(_variables.charactervis).toUpperCase();
-                    ExplainText.text = "Characters:\nHide the characters?";
+                    ExplainText.text = "HIDE CHARACTERS:\nyou want the characters or not?";
                 case "healthbarvis":
                     ResultText.text = Std.string(_variables.healthbarvis).toUpperCase();
-                    ExplainText.text = "HealthIcon:\nHide the health bar?";
+                    ExplainText.text = "HIDE HEALTH BAR:\nyou want the health bar or not?";
             }
 
             menuItems.forEach(function(spr:FlxSprite)

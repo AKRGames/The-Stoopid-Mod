@@ -1,5 +1,6 @@
 package;
 
+import lime.system.System;
 import openfl.Lib;
 import Discord.DiscordClient;
 import flixel.util.FlxGradient;
@@ -82,7 +83,7 @@ class TitleStateReturn extends MusicBeatState
 		gradientBar.scale.y = 0;
 		gradientBar.updateHitbox();
 		add(gradientBar);
-		FlxTween.tween(gradientBar, {'scale.y': 1.3}, 4, {ease: FlxEase.quadInOut});
+		FlxTween.tween(gradientBar, {'scale.y': 1.3}, 4, {ease: FlxEase.backOut});
 
 		add(logoBl);
 
@@ -102,8 +103,8 @@ class TitleStateReturn extends MusicBeatState
 			'scale.y': 0.45,
 			x: -165,
 			y: -125
-		}, 1.3, {ease: FlxEase.expoInOut, startDelay: 1.3});
-		FlxTween.tween(gfDance, {y: 20}, 2.3, {ease: FlxEase.expoInOut, startDelay: 0.8});
+			}, 1.25, {ease: FlxEase.backInOut, startDelay: 1.25});
+		FlxTween.tween(gfDance, {y: 20}, 1.25, {ease: FlxEase.backOut, startDelay: 1.5});
 	}
 
 	var logoBl:FlxSprite;
@@ -192,6 +193,17 @@ class TitleStateReturn extends MusicBeatState
 			TitleState.restart();
 		}
 
+		if (controls.BACK)
+		{
+			FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
+			FlxG.camera.fade(FlxColor.BLACK, 1);
+			FlxG.sound.music.fadeOut(1, 0);
+			new FlxTimer().start(1.23, function(tmr:FlxTimer)
+			{
+				System.exit(0);
+			});
+		}
+
 		if (pressedEnter && !transitioning)
 		{
 			titleText.animation.play('press');
@@ -204,9 +216,9 @@ class TitleStateReturn extends MusicBeatState
 			transitioning = true;
 			// FlxG.sound.music.stop();
 
-			FlxTween.tween(FlxG.camera, {y: FlxG.height}, 1.6, {ease: FlxEase.expoIn, startDelay: 0.4});
+			FlxTween.tween(FlxG.camera, {y: FlxG.height}, 1, {ease: FlxEase.circIn, startDelay: 0.5});
 
-			new FlxTimer().start(1.7, function(tmr:FlxTimer)
+			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
 				FlxG.switchState(new MainMenuState());
 			});

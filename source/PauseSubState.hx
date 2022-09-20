@@ -38,8 +38,7 @@ class PauseSubState extends MusicBeatSubstate
 		this.loopState = loopState;
 
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast', 'shared'), true, true);
-		pauseMusic.volume = 0;
-		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
+		pauseMusic.volume = 1;
 
 		FlxG.sound.list.add(pauseMusic);
 
@@ -88,10 +87,10 @@ class PauseSubState extends MusicBeatSubstate
 		levelDifficulty.x = FlxG.width - (levelDifficulty.width + 20);
 		deathCounter.x = FlxG.width - (deathCounter.width + 20);
 
-		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
-		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
-		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
-		FlxTween.tween(deathCounter, {alpha: 1, y: deathCounter.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
+		FlxTween.tween(bg, {alpha: 0.5}, 0.5, {ease: FlxEase.expoOut});
+		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.5, {ease: FlxEase.circOut, startDelay: 0.3});
+		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.5, {ease: FlxEase.circOut, startDelay: 0.5});
+		FlxTween.tween(deathCounter, {alpha: 1, y: deathCounter.y + 5}, 0.5, {ease: FlxEase.circOut, startDelay: 0.7});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -365,7 +364,7 @@ class PauseSubState extends MusicBeatSubstate
 					ready.screenCenter();
 					add(ready);
 					FlxTween.tween(ready, {y: ready.y += 100, alpha: 0}, Conductor.crochet / 1000, {
-						ease: FlxEase.cubeInOut,
+						ease: FlxEase.sineInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							ready.destroy();
@@ -388,7 +387,7 @@ class PauseSubState extends MusicBeatSubstate
 					set.screenCenter();
 					add(set);
 					FlxTween.tween(set, {y: set.y += 100, alpha: 0}, Conductor.crochet / 1000, {
-						ease: FlxEase.cubeInOut,
+						ease: FlxEase.sineInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							set.destroy();
@@ -413,7 +412,7 @@ class PauseSubState extends MusicBeatSubstate
 					go.screenCenter();
 					add(go);
 					FlxTween.tween(go, {y: go.y += 100, alpha: 0}, Conductor.crochet / 1000, {
-						ease: FlxEase.cubeInOut,
+						ease: FlxEase.sineInOut,
 						onComplete: function(twn:FlxTween)
 						{
 							go.destroy();

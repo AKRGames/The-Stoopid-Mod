@@ -57,7 +57,7 @@ class Endless_Substate extends MusicBeatSubstate
 		add(blackBarThingie);
         blackBarThingie.scrollFactor.set();
         blackBarThingie.scale.y = 0;
-        FlxTween.tween(blackBarThingie, { 'scale.y': 500}, 0.5, { ease: FlxEase.expoOut});
+        FlxTween.tween(blackBarThingie, { 'scale.y': 500}, 0.5, { ease: FlxEase.circOut});
 
         menuItems = new FlxTypedGroup<FlxSprite>();
         add(menuItems);
@@ -97,7 +97,7 @@ class Endless_Substate extends MusicBeatSubstate
         add(sprDifficulty);
 
         textSpeed = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		textSpeed.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		textSpeed.setFormat(Paths.font("calibri.ttf"), 32, FlxColor.WHITE, RIGHT);
 		textSpeed.alignment = CENTER;
 		textSpeed.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		textSpeed.x = 910;
@@ -106,7 +106,7 @@ class Endless_Substate extends MusicBeatSubstate
 		add(textSpeed);
 
         textRamp = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		textRamp.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		textRamp.setFormat(Paths.font("calibri.ttf"), 32, FlxColor.WHITE, RIGHT);
 		textRamp.alignment = CENTER;
 		textRamp.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		textRamp.x = 910;
@@ -114,8 +114,8 @@ class Endless_Substate extends MusicBeatSubstate
         textRamp.alpha = 0;
 		add(textRamp);
 
-        FlxTween.tween(textSpeed, { alpha:1}, 0.5, { ease: FlxEase.quartInOut});
-        FlxTween.tween(textRamp, { alpha:1}, 0.5, { ease: FlxEase.quartInOut});
+        FlxTween.tween(textSpeed, { alpha:1}, 0.5, { ease: FlxEase.expoOut});
+        FlxTween.tween(textRamp, { alpha:1}, 0.5, { ease: FlxEase.expoOut});
 
         changeItem();
         changeDiff();
@@ -184,9 +184,9 @@ class Endless_Substate extends MusicBeatSubstate
                     goingBack = true;
                     FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
                     FlxTween.tween(blackBarThingie, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoIn});
-                    FlxTween.tween(sprDifficulty, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoIn});
-                    FlxTween.tween(textSpeed, { alpha: 0}, 0.5, { ease: FlxEase.expoIn});
-                    FlxTween.tween(textRamp, { alpha: 0}, 0.5, { ease: FlxEase.expoIn});
+                    FlxTween.tween(sprDifficulty, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoOut});
+                    FlxTween.tween(textSpeed, { alpha: 0}, 0.5, { ease: FlxEase.expoOut});
+                    FlxTween.tween(textRamp, { alpha: 0}, 0.5, { ease: FlxEase.expoOut});
                     new FlxTimer().start(0.6, function(tmr:FlxTimer)
                         {
                             FlxG.state.closeSubState();
@@ -203,8 +203,8 @@ class Endless_Substate extends MusicBeatSubstate
 
                 goingBack = true;
                 FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume/100);
-                FlxTween.tween(blackBarThingie, { 'scale.y': 780}, 0.5, { ease: FlxEase.expoIn});
-                FlxTween.tween(sprDifficulty, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoIn});
+                FlxTween.tween(blackBarThingie, { 'scale.y': 780}, 0.5, { ease: FlxEase.expoOut});
+                FlxTween.tween(sprDifficulty, { 'scale.y': 0}, 0.5, { ease: FlxEase.expoOut});
                 FlxTween.tween(textSpeed, { alpha: 0}, 0.5, { ease: FlxEase.expoIn});
                 FlxTween.tween(textRamp, { alpha: 0}, 0.5, { ease: FlxEase.expoIn});
                 new FlxTimer().start(0.6, function(tmr:FlxTimer)

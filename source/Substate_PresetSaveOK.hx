@@ -2,6 +2,7 @@ package;
 
 import sys.io.File;
 import sys.FileSystem;
+import Song.SwagSong;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -78,6 +79,10 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 			case 'current':
 				canOK = false;
 				resultText.text = "don't replace what saves on your way. it'll autosave itself.";
+			case 'whose fault':
+				Conductor.changeBPM(86);
+			case "legion fits in everything":
+				FlxG.sound.playMusic(Paths.musicRandom('easterEgg_randomMusic/legion', 1, 2));
 			default:
 		}
 
@@ -119,11 +124,11 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 
 		if (easterImage)
 		{
-			FlxTween.tween(resultName, {size: 40, x: 300, y: 350}, 0.2, {ease: FlxEase.backOut});
+			FlxTween.tween(resultName, {size: 40, x: 300, y: 350}, 0.25, {ease: FlxEase.expoOut});
 		}
 		else
 		{
-			FlxTween.tween(resultName, {size: 64, y: 280}, 0.2, {ease: FlxEase.backOut});
+			FlxTween.tween(resultName, {size: 64, y: 280}, 0.25, {ease: FlxEase.expoOut});
 		}
 
 		new FlxTimer().start(0.25, function(tmr:FlxTimer)
@@ -153,23 +158,30 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 
 			if (controls.ACCEPT && canOK)
 			{
-				switch (Substate_PresetSave.coming)
+				switch (eggText)
 				{
-					case "Modifiers":
-						ModifierVariables.savePreset(eggText);
-					case "Marathon":
-						MenuMarathon.savePreset(eggText);
-					case "Survival":
-						MenuSurvival.savePreset(eggText);
+					case "julyym2612":
+						PlayState.SONG = Song.loadFromJson('slapper remix', 'slapper remix');
+						LoadingState.loadAndSwitchState(new PlayState());
+					default:
+						switch (Substate_PresetSave.coming)
+						{
+							case "Modifiers":
+								ModifierVariables.savePreset(eggText);
+							case "Marathon":
+								MenuMarathon.savePreset(eggText);
+							case "Survival":
+								MenuSurvival.savePreset(eggText);
+						}
 				}
 
 				goingBack = true;
 
-				FlxTween.tween(blackBarThingie, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
-				FlxTween.tween(resultText, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
-				FlxTween.tween(resultName, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
+				FlxTween.tween(blackBarThingie, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
+				FlxTween.tween(resultText, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
+				FlxTween.tween(resultName, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
 				if (easterImage)
-					FlxTween.tween(eggImage, {'scale.x': 0}, 0.5, {ease: FlxEase.expoIn});
+					FlxTween.tween(eggImage, {'scale.x': 0}, 0.5, {ease: FlxEase.expoOut});
 
 				FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume / 100);
 				new FlxTimer().start(0.5, function(tmr:FlxTimer)

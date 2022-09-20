@@ -8,7 +8,6 @@ import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Assets;
 import openfl.Lib;
-import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 
@@ -91,7 +90,7 @@ class Main extends Sprite
 		GlobalVideo.setWebm(webmHandle);
 
 		#if !mobile
-		fpsCounter = new FPS(10, 3, 0xFFFFFF);
+		fpsCounter = new FramasPorSex(10, 3, 0xFFFFFF);
 		addChild(fpsCounter);
 
 		memoryCounter = new MemoryCounter(10, 3, 0xffffff);
@@ -109,7 +108,7 @@ class Main extends Sprite
 
 		watermark = new Sprite();
 		watermark.addChild(new Bitmap(bitmapData)); // Sets the graphic of the sprite to a Bitmap object, which uses our embedded BitmapData class.
-		watermark.alpha = 0.4;
+		watermark.alpha = 0.5;
 		watermark.x = Lib.application.window.width - 10 - watermark.width;
 		watermark.y = Lib.application.window.height - 10 - watermark.height;
 		addChild(watermark);
@@ -117,7 +116,7 @@ class Main extends Sprite
 		MainVariables.Load(); // Funnily enough you can do this. I say this optimizes options better in a way or another.
 	}
 
-	public static var fpsCounter:FPS;
+	public static var fpsCounter:FramasPorSex;
 
 	public static function toggleFPS(fpsEnabled:Bool):Void
 	{

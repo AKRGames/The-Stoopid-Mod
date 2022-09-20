@@ -17,8 +17,8 @@
 
 HEY!
 Thanks for downloadin Friday Night Funkin': The Stoopid Mod.
-If you downloaded this from any other place than [insert links here]
-You might be in DANGER!!! Unless is stated otherwise of course. 
+If you downloaded this from any other place than https://gamebanana.com/concepts/1830
+You might be in DANGER!!! Unless stated otherwise of course. 
 
 The GameBanana and Game Jolt releases are the only official sources for the desktop (PC) version of the mod!
 The itch.io release is the only official source for the browser (HTML) version of the mod!
@@ -36,7 +36,8 @@ Use the music in videos you do, use art, ANYTHING. GO CRAZY BRO.
 
 If you do make any sort of video, it would be a bro move if you linked the mod and spread the word
 
-Support on Gamebanana - https://gamebanana.com/gamefiles/15309
+Download The Stoopid Mod on Gamebanana - https://gamebanana.com/concepts/1830
+Support Mic'd Up on Gamebanana - https://gamebanana.com/gamefiles/15309
 
 If not FUCK YOU.
 
@@ -50,15 +51,13 @@ https://github.com/AKRGames/The-Stoopid-Mod
 
 It's made in Haxe / HaxeFlixel
 
-MUSIC IS ON SPOTIFY AND BANDCAMP AND EVERYWHERE ELSE PROB TOO BY KAWAISPRIITE, GO SUPPORT THIS DUDE
-https://kawaisprite.bandcamp.com/album/friday-night-funkin-ost-vol-1
-
+MUSIC (ON SOUNDCLOUD) BY ME.
 
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
     FINAL WORDS / CREDITS
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
 
-Friday Night Funkin' is made by ninjamuffin99 (programmer), PhantomArcade (animator), kawaisprite (musician), and evilsk8r (artist)
+Friday Night Funkin' is made by ninjamuffin99 (programmer), PhantomArcade (animator), kawaisprite (musician), and evilsk8r (artist).
 
 https://twitter.com/ninja_muffin99
 https://twitter.com/phantomarcade3k
@@ -73,18 +72,22 @@ https://twitter.com/ash__i_guess_
 
 The Stoopid Mod is made by AKRGames
 
-https://twitter.com/AKRGames_93110
+https://twitter.com/AKRGames_93110.
 
-Pico is created by Tom Fulp
-Skid and Pump are created by SrPelo
-BassetFilms did music for lemon monster songs
-
+Pico is created by Tom Fulp.
+Skid and Pump are created by SrPelo.
+BassetFilms made the Lemon Monster songs.
+MarStarBro made Endless v1 for the Sonic.EXE mod before v2.
+KrystalPhantasm made Green Screen for the Super Mario Bros. Funk Mix mod.
 
 Final important thing, this is made with the support and love to and from Newgrounds.com.
 Go to newgrounds, we love newgrounds. newgrounds good. How many times do I gotta damn say it. Newgrounds newgrounds newgrounds newgrounds
 I love Tom Fulp.
 
 - Cameron ♪(´▽｀)
+
+i first acknowledged Newgrounds through Geometry Dash. i used to call it Newsgrounds.
+- AKR (^v^)
 
 ##################################################################################
                                                                                   

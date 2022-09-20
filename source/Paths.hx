@@ -264,6 +264,11 @@ class Paths
 			return getPath('music/$key.$SOUND_EXT', MUSIC, library);
 	}
 
+	inline static public function musicRandom(key:String, min:Int, max:Int, ?library:String)
+	{
+		return music(key + FlxG.random.int(min, max), library);
+	}
+
 	inline static public function voices(song:String)
 	{
 		var rawSound:flixel.system.FlxAssets.FlxSoundAsset = 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';

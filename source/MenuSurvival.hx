@@ -110,14 +110,13 @@ class MenuSurvival extends MusicBeatState
 			// songText.screenCenter(X);
 		}
 
-		FlxTween.tween(bg, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxTween.tween(side, {x: 0}, 0.8, {ease: FlxEase.quartInOut});
-		FlxG.camera.zoom = 0.6;
-		FlxG.camera.alpha = 0;
-		FlxTween.tween(FlxG.camera, {zoom: 1, alpha: 1}, 0.7, {ease: FlxEase.quartInOut});
+		FlxTween.tween(bg, {alpha: 1}, 0, {ease: FlxEase.expoOut});
+		FlxTween.tween(side, {x: 0}, 0, {ease: FlxEase.expoOut});
+		FlxG.camera.zoom = 1;
+		FlxG.camera.alpha = 1;
 
-		tracksUsed = new FlxText(FlxG.width * 0.7, 635, 0, "0 TRACKS USED\nPERSONAL BEST", 20);
-		tracksUsed.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		tracksUsed = new FlxText(FlxG.width * 0.7, 635, 0, "0 TRACKS USED\nHIGHSCORE: ", 20);
+		tracksUsed.setFormat(Paths.font("comic.ttf"), 32, FlxColor.WHITE, RIGHT);
 		tracksUsed.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		add(tracksUsed);
 
@@ -138,7 +137,7 @@ class MenuSurvival extends MusicBeatState
 		changeSelection();
 		changeDiff();
 
-		new FlxTimer().start(0.7, function(tmr:FlxTimer)
+		new FlxTimer().start(0.75, function(tmr:FlxTimer)
 		{
 			selectable = true;
 		});
@@ -159,7 +158,7 @@ class MenuSurvival extends MusicBeatState
 
 		super.create();
 
-		DiscordClient.changePresence("Choosing my survival adventure.", null);
+		DiscordClient.changePresence("choosing my minecraft survival.", null);
     }
 
 	var score = Std.int(FlxG.save.data.survivalScore);
@@ -172,7 +171,7 @@ class MenuSurvival extends MusicBeatState
         checker.x -= -0.67 / (_variables.fps / 60);
 		checker.y -= 0.2 / (_variables.fps / 60);
 
-		tracksUsed.text = PlayState.storyPlaylist.length + '/5 TRACKS USED\nPERSONAL BEST: $minutes:$seconds:$milliseconds - $score';
+		tracksUsed.text = PlayState.storyPlaylist.length + '/5 TRACKS USED\nTIME SURVIVED - HIGHSCORE: $minutes:$seconds:$milliseconds - $score';
 		tracksUsed.x = 1240 - tracksUsed.width;
 
         super.update(elapsed);

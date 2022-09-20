@@ -65,7 +65,7 @@ class PAGE1settings extends MusicBeatSubstate
 			menuItem.scrollFactor.y = 1;
 
 			menuItem.x = 2000;
-			FlxTween.tween(menuItem, {x: 800}, 0.15, {ease: FlxEase.expoInOut});
+			FlxTween.tween(menuItem, {x: 800}, 0.5, {ease: FlxEase.expoInOut});
 		}
 
 		var nTex = Paths.getSparrowAtlas('Options_Navigation');
@@ -90,6 +90,7 @@ class PAGE1settings extends MusicBeatSubstate
 		updateResults();
 
 		FlxG.camera.follow(camFollow, null, camLerp);
+		FlxG.camera.zoom = 1;
 
 		DiscordClient.changePresence("settings page: general", null);
 	}
@@ -99,12 +100,12 @@ class PAGE1settings extends MusicBeatSubstate
 		add(ResultText);
 		ResultText.scrollFactor.x = 0;
 		ResultText.scrollFactor.y = 0;
-		ResultText.setFormat("Comic Sans MS", 45, FlxColor.WHITE, CENTER);
+		ResultText.setFormat("Calibri", 45, FlxColor.WHITE, CENTER);
 		ResultText.x = -400;
 		ResultText.y = 350;
 		ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		ResultText.alpha = 0;
-		FlxTween.tween(ResultText, {alpha: 1}, 0.15, {ease: FlxEase.expoInOut});
+		FlxTween.tween(ResultText, {alpha: 1}, 0.125, {ease: FlxEase.expoOut});
 
 		add(ExplainText);
 		ExplainText.scrollFactor.x = 0;
@@ -115,7 +116,7 @@ class PAGE1settings extends MusicBeatSubstate
 		ExplainText.y = 625;
 		ExplainText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		ExplainText.alpha = 0;
-		FlxTween.tween(ExplainText, {alpha: 1}, 0.15, {ease: FlxEase.expoInOut});
+		FlxTween.tween(ExplainText, {alpha: 1}, 0.125, {ease: FlxEase.expoOut});
 	}
 
 	function updateResults():Void
@@ -191,14 +192,13 @@ class PAGE1settings extends MusicBeatSubstate
 				menuItems.forEach(function(spr:FlxSprite)
 				{
 					spr.animation.play('idle');
-					FlxTween.tween(spr, {x: -1000}, 0.15, {ease: FlxEase.expoIn});
+					FlxTween.tween(spr, {x: -1000}, 0.5, {ease: FlxEase.expoIn});
 				});
 
-				FlxTween.tween(FlxG.camera, {zoom: 7}, 0.5, {ease: FlxEase.expoIn, startDelay: 0.2});
-				FlxTween.tween(ResultText, {alpha: 0}, 0.15, {ease: FlxEase.expoIn});
-				FlxTween.tween(ExplainText, {alpha: 0}, 0.15, {ease: FlxEase.expoIn});
+				FlxTween.tween(ResultText, {alpha: 0}, 0.25, {ease: FlxEase.expoIn});
+				FlxTween.tween(ExplainText, {alpha: 0}, 0.25, {ease: FlxEase.expoIn});
 
-				new FlxTimer().start(0.3, function(tmr:FlxTimer)
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
 				{
 					FlxG.switchState(new MainMenuState());
 				});
@@ -221,7 +221,7 @@ class PAGE1settings extends MusicBeatSubstate
 				ExplainText.text = "FPS CAP:\nhow many FPS bro?";
 			case "page":
 				ResultText.text = "";
-				ExplainText.text = "previous page: CLEAR \nnext page: SFX";
+				ExplainText.text = "previous page: CLEAR \nnext page: SOUNDS";
 			case "filter":
 				ResultText.text = _variables.filter;
 				ExplainText.text = "FILTER: \na color filter. either for fun or for anti-colorblindness.";
@@ -350,13 +350,13 @@ class PAGE1settings extends MusicBeatSubstate
 				menuItems.forEach(function(spr:FlxSprite)
 				{
 					spr.animation.play('idle');
-					FlxTween.tween(spr, {x: -1000}, 0.15, {ease: FlxEase.expoIn});
+					FlxTween.tween(spr, {x: -1000}, 0.25, {ease: FlxEase.expoOut});
 				});
 
-				FlxTween.tween(ResultText, {alpha: 0}, 0.15, {ease: FlxEase.expoIn});
-				FlxTween.tween(ExplainText, {alpha: 0}, 0.15, {ease: FlxEase.expoIn});
+				FlxTween.tween(ResultText, {alpha: 0}, 0.15, {ease: FlxEase.expoOut});
+				FlxTween.tween(ExplainText, {alpha: 0}, 0.15, {ease: FlxEase.expoOut});
 
-				new FlxTimer().start(0.2, function(tmr:FlxTimer)
+				new FlxTimer().start(0.25, function(tmr:FlxTimer)
 				{
 					navi.kill();
 					menuItems.kill();

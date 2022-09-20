@@ -102,44 +102,29 @@ class MenuEndless extends MusicBeatState
 		add(side);
 
 		side.screenCenter(Y);
-		side.x = 500 - side.width;
-		FlxTween.tween(side, {x: 0}, 0.6, {ease: FlxEase.quartInOut});
+		side.x = 0;
 
-		FlxTween.tween(bg, {alpha: 1}, 0.8, {ease: FlxEase.quartInOut});
-		FlxG.camera.zoom = 0.6;
-		FlxG.camera.alpha = 0;
-		FlxTween.tween(FlxG.camera, {zoom: 1, alpha: 1}, 0.7, {ease: FlxEase.quartInOut});
+		FlxTween.tween(bg, {alpha: 1}, 0, {ease: FlxEase.expoOut});
+		FlxG.camera.zoom = 1;
+		FlxG.camera.alpha = 1;
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		scoreText.setFormat(Paths.font("comic.ttf"), 32, FlxColor.WHITE, RIGHT);
 		scoreText.alignment = LEFT;
 		scoreText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
 		scoreText.screenCenter(Y);
 		scoreText.x = 10;
-		scoreText.alpha = 0;
+		scoreText.alpha = 1;
 		add(scoreText);
-
-		FlxTween.tween(scoreText, {alpha: 1}, 0.5, {ease: FlxEase.quartInOut});
 
 		changeSelection();
 
-		new FlxTimer().start(0.7, function(tmr:FlxTimer)
-		{
-			selectable = true;
-		});
+		selectable = true;
 
 		if (!FlxG.sound.music.playing)
 		{
-			if (FileSystem.exists(Paths.music('menu/' + _variables.music)))
-			{
-				FlxG.sound.playMusic(Paths.music('menu/' + _variables.music), _variables.mvolume / 100);
-				Conductor.changeBPM(Std.parseFloat(File.getContent('assets/music/menu/' + _variables.music + '_BPM.txt')));
-			}
-			else
-			{
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), _variables.mvolume / 100);
-				Conductor.changeBPM(102);
-			}
+				FlxG.sound.playMusic(Paths.music('endless'), _variables.mvolume / 100);
+				Conductor.changeBPM(155);
 		}
 
 		super.create();
@@ -162,7 +147,7 @@ class MenuEndless extends MusicBeatState
 		if (Math.abs(lerpScore - intendedScore) <= 10)
 			lerpScore = intendedScore;
 
-		scoreText.text = "PERSONAL BEST:\n" + lerpScore;
+		scoreText.text = "HIGHSCORE:\n" + lerpScore;
 
 		var upP = controls.UP_P;
 		var downP = controls.DOWN_P;
@@ -180,16 +165,12 @@ class MenuEndless extends MusicBeatState
 			{
 				FlxG.switchState(new PlaySelection());
 				goingBack = true;
-				FlxTween.tween(FlxG.camera, {zoom: 0.6, alpha: -0.6}, 0.7, {ease: FlxEase.quartInOut});
-				FlxTween.tween(bg, {alpha: 0}, 0.7, {ease: FlxEase.quartInOut});
-				FlxTween.tween(checker, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-				FlxTween.tween(gradientBar, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
-				FlxTween.tween(side, {x: -500 - side.width}, 0.3, {ease: FlxEase.quartInOut});
-				FlxTween.tween(scoreText, {alpha: 0}, 0.3, {ease: FlxEase.quartInOut});
 
-				DiscordClient.changePresence("Going back!", null);
+				DiscordClient.changePresence("they headin' out", null);
 
 				FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
+				FlxG.sound.music.fadeOut(0, 0);
+				FlxG.sound.music.stop();
 			}
 
 			if (accepted)

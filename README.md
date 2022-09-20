@@ -83,7 +83,7 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
 	<a href="https://ninja-muffin24.itch.io/funkin"><img src="/art/preloaderArt.png" width"658.5px" height="369.75px"></a>
 </p>
 
-**The engine and this mod was made with love to Friday Night Funkin' and its community. Extra love to the team behind it. 💖**
+**This mod and it's engine was made with love to Friday Night Funkin' and its community. Extra love to the team behind it. 💖**
 
 # Mods and Modcharts ([skip](#Compiling))
 
@@ -185,7 +185,7 @@ Desktop building can be a bit tedious. Each different version requires a differe
 ### Windows Building:
 **THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE. SO SAVE UP YOUR STORAGESPACE!!**
 1. Install [Visual Studio Community 2022](https://visualstudio.microsoft.com/downloads/).
-2. Open the installer and go to the individual workloads tab and download the following:
+2. Open the installer and go to the individual workloads tab and download the following (if available):
 ```
 * C++ CMake tools for windows 
 * C++ Profiling tools 

@@ -66,7 +66,7 @@ class PAGE6settings extends MusicBeatSubstate
             menuItem.scrollFactor.y = 1;
 
             menuItem.x = 2000;
-            FlxTween.tween(menuItem, { x: 800}, 0.15, { ease: FlxEase.expoInOut });
+            FlxTween.tween(menuItem, { x: 800}, 0.5, { ease: FlxEase.expoInOut });
         }
 
         var nTex = Paths.getSparrowAtlas('Options_Navigation');
@@ -88,8 +88,9 @@ class PAGE6settings extends MusicBeatSubstate
         createResults();
 
         FlxG.camera.follow(camFollow, null, camLerp);
+        FlxG.camera.zoom = 1;
 
-		DiscordClient.changePresence("settings page: Clear", null);
+		DiscordClient.changePresence("settings page: clear", null);
     }
 
         function createResults():Void
@@ -97,12 +98,12 @@ class PAGE6settings extends MusicBeatSubstate
                 add(ResultText);
                 ResultText.scrollFactor.x = 0;
                 ResultText.scrollFactor.y = 0;
-                ResultText.setFormat("Comic Sans MS", 45, FlxColor.WHITE, CENTER);
+                ResultText.setFormat("Calibri", 45, FlxColor.WHITE, CENTER);
                 ResultText.x = -400;
                 ResultText.y = 350;
                 ResultText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
                 ResultText.alpha = 0;
-                FlxTween.tween(ResultText, { alpha: 1}, 0.15, { ease: FlxEase.expoInOut });
+                FlxTween.tween(ResultText, { alpha: 1}, 0.15, { ease: FlxEase.expoOut });
         
                 add(ExplainText);
                 ExplainText.scrollFactor.x = 0;
@@ -113,7 +114,7 @@ class PAGE6settings extends MusicBeatSubstate
                 ExplainText.y = 625;
                 ExplainText.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
                 ExplainText.alpha = 0;
-                FlxTween.tween(ExplainText, { alpha: 1}, 0.15, { ease: FlxEase.expoInOut });
+                FlxTween.tween(ExplainText, { alpha: 1}, 0.15, { ease: FlxEase.expoOut });
             }
 
     override function update(elapsed:Float)
@@ -151,25 +152,24 @@ class PAGE6settings extends MusicBeatSubstate
                 
                 if (controls.BACK)
                         {
-                            FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume/100);
+                            FlxG.sound.play(Paths.sound('cancelMenu'), _variables.svolume / 100);
                             selectedSomethin = true;
 
-			                DiscordClient.changePresence("they headin out", null);
-    
+                            DiscordClient.changePresence("they headin out", null);
+
                             menuItems.forEach(function(spr:FlxSprite)
-                                {
-                                    spr.animation.play('idle');
-                                    FlxTween.tween(spr, { x: -1000}, 0.15, { ease: FlxEase.expoIn });
-                                });
-                            
-                            FlxTween.tween(FlxG.camera, { zoom: 7}, 0.5, { ease: FlxEase.expoIn, startDelay: 0.2 });
-                            FlxTween.tween(ResultText, { alpha: 0}, 0.15, { ease: FlxEase.expoIn });
-                            FlxTween.tween(ExplainText, { alpha: 0}, 0.15, { ease: FlxEase.expoIn });
-    
-                            new FlxTimer().start(0.3, function(tmr:FlxTimer)
-                                {
-                                    FlxG.switchState(new MainMenuState());
-                                });
+                            {
+                                spr.animation.play('idle');
+                                FlxTween.tween(spr, { x: -1000 }, 0.5, { ease: FlxEase.expoIn });
+                            });
+
+                            FlxTween.tween(ResultText, { alpha: 0 }, 0.25, { ease: FlxEase.expoIn });
+                            FlxTween.tween(ExplainText, { alpha: 0 }, 0.25, { ease: FlxEase.expoIn });
+
+                            new FlxTimer().start(0.5, function(tmr:FlxTimer)
+                            {
+                                FlxG.switchState(new MainMenuState());
+                            });
                         }
                     }
             
@@ -183,7 +183,7 @@ class PAGE6settings extends MusicBeatSubstate
                     ExplainText.text = "CLEAR CONFIG:\nclears your settings in case something goes wrong, which it shouldn't (unless you're in debug).";
                 case "save":
                     ResultText.text = "";
-                    ExplainText.text = "CLEAR SAVE:\nclears your save file.";
+                    ExplainText.text = "CLEAR SAVE:\nclears all your scores. this will close the game.";
             }
 
             switch (optionShit[curSelected])
@@ -243,11 +243,11 @@ class PAGE6settings extends MusicBeatSubstate
                     menuItems.forEach(function(spr:FlxSprite)
                         {
                             spr.animation.play('idle');
-                            FlxTween.tween(spr, { x: -1000}, 0.15, { ease: FlxEase.expoIn });
+                            FlxTween.tween(spr, { x: -1000}, 0.25, { ease: FlxEase.expoOut });
                         });
 
-                    FlxTween.tween(ResultText, { alpha: 0}, 0.15, { ease: FlxEase.expoIn });
-                    FlxTween.tween(ExplainText, { alpha: 0}, 0.15, { ease: FlxEase.expoIn });
+                    FlxTween.tween(ResultText, { alpha: 0}, 0.15, { ease: FlxEase.expoOut });
+                    FlxTween.tween(ExplainText, { alpha: 0}, 0.15, { ease: FlxEase.expoOut });
     
                     new FlxTimer().start(0.2, function(tmr:FlxTimer)
                         {
@@ -271,27 +271,19 @@ class PAGE6settings extends MusicBeatSubstate
         switch (optionShit[curSelected])
 		{
             case 'save':
-                FlxG.sound.music.fadeOut(0, 0);
+                FlxG.sound.music.fadeOut(1, 0);
 				FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume/100);
 				FlxG.save.erase();
 				FlxG.save.flush();
-				FlxG.save.bind('save', "Funkin Stoopid");
+				FlxG.save.bind('save', "Stoopid Save File");
                 FlxG.game.stage.window.alert('All your scores have been cleared. You may now close the game. :)', 'Save file cleared.');
-                menuItems.forEach(function(spr:FlxSprite)
-                {
-                    spr.animation.play('idle');
-                    FlxTween.tween(spr, { x: -1000 }, 0.15, { ease: FlxEase.expoIn });
-                });
-                FlxTween.tween(FlxG.camera, { zoom: -212 }, 0.5, { ease: FlxEase.expoIn, startDelay : 0.2 });
-                FlxTween.tween(ResultText, { alpha: 0 }, 0.15, { ease: FlxEase.expoIn });
-                FlxTween.tween(ExplainText, { alpha: 0 }, 0.15, { ease: FlxEase.expoIn });
+                FlxG.camera.fade(FlxColor.BLACK, 1);
 				new FlxTimer().start(30, function(tmr:FlxTimer)
 				{
                 System.exit(0);
 				});
 
             case 'config':
-                FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume/100);
                 FileSystem.deleteFile('config-2.0.3.json');
                 FlxG.sound.music.volume = 1;
                 FlxG.sound.playMusic(Paths.music('freakyMenu'), _variables.mvolume/100);

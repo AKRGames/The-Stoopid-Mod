@@ -132,7 +132,7 @@ class MenuModifiers extends MusicBeatState
 		add(multi);
         multi.scrollFactor.x = 0;
         multi.scrollFactor.y = 0;
-        multi.setFormat("Comic Sans MS", 30, FlxColor.WHITE, RIGHT);
+        multi.setFormat("Calibri", 30, FlxColor.WHITE, RIGHT);
         multi.x = 20;
         multi.y = 618;
         multi.setBorderStyle(OUTLINE, 0xFF000000, 5, 1);
@@ -148,27 +148,22 @@ class MenuModifiers extends MusicBeatState
         super.create();
 		changeItem();
 
-		niceText.setFormat("Comic Sans MS", 52, FlxColor.WHITE, CENTER);
+		niceText.setFormat("Calibri", 50, FlxColor.WHITE, CENTER);
         niceText.x = 350;
         niceText.y = 140;
 		niceText.scrollFactor.set();
         niceText.setBorderStyle(OUTLINE, 0xFF000000, 3, 1);
 		add(niceText);
 
-		explain.alpha = niceText.alpha = multi.alpha = name.alpha = 0;
-		FlxTween.tween(name, {alpha:1}, 0.7, {ease: FlxEase.quartInOut, startDelay: 0.4});
-		FlxTween.tween(multi, {alpha:1}, 0.7, {ease: FlxEase.quartInOut, startDelay: 0.4});
-		FlxTween.tween(niceText, {alpha:1}, 0.7, {ease: FlxEase.quartInOut, startDelay: 0.4});
-		FlxTween.tween(explain, {alpha:1}, 0.7, {ease: FlxEase.quartInOut, startDelay: 0.4});
-		side.y = FlxG.height;
-		FlxTween.tween(side, {y:FlxG.height-side.height}, 0.6, {ease: FlxEase.quartInOut});
+		explain.alpha = niceText.alpha = multi.alpha = name.alpha = 1;
+		side.y = FlxG.height - side.height;
 
-		FlxTween.tween(bg, { alpha:1}, 0.8, { ease: FlxEase.quartInOut});
-		FlxG.camera.zoom = 0.6;
-		FlxG.camera.alpha = 0;
-		FlxTween.tween(FlxG.camera, { zoom:1, alpha:1}, 0.7, { ease: FlxEase.quartInOut});
+		FlxTween.tween(bg, {alpha:1}, 0, {ease: FlxEase.expoOut});
+		FlxG.camera.zoom = 1;
+		FlxG.camera.alpha = 1;
+		FlxTween.tween(FlxG.camera, {zoom:1, alpha:1}, 1, { ease: FlxEase.expoOut});
 
-		new FlxTimer().start(0.7, function(tmr:FlxTimer)
+		new FlxTimer().start(0.125, function(tmr:FlxTimer)
 			{
 				selectable = true;
 			});
@@ -295,11 +290,11 @@ class MenuModifiers extends MusicBeatState
 				{
 					FlxG.switchState(new PlaySelection());	
 
-					FlxTween.tween(FlxG.camera, { zoom:0.6, alpha:-0.6}, 0.8, { ease: FlxEase.quartInOut});
-					FlxTween.tween(bg, { alpha:0}, 0.8, { ease: FlxEase.quartInOut});
-					FlxTween.tween(checker, { alpha:0}, 0.3, { ease: FlxEase.quartInOut});
-					FlxTween.tween(gradientBar, { alpha:0}, 0.3, { ease: FlxEase.quartInOut});
-					FlxTween.tween(side, { alpha:0}, 0.3, { ease: FlxEase.quartInOut});
+					// FlxG.camera.fade(FlxColor.BLACK, 0.25);
+					// FlxTween.tween(bg, { alpha:0}, 0.25, {ease: FlxEase.expoOut});
+					// FlxTween.tween(checker, { alpha:0}, 0.25, {ease: FlxEase.expoOut});
+					// FlxTween.tween(gradientBar, { alpha:0}, 0.25, {ease: FlxEase.expoOut});
+					// FlxTween.tween(side, { alpha:0}, 0.25, {ease: FlxEase.expoOut});
 
 					DiscordClient.changePresence("they headin out", null);
 
