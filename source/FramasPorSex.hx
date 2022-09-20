@@ -20,7 +20,7 @@ import openfl.Lib;
 @:fileXml('tags="haxe,release"')
 @:noDebug
 #end
-class FPS extends TextField
+class FramasPorSex extends TextField
 {
 	/**
 		The current frame rate, expressed using frames-per-second

@@ -1,16 +1,16 @@
 package;
 
-import sys.io.File;
-import sys.FileSystem;
+import MainVariables._variables;
 import Song.SwagSong;
-import flixel.util.FlxTimer;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import MainVariables._variables;
+import flixel.util.FlxTimer;
+import sys.FileSystem;
+import sys.io.File;
 
 using StringTools;
 
@@ -82,7 +82,7 @@ class Substate_PresetSaveOK extends MusicBeatSubstate
 			case 'whose fault':
 				Conductor.changeBPM(86);
 			case "legion fits in everything":
-				FlxG.sound.playMusic(Paths.musicRandom('easterEgg_randomMusic/legion', 1, 2));
+				FlxG.sound.playMusic(Paths.musicRandom('easterEgg_randomMusic/legion', 1, 3));
 			default:
 		}
 
