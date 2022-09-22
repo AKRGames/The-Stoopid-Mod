@@ -125,8 +125,8 @@ If you just want to download and play the mod normally, you can click [here to g
 </p>
 
 First, you need to install Haxe and HaxeFlixel.
-1. [Install Haxe](https://haxe.org/download/)
-2. [Install HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) after downloading Haxe
+1. [Install Haxe](https://haxe.org/download/).
+2. [Install HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) after downloading Haxe.
 
 Other installations you will need are the additional libraries. A fully updated list will be in `Project.xml` in the project root. Currently, these are all the things you need to install:
 ```
