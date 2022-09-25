@@ -151,7 +151,8 @@ You will also need to install a couple things that involve Gits. To do this, you
 6. Run `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm` to install Eextension-WEBM and run `lime rebuild extension-webm windows`. This is required to run webm videos in-game.
 7. Optional: - Run `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` to update Flixel-Addons. This fixes the transition bug for zoomed out stage cameras.
 8. Optional: - Run `haxelib git random https://github.com/jasononeil/hxrandom` to make random more random.
-9. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if your antivirus decides to say "bro it's not worth it, it's a virus" then ignore it. **USE HAYA3218'S REPO TO MAKE IT WORK, OR IT'LL THROW A COMPILER ERROR.**
+9. Optional: - Run `haxelib install hxcpp-debug-server` to make debug mode better.
+10. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if your antivirus decides to say "bro it's not worth it, it's a virus" then ignore it. **USE HAYA3218'S REPO TO MAKE IT WORK, OR IT'LL THROW A COMPILER ERROR.**
 
 You should have everything ready for compiling the mod! Follow the guide below to continue!
 
