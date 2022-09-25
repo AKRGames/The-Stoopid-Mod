@@ -1,12 +1,8 @@
 package;
 
-import lime.system.System;
-import seedyrng.Seedy;
-import sys.FileSystem;
-import lime.app.Application;
-import openfl.Lib;
 import Discord.DiscordClient;
-import flixel.util.FlxGradient;
+import MainVariables._variables;
+import Random.Random as Bitchom;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
@@ -20,15 +16,19 @@ import flixel.math.FlxRect;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxGradient;
 import flixel.util.FlxTimer;
+import lime.app.Application;
+import lime.system.System;
 import openfl.Assets;
-import MainVariables._variables;
-import seedyrng.Xorshift64Plus;
+import openfl.Lib;
 import seedyrng.Random;
-import Random.Random as Bitchom;
+import seedyrng.Seedy;
+import seedyrng.Xorshift64Plus;
+import sys.FileSystem;
 
-using StringTools;
 using Std;
+using StringTools;
 
 class TitleState extends MusicBeatState
 {
@@ -71,7 +71,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('save', "Stoopid Save File");
+		FlxG.save.bind('stoopidsavefile', "Stoopid Save File");
 
 		Highscore.load();
 

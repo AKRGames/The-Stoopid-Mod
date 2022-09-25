@@ -1,6 +1,5 @@
 package;
 
-import sys.io.File;
 import flixel.FlxG;
 import flixel.input.FlxInput;
 import flixel.input.actions.FlxAction;
@@ -13,6 +12,7 @@ import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
 import flixel.system.macros.FlxMacroUtil;
 import flixel.util.FlxSort;
+import sys.io.File;
 
 #if (haxe >= "4.0.0")
 enum abstract Action(String) to String from String
@@ -535,7 +535,7 @@ class Controls extends FlxActionSet
 
 		keyboardScheme = scheme;
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('stoopidsavefile', "Stoopid Save File");
 		loadControls();
 		#if (haxe >= "4.0.0")
 		switch (scheme)
@@ -633,8 +633,8 @@ class Controls extends FlxActionSet
 		// why tf does this work
 		var arr = [];
 		var shitass:Array<String> = [
-			"UP", "DOWN", "LEFT", "RIGHT", "CENTER", "UP (ALTERNATE)", "DOWN (ALTERNATE)", "LEFT (ALTERNATE)", "RIGHT (ALTERNATE)", "CENTER (ALTERNATE)", "ACCEPT", "RESET", "BACK", "CHEAT",
-			"ACCEPT (ALTERNATE)", "RESET (ALTERNATE)", "BACK (ALTERNATE)", "CHEAT (ALTERNATE)"
+			"UP", "DOWN", "LEFT", "RIGHT", "CENTER", "UP (ALTERNATE)", "DOWN (ALTERNATE)", "LEFT (ALTERNATE)", "RIGHT (ALTERNATE)", "CENTER (ALTERNATE)",
+			"ACCEPT", "RESET", "BACK", "CHEAT", "ACCEPT (ALTERNATE)", "RESET (ALTERNATE)", "BACK (ALTERNATE)", "CHEAT (ALTERNATE)"
 		];
 		FlxG.log.add('OK SO KEYMAPS ARE');
 		for (i in 0...shitass.length)
@@ -676,7 +676,7 @@ class Controls extends FlxActionSet
 
 		#if (haxe >= "4.0.0")
 		for (control => buttons in buttonMap)
-			inline bindButtons(control, id, buttons);
+		inline bindButtons(control, id, buttons);
 		#else
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
@@ -689,7 +689,7 @@ class Controls extends FlxActionSet
 
 		#if (haxe >= "4.0.0")
 		for (control => buttons in buttonMap)
-			inline bindButtons(control, id, buttons);
+		inline bindButtons(control, id, buttons);
 		#else
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
