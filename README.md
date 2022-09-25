@@ -135,6 +135,7 @@ flixel-addons
 flixel-ui
 hscript
 newgrounds
+polymod
 seedyrng
 random
 systools
@@ -145,14 +146,13 @@ So, for each of those, type `haxelib install [library]`. For example: `haxelib i
 You will also need to install a couple things that involve Gits. To do this, you need to do a few things first.
 1. Download [git-scm](https://git-scm.com/downloads). Works for Windows, Mac, and Linux, just select your build!
 2. Follow instructions to install the application properly.
-3. Run `haxelib git polymod https://github.com/larsiusprime/polymod.git` to install Polymod.
-4. Run `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc` to install Discord RPC.
-5. Run `haxelib git hscript-plus https://github.com/DleanJeans/hscript-plus/` because its required to compile properly.
-6. Run `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm` to install Eextension-WEBM and run `lime rebuild extension-webm windows`. This is required to run webm videos in-game.
-7. Optional: - Run `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` to update Flixel-Addons. This fixes the transition bug for zoomed out stage cameras.
-8. Optional: - Run `haxelib git random https://github.com/jasononeil/hxrandom` to make random more random.
-9. Optional: - Run `haxelib install hxcpp-debug-server` to make debug mode better.
-10. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if your antivirus decides to say "bro it's not worth it, it's a virus" then ignore it. **USE HAYA3218'S REPO TO MAKE IT WORK, OR IT'LL THROW A COMPILER ERROR.**
+3. Run `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc` to install Discord RPC.
+4. Run `haxelib git hscript-plus https://github.com/DleanJeans/hscript-plus/` because its required to compile properly.
+5. Run `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm` to install Eextension-WEBM and run `lime rebuild extension-webm windows`. This is required to run webm videos in-game.
+6. Optional: - Run `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` to update Flixel-Addons. This fixes the transition bug for zoomed out stage cameras.
+7. Optional: - Run `haxelib git random https://github.com/jasononeil/hxrandom` to make random more random.
+8. Optional: - Run `haxelib install hxcpp-debug-server` to make debug mode better.
+9. Run `haxelib git systools https://github.com/haya3218/systools` to install systools and run `lime rebuild systools windows`. This is required for system edits, if your antivirus decides to say "bro it's not worth it, it's a virus" then ignore it. **USE HAYA3218'S REPO TO MAKE IT WORK, OR IT'LL THROW A COMPILER ERROR.**
 
 You should have everything ready for compiling the mod! Follow the guide below to continue!
 
