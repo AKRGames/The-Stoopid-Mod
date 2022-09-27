@@ -184,7 +184,7 @@ Desktop building can be a bit tedious. Each different version requires a differe
 3. Type `lime run mac -release` to run the Mac version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/mac/bin`)
 
 ### Windows Building:
-**THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE. SO SAVE UP YOUR STORAGESPACE!!**
+**THIS METHOD REQUIRES UNDER 22 GIGABYTES OF STORAGE. SO SAVE UP YOUR STORAGESPACE!!**
 1. Install [Visual Studio Community 2022](https://visualstudio.microsoft.com/downloads/).
 2. Open the installer and go to the individual workloads tab and download the following (if available):
 ```
@@ -195,12 +195,8 @@ Desktop building can be a bit tedious. Each different version requires a differe
 * C++/CLI support for v142 build tools (14.21)
 * C++ Modules for v142 build tools (x64/x86)
 * Clang Compiler for Windows
-* MSVC v140 - VS 2015 C++ build tools (v14.00) 
-* MSVC v141 - VS 2017 C++ x64/x86 build tools
-* MSVC v142 - VS 2019 C++ x64/x86 build tools
-* Windows 10 SDK (10.0.16299.0)
-* Windows 10 SDK (10.0.17134.0)
-* Windows SDK (10.0.17763.0)
+* MSVC (v140 or v141 or v142)
+* Windows 10 SDK
 ```
 3. Wait for the install to finish, which might take a while.
 4. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
