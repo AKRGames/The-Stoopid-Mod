@@ -1,21 +1,21 @@
 package;
 
-import flixel.util.FlxTimer;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.system.FlxSound;
-import flixel.util.FlxGradient;
 import Discord.DiscordClient;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.math.FlxMath;
-import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import flixel.addons.display.FlxBackdrop;
 import MainVariables._variables;
 import ModifierVariables._modifiers;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.math.FlxMath;
+import flixel.system.FlxSound;
+import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxColor;
+import flixel.util.FlxGradient;
+import flixel.util.FlxTimer;
 
 using StringTools;
 
@@ -59,19 +59,24 @@ class MenuFreeplay extends MusicBeatState
 
 	var navi:FlxSprite;
 
+	var song:String;
+
 	override function create()
 	{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
+		var modSonglist = CoolUtil.coolTextFile(Paths.txt('theseSongsExist'));
 
 		lime.app.Application.current.window.title = lime.app.Application.current.meta.get('name');
-		
+
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
 		for (i in 0...initSonglist.length)
 		{
 			var data:Array<String> = initSonglist[i].split(':');
+			var modData:Array<String> = modSonglist[i].split(':');
 			songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1], data[3], data[4], data[5]));
+			songs.push(new SongMetadata(modData[0], Std.parseInt(data[2]), data[1], data[3], data[4], data[5]));
 		}
 
 		/* 
@@ -239,27 +244,26 @@ class MenuFreeplay extends MusicBeatState
 	}
 
 	/*
-	public function addSong(songName:String, weekNum:Int, songCharacter:String, bgColor:String)
-	{
-		songs.push(new SongMetadata(songName, weekNum, songCharacter, bgColor));
-	}
-
-	public function addWeek(songs:Array<String>, weekNum:Int, ?songCharacters:Array<String>, bgColors:Array<String>)
-	{
-		if (songCharacters == null)
-			songCharacters = ['bf'];
-
-		var num:Int = 0;
-		for (song in songs)
+		public function addSong(songName:String, weekNum:Int, songCharacter:String, bgColor:String)
 		{
-			addSong(song, weekNum, songCharacters[num], bgColors[num]);
-
-			if (songCharacters.length != 1)
-				num++;
+			songs.push(new SongMetadata(songName, weekNum, songCharacter, bgColor));
 		}
-	}
-	*/
 
+		public function addWeek(songs:Array<String>, weekNum:Int, ?songCharacters:Array<String>, bgColors:Array<String>)
+		{
+			if (songCharacters == null)
+				songCharacters = ['bf'];
+
+			var num:Int = 0;
+			for (song in songs)
+			{
+				addSong(song, weekNum, songCharacters[num], bgColors[num]);
+
+				if (songCharacters.length != 1)
+					num++;
+			}
+		}
+	 */
 	var selectedSomethin:Bool = false;
 	var selectable:Bool = false;
 

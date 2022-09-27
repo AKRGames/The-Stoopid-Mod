@@ -1,22 +1,16 @@
 package;
 
-import flixel.system.FlxAssets.FlxSoundAsset;
-import lime.tools.AssetType;
-import flixel.input.FlxInput;
-import sys.io.FileInput;
-import cpp.RawConstPointer;
-import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.system.FlxAssets.FlxGraphicAsset;
+import flixel.system.FlxAssets.FlxSoundAsset;
+import openfl.display.BitmapData;
+import openfl.media.Sound;
 import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
-import openfl.display.BitmapData;
 import openfl.utils.ByteArray;
-import sys.io.File;
 import sys.FileSystem;
-import haxe.io.Bytes;
-import flixel.util.typeLimit.OneOfTwo;
-import openfl.media.Sound;
+import sys.io.File;
 
 using StringTools;
 
@@ -186,7 +180,17 @@ class Paths
 
 	inline static public function txt(key:String, ?library:String)
 	{
-		return getPath('data/$key.txt', TEXT, library);
+		if (FileSystem.exists('mods/mainMods/_append/data/$key.txt'))
+		{
+			return 'mods/mainMods/_append/data/$key.txt';
+		}
+		else
+			return getPath('data/$key.txt', TEXT, library);
+	}
+
+	inline static public function theseSongsExist(mod:String, ?library:String)
+	{
+		return getPath('mods/$mod/_append/data/theseSongsExist.txt', TEXT, library);
 	}
 
 	inline public static function offsets(path:String, ?library:String):Array<String>
