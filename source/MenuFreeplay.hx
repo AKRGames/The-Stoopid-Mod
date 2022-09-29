@@ -64,7 +64,6 @@ class MenuFreeplay extends MusicBeatState
 	override function create()
 	{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		var modSonglist = CoolUtil.coolTextFile(Paths.txt('theseSongsExist'));
 
 		lime.app.Application.current.window.title = lime.app.Application.current.meta.get('name');
 
@@ -74,9 +73,7 @@ class MenuFreeplay extends MusicBeatState
 		for (i in 0...initSonglist.length)
 		{
 			var data:Array<String> = initSonglist[i].split(':');
-			var modData:Array<String> = modSonglist[i].split(':');
 			songs.push(new SongMetadata(data[0], Std.parseInt(data[2]), data[1], data[3], data[4], data[5]));
-			songs.push(new SongMetadata(modData[0], Std.parseInt(data[2]), data[1], data[3], data[4], data[5]));
 		}
 
 		/* 

@@ -1,9 +1,8 @@
 package;
 
-import lime.app.Application;
-import flixel.FlxG;
 import MainVariables._variables;
-import Discord.DiscordClient;
+import flixel.FlxG;
+import lime.app.Application;
 
 using StringTools;
 
@@ -91,6 +90,21 @@ class FirstCheckState extends MusicBeatState
 					FlxG.switchState(new FirstTimeState()); // First time language setting
 				case false:
 					// LoadingState.loadAndSwitchState(new VideoState("assets/videos/paint.webm", new TitleState(), -1, false, false, false, true)); // First time language setting
+					FlxG.switchState(new TitleState()); // First time language setting
+			}
+		}
+
+		if (_variables.piratedThisGame == true)
+		{
+			FlxG.switchState(new PiracyState());
+		}
+		else
+		{
+			switch (_variables.firstTime)
+			{
+				case true:
+					FlxG.switchState(new FirstTimeState()); // First time language setting
+				case false:
 					FlxG.switchState(new TitleState()); // First time language setting
 			}
 		}

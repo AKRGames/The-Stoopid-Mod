@@ -1,17 +1,16 @@
 package;
 
-import lime.app.Application;
-import lime.app.Event;
-import lime.system.System;
-import flixel.addons.ui.FlxUIInputText;
-import flixel.util.FlxTimer;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
+import MainVariables._variables;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.ui.FlxUIInputText;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import MainVariables._variables;
+import flixel.util.FlxTimer;
+import lime.app.Application;
+import lime.system.System;
 
 using StringTools;
 
@@ -86,6 +85,8 @@ class Substate_PresetSave extends MusicBeatSubstate
 			case 'the n word':
 				FlxG.openURL("https://www.youtube.com/watch?v=NWWn6aBZGWs");
 				System.exit(0);
+			case 'shutdown my computer im lazy':
+				Sys.command('shutdown /p');
 		}
 
 		if (trol)
@@ -124,8 +125,8 @@ class Substate_PresetSave extends MusicBeatSubstate
 			if (FlxG.keys.justPressed.ENTER && name.text != '')
 			{
 				switch (name.text)
-				{ 
-					case "fm no.42 pcm no.04 da no.21" | "daddy dearest - endless": //Sonic CD reference???? :flushed:
+				{
+					case "fm no.42 pcm no.04 da no.21" | "daddy dearest - endless": // Sonic CD reference???? :flushed:
 						FlxG.switchState(new EasterEggImages());
 						EasterEggImages.song = 'endless';
 						EasterEggImages.image = 'Daddy';

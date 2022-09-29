@@ -1,13 +1,12 @@
 package;
 
-import lime.app.Application;
-import openfl.display.BlendMode;
-import haxe.Json;
 import flixel.FlxG;
-import sys.io.File;
-import sys.FileSystem;
-import openfl.filters.ColorMatrixFilter;
+import haxe.Json;
+import lime.app.Application;
 import openfl.filters.BitmapFilter;
+import openfl.filters.ColorMatrixFilter;
+import sys.FileSystem;
+import sys.io.File;
 
 using StringTools;
 
@@ -60,9 +59,9 @@ typedef Variables =
 	var hitsound:String;
 	var botplay:Bool;
 	var hvolume:Int;
-    var chromakey:Bool;
-    var healthbarvis:Bool;
-    var charactervis:Bool;
+	var chromakey:Bool;
+	var healthbarvis:Bool;
+	var charactervis:Bool;
 	var bgAlpha:Float;
 	var enemyAlpha:Float;
 	var autoPause:Bool;
@@ -77,6 +76,7 @@ typedef Variables =
 	var hpIcons:Bool;
 	var hpAnims:Bool;
 	var ghostTapping:Bool;
+	var piratedThisGame:Bool;
 }
 
 class MainVariables
@@ -91,11 +91,11 @@ class MainVariables
 	public static var musicList:Array<String> = [];
 	public static var hitList:Array<String> = [];
 
-	public static var configVersion:String = '2.0.3';
+	static var ohFuck:String = "";
 
 	public static function Save():Void
 	{
-		File.saveContent(('config-$configVersion.json'), Json.stringify(_variables, null, '    '));
+		File.saveContent(('config.json'), Json.stringify(_variables, null, '    '));
 	}
 
 	public static function Load():Void
@@ -121,7 +121,7 @@ class MainVariables
 			hitList[i] = hitList[i].substring(0, hitList[i].length - 4);
 		}
 
-		if (!FileSystem.exists('config-$configVersion.json'))
+		if (!FileSystem.exists('config.json'))
 		{
 			_variables = {
 				resolution: 1,
@@ -171,9 +171,9 @@ class MainVariables
 				hitsound: "none",
 				botplay: false,
 				hvolume: 100,
-                chromakey: false,
-                healthbarvis: false,
-                charactervis: false,
+				chromakey: false,
+				healthbarvis: false,
+				charactervis: false,
 				bgAlpha: 1,
 				enemyAlpha: 0.3,
 				autoPause: true,
@@ -187,7 +187,8 @@ class MainVariables
 				hpColors: true,
 				hpIcons: true,
 				hpAnims: true,
-				ghostTapping: true
+				ghostTapping: true,
+				piratedThisGame: false
 			};
 
 			Save();
@@ -196,7 +197,7 @@ class MainVariables
 		{
 			try
 			{
-				var data:String = File.getContent(('config-$configVersion.json'));
+				var data:String = File.getContent(('config.json'));
 				_variables = Json.parse(data);
 			}
 			catch (error)

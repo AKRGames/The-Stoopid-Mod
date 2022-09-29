@@ -1,12 +1,9 @@
 package;
 
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import openfl.Lib;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.text.FlxText;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.app.Application;
 
@@ -20,20 +17,21 @@ class OutOfDate extends MusicBeatState
 
 	override function create()
 	{
+		transIn = FlxTransitionableState.defaultTransIn;
+		transOut = FlxTransitionableState.defaultTransOut;
+
 		super.create();
 
 		// var lol = (cast(Lib.current.getChildAt(0), Main)).lastY;
 		// FlxTween.tween(Application.current.window, {y: lol}, 0.5, {ease: FlxEase.circOut});
 		// the code above is horrendous
 
-		transIn = FlxTransitionableState.defaultTransIn;
-		transOut = FlxTransitionableState.defaultTransOut;
-		
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('oNo'));
 		add(bg);
+		bg.alpha = 0.69;
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
 			"uh oh! your version of the mod seems to be outdated.\n"
-			+ "fortunatly, you can update the game from "
+			+ "fortunatly, you can update the mod from "
 			+ Application.current.meta.get('version')
 			+ " to "
 			+ needVer
@@ -56,8 +54,8 @@ class OutOfDate extends MusicBeatState
 		}
 		if (controls.BACK)
 		{
-				leftState = true;
-				FlxG.switchState(new TitleState());
+			leftState = true;
+			FlxG.switchState(new TitleState());
 		}
 		super.update(elapsed);
 	}

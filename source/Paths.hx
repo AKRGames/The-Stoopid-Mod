@@ -190,7 +190,10 @@ class Paths
 
 	inline static public function theseSongsExist(mod:String, ?library:String)
 	{
-		return getPath('mods/$mod/_append/data/theseSongsExist.txt', TEXT, library);
+		if (FileSystem.exists('mods/$mod/_append/data/theseSongsExist.txt'))
+		{
+			return getPath('mods/$mod/_append/data/theseSongsExist.txt', TEXT, library);
+		}
 	}
 
 	inline public static function offsets(path:String, ?library:String):Array<String>

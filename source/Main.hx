@@ -1,13 +1,13 @@
 package;
 
-import lime.app.Application;
 import Discord.DiscordClient;
-import flixel.util.FlxColor;
-import openfl.display.Bitmap;
 import flixel.FlxGame;
 import flixel.FlxState;
+import flixel.util.FlxColor;
+import lime.app.Application;
 import openfl.Assets;
 import openfl.Lib;
+import openfl.display.Bitmap;
 import openfl.display.Sprite;
 import openfl.events.Event;
 
