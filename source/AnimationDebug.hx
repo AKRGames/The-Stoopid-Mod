@@ -1,18 +1,18 @@
 package;
 
-import sys.io.File;
-import openfl.text.TextFieldAutoSize;
-import flixel.addons.ui.FlxUICheckBox;
-import flixel.addons.ui.FlxUIDropDownMenu;
-import flixel.addons.ui.FlxUI;
-import flixel.addons.ui.FlxUITabMenu;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
+import flixel.addons.ui.FlxUI;
+import flixel.addons.ui.FlxUICheckBox;
+import flixel.addons.ui.FlxUIDropDownMenu;
+import flixel.addons.ui.FlxUITabMenu;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
+import openfl.text.TextFieldAutoSize;
+import sys.io.File;
 
 /**
 	*DEBUG MODE
@@ -53,7 +53,7 @@ class AnimationDebug extends MusicBeatState
 		camHUD.bgColor.alpha = 0;
 		FlxG.cameras.add(camHUD);
 
-		FlxCamera.defaultCameras = [camBG];
+		FlxG.cameras.setDefaultDrawTarget(camBG, true);
 
 		FlxG.sound.music.stop();
 
