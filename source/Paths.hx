@@ -180,9 +180,12 @@ class Paths
 
 	inline static public function txt(key:String, ?library:String)
 	{
-		if (FileSystem.exists('mods/mainMods/_append/data/$key.txt'))
+		if (FileSystem.exists('mods/mainMods/_append/data/$key.txt')
+			|| FileSystem.exists('mods/mainMods/_append/data/$key.txt')
+			|| FileSystem.exists('mods/mainMods/_append/shared/data/$key.txt')
+			|| FileSystem.exists('mods/mainMods/_append/$library/data/$key.txt'))
 		{
-			return 'mods/mainMods/_append/data/$key.txt';
+			return 'data/$key.txt';
 		}
 		else
 			return getPath('data/$key.txt', TEXT, library);
