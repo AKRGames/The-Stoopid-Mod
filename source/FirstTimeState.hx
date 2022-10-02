@@ -1,17 +1,11 @@
 package;
 
-import lime.app.Application;
-import flixel.tweens.FlxTween;
-import flixel.tweens.FlxEase;
-import openfl.Lib;
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.addons.transition.TransitionData;
-import flixel.addons.transition.Transition;
+import Discord.DiscordClient;
+import MainVariables._variables;
 import flixel.FlxG;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import MainVariables._variables;
-import Discord.DiscordClient;
 
 using StringTools;
 
@@ -30,7 +24,7 @@ class FirstTimeState extends MusicBeatState
 		// the code above is horrendous
 
 		transOut = FlxTransitionableState.defaultTransOut;
-		
+
 		DiscordClient.changePresence("guys don't jugde them it's their first time :(", null);
 
 		txt = new FlxText(0, 100, FlxG.width,

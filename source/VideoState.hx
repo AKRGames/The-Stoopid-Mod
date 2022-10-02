@@ -1,27 +1,19 @@
 package;
 
-import flixel.tweens.FlxTween;
-import openfl.media.Sound;
-import sys.FileSystem;
-import sys.io.File;
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.FlxState;
+import MainVariables._variables;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.FlxSubState;
+import flixel.FlxState;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import flixel.util.FlxTimer;
-import lime.app.Application;
-import flixel.system.FlxSound;
-import openfl.utils.Assets;
-import openfl.utils.AssetType;
-import haxe.io.Path;
-import openfl.Lib;
-import openfl.net.FileReference;
 import openfl.events.Event;
 import openfl.events.IOErrorEvent;
-import MainVariables._variables;
+import openfl.media.Sound;
+import openfl.net.FileReference;
+import openfl.utils.Assets;
+import sys.io.File;
 
 using StringTools;
 
@@ -52,19 +44,20 @@ class VideoState extends MusicBeatState
 	public var looping:Bool = false;
 	public var loadWEBM:Bool = false;
 	public var skip:Bool = true;
-	
+
 	/**
-	* i will try to explain to you beginner coders what it does.
-	* 
-	* filePath: where the video file is.
-	* toTrans: the state to go to when the video ends.
-	* frameSkipLimit: idk what this is exactly...
-	* autopause: it automatically pauses, i think.
-	* looped: gives the option whether to loop this video.
-	* loadWebm: gives the option to load a WEBM file.
-	* skippable: gives the option to skip this video.
-	*/
-	public function new(filePath:String, toTrans:FlxState, frameSkipLimit:Int = -1, autopause:Bool = false, ?looped:Bool = false, ?loadWebm:Bool = false, ?skippable:Bool = true)
+	 * i will try to explain to you beginner coders what it does.
+	 * 
+	 * filePath: where the video file is.
+	 * toTrans: the state to go to when the video ends.
+	 * frameSkipLimit: idk what this is exactly...
+	 * autopause: it automatically pauses, i think.
+	 * looped: gives the option whether to loop this video.
+	 * loadWebm: gives the option to load a WEBM file.
+	 * skippable: gives the option to skip this video.
+	 */
+	public function new(filePath:String, toTrans:FlxState, frameSkipLimit:Int = -1, autopause:Bool = false, ?looped:Bool = false, ?loadWebm:Bool = false,
+			?skippable:Bool = true)
 	{
 		super();
 
@@ -88,7 +81,7 @@ class VideoState extends MusicBeatState
 				+ " or "
 				+ Controls.keyboardMap.get("ACCEPT (ALTERNATE)").toString()
 				+ " to end the video. ";
-				
+
 			if (loadWEBM)
 				skipText + "press E to load a webm file.";
 		}

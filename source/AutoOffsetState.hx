@@ -1,17 +1,16 @@
 package;
 
-import sys.io.File;
-import sys.FileSystem;
+import MainVariables._variables;
+import MainVariables;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import MainVariables._variables;
-import MainVariables;
+import sys.FileSystem;
+import sys.io.File;
 
 using StringTools;
 
@@ -215,7 +214,7 @@ class AutoOffsetState extends MusicBeatState
 		offsetText.text = "offset:\n" + offsetCalc;
 	}
 
-	function endSong() : Void
+	function endSong():Void
 	{
 		FlxG.camera.fade(FlxColor.BLACK, 2);
 		FlxTween.tween(offsetText, {y: offsetText.y - 10, alpha: 0}, 1, {ease: FlxEase.backIn, startDelay: 0.6});

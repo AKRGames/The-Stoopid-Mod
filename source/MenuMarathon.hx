@@ -1,22 +1,21 @@
 package;
 
-import haxe.Json;
-import sys.io.File;
-import sys.FileSystem;
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.util.FlxTimer;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.util.FlxGradient;
 import Discord.DiscordClient;
+import MainVariables._variables;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import flixel.addons.display.FlxBackdrop;
-import MainVariables._variables;
+import flixel.util.FlxGradient;
+import flixel.util.FlxTimer;
+import haxe.Json;
+import sys.FileSystem;
+import sys.io.File;
 
 using StringTools;
 

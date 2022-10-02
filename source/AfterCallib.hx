@@ -4,7 +4,6 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import lime.app.Application;
 
 class AfterCallib extends MusicBeatState
 {

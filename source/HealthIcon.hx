@@ -1,19 +1,18 @@
 package;
 
-import sys.FileSystem;
 import flixel.FlxSprite;
-import MainVariables._variables;
+import sys.FileSystem;
 
 using StringTools;
 
 class HealthIcon extends FlxSprite
 {
 	/**
-	 * Used for FreeplayState! If you use it elsewhere, prob gonna annoying
-	 	-NinjaMuffin99
+		* Used for FreeplayState! If you use it elsewhere, prob gonna annoying
+			-NinjaMuffin99
 
-	 * Who said that was the case??
-	 	-Verwex
+		* Who said that was the case??
+			-Verwex
 	 */
 	public var sprTracker:FlxSprite;
 
@@ -23,7 +22,8 @@ class HealthIcon extends FlxSprite
 	{
 		super();
 
-		if (FileSystem.exists('assets/shared/images/icons/icon-' + char + '.png') || FileSystem.exists('mods/mainMods/_append/shared/images/icons/icon-' + char + '.png'))
+		if (FileSystem.exists('assets/shared/images/icons/icon-' + char + '.png')
+			|| FileSystem.exists('mods/mainMods/_append/shared/images/icons/icon-' + char + '.png'))
 		{
 			loadGraphic(Paths.image('icons/icon-' + char, 'shared'), true, 150, 150);
 
@@ -74,7 +74,7 @@ class HealthIcon extends FlxSprite
 			case 'bf-pixel' | 'senpai' | 'senpai-angry' | 'spirit' | 'gf-pixel':
 				antialiasing = false;
 			default:
-				antialiasing = true; //grrrrr this is what makes the rest not look blocky, mannnnn
+				antialiasing = true; // grrrrr this is what makes the rest not look blocky, mannnnn
 		}
 
 		scrollFactor.set();

@@ -1,10 +1,9 @@
 package;
 
-import lime.app.Application;
+import ModifierVariables._modifiers;
 import Section.SwagSection;
 import haxe.Json;
-import lime.utils.Assets;
-import ModifierVariables._modifiers;
+import lime.app.Application;
 
 using StringTools;
 

@@ -1,21 +1,18 @@
 package;
 
-import sys.io.File;
-import sys.FileSystem;
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.util.FlxTimer;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.util.FlxGradient;
 import Discord.DiscordClient;
+import MainVariables._variables;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.display.FlxBackdrop;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.math.FlxMath;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import flixel.addons.display.FlxBackdrop;
-import MainVariables._variables;
+import flixel.util.FlxGradient;
 
 using StringTools;
 
@@ -48,7 +45,7 @@ class MenuEndless extends MusicBeatState
 		substated = false;
 
 		lime.app.Application.current.window.title = lime.app.Application.current.meta.get('name');
-		
+
 		no = false;
 		goingBack = false;
 
@@ -123,8 +120,8 @@ class MenuEndless extends MusicBeatState
 
 		if (!FlxG.sound.music.playing)
 		{
-				FlxG.sound.playMusic(Paths.music('endless'), _variables.mvolume / 100);
-				Conductor.changeBPM(155);
+			FlxG.sound.playMusic(Paths.music('endless'), _variables.mvolume / 100);
+			Conductor.changeBPM(155);
 		}
 
 		super.create();

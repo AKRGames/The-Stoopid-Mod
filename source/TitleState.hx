@@ -2,7 +2,6 @@ package;
 
 import Discord.DiscordClient;
 import MainVariables._variables;
-import Random.Random as Bitchom;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
@@ -18,12 +17,10 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxGradient;
 import flixel.util.FlxTimer;
-import lime.app.Application;
 import lime.system.System;
 import openfl.Assets;
 import openfl.Lib;
 import seedyrng.Random;
-import seedyrng.Seedy;
 import seedyrng.Xorshift64Plus;
 import sys.FileSystem;
 

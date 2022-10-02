@@ -1,20 +1,17 @@
 package;
 
 import Discord.DiscordClient;
-import flixel.util.FlxGradient;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.util.FlxTimer;
+import MainVariables._variables;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.display.FlxBackdrop;
 import flixel.effects.FlxFlicker;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.input.keyboard.FlxKey;
 import flixel.system.macros.FlxMacroUtil;
-import flixel.addons.display.FlxBackdrop;
 import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import MainVariables._variables;
+import flixel.util.FlxGradient;
+import flixel.util.FlxTimer;
 
 class MenuControls extends MusicBeatState
 {
@@ -24,8 +21,8 @@ class MenuControls extends MusicBeatState
 
 	var controlsStrings:Array<String> = [];
 	var shitass:Array<String> = [
-		"UP", "DOWN", "LEFT", "RIGHT", "CENTER", "UP (ALTERNATE)", "DOWN (ALTERNATE)", "LEFT (ALTERNATE)", "RIGHT (ALTERNATE)", "CENTER (ALTERNATE)", "ACCEPT", "RESET", "BACK", "CHEAT",
-		"ACCEPT (ALTERNATE)", "RESET (ALTERNATE)", "BACK (ALTERNATE)", "CHEAT (ALTERNATE)"
+		"UP", "DOWN", "LEFT", "RIGHT", "CENTER", "UP (ALTERNATE)", "DOWN (ALTERNATE)", "LEFT (ALTERNATE)", "RIGHT (ALTERNATE)", "CENTER (ALTERNATE)",
+		"ACCEPT", "RESET", "BACK", "CHEAT", "ACCEPT (ALTERNATE)", "RESET (ALTERNATE)", "BACK (ALTERNATE)", "CHEAT (ALTERNATE)"
 	];
 
 	private var grpControls:FlxTypedGroup<Alphabet>;
@@ -64,11 +61,11 @@ class MenuControls extends MusicBeatState
 		FlxG.camera.alpha = 1;
 
 		new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				selectable = true;
-			});
-		
-		//off to the main sauce
+		{
+			selectable = true;
+		});
+
+		// off to the main sauce
 
 		controlsStrings = CoolUtil.coolTextFile(Paths.txt('defaultControls'));
 
@@ -114,7 +111,7 @@ class MenuControls extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		checker.x += 0.12;
-		checker.y -= Math.sin(elapsed/100)*400;
+		checker.y -= Math.sin(elapsed / 100) * 400;
 
 		super.update(elapsed);
 
@@ -144,7 +141,7 @@ class MenuControls extends MusicBeatState
 			{
 				if (!changingInput)
 					FlxG.sound.play(Paths.sound('confirmMenu'), _variables.svolume / 100);
-				
+
 				ChangeInput();
 			}
 		}

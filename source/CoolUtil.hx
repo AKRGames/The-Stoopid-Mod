@@ -1,7 +1,5 @@
 package;
 
-import lime.utils.Assets;
-
 using StringTools;
 
 class CoolUtil

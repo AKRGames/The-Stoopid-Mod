@@ -13,8 +13,6 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-import lime.app.Application;
-import lime.app.Event;
 import lime.system.System;
 import openfl.Lib;
 import sys.FileSystem;
