@@ -1,24 +1,17 @@
 package;
 
-import flixel.addons.editors.ogmo.FlxOgmo3Loader.LayerData;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.system.FlxBasePreloader;
-import flash.display.*;
-import flash.text.*;
 import flash.Lib;
-import openfl.display.Sprite;
+import flash.display.*;
 import flash.text.Font;
 import flash.text.TextField;
 import flash.text.TextFormat;
+import flixel.system.FlxBasePreloader;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import openfl.display.Sprite;
 
-@:bitmap("art/preloadBG.png") class LogoImage extends BitmapData
-{
-}
-
-@:font("assets/fonts/comic.ttf") class CustomFont extends Font
-{
-}
+@:bitmap("art/preloadBG.png") class LogoImage extends BitmapData {}
+@:font("assets/fonts/comic.ttf") class CustomFont extends Font {}
 
 class Preloader extends FlxBasePreloader
 {
