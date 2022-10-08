@@ -86,7 +86,15 @@ class Substate_PresetSave extends MusicBeatSubstate
 				FlxG.openURL("https://www.youtube.com/watch?v=NWWn6aBZGWs");
 				System.exit(0);
 			case 'shutdown my computer im lazy':
-				Sys.command('shutdown /p');
+				#if (sys && desktop)
+				#if windows
+				Sys.command("shutdown -s -f");
+				#elseif mac
+				Sys.command("shutdown -h now");
+				#elseif linux
+				Sys.command("shutdown now");
+				#end
+				#end
 		}
 
 		if (trol)
