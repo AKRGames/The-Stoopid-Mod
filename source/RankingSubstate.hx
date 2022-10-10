@@ -9,6 +9,9 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import lime.system.System;
+import sys.FileSystem;
+import sys.io.File;
 
 class RankingSubstate extends MusicBeatSubstate
 {
