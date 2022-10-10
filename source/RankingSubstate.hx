@@ -1,9 +1,7 @@
 package;
 
-import lime.app.Event;
-import lime.system.System;
-import sys.FileSystem;
-import sys.io.File;
+import MainVariables._variables;
+import ModifierVariables._modifiers;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.system.FlxSound;
@@ -11,8 +9,6 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import MainVariables._variables;
-import ModifierVariables._modifiers;
 
 class RankingSubstate extends MusicBeatSubstate
 {
@@ -204,25 +200,25 @@ class RankingSubstate extends MusicBeatSubstate
 		// WIFE TIME :)))) (based on Wife3)
 
 		// var wifeConditions:Array<Bool> = [
-			// PlayState.accuracy >= 99.9935, // P
-			// PlayState.accuracy >= 99.980, // X
-			// PlayState.accuracy >= 99.950, // X-
-			// PlayState.accuracy >= 99.90, // SS+
-			// PlayState.accuracy >= 99.80, // SS
-			// PlayState.accuracy >= 99.70, // SS-
-			// PlayState.accuracy >= 99.50, // S+
-			// PlayState.accuracy >= 99, // S
-			// PlayState.accuracy >= 96.50, // S-
-			// PlayState.accuracy >= 93, // A+
-			// PlayState.accuracy >= 90, // A
-			// PlayState.accuracy >= 85, // A-
-			// PlayState.accuracy >= 80, // B
-			// PlayState.accuracy >= 70, // C
-			// PlayState.accuracy >= 60, // D
-			// PlayState.accuracy < 60 // E
+		// PlayState.accuracy >= 99.9935, // P
+		// PlayState.accuracy >= 99.980, // X
+		// PlayState.accuracy >= 99.950, // X-
+		// PlayState.accuracy >= 99.90, // SS+
+		// PlayState.accuracy >= 99.80, // SS
+		// PlayState.accuracy >= 99.70, // SS-
+		// PlayState.accuracy >= 99.50, // S+
+		// PlayState.accuracy >= 99, // S
+		// PlayState.accuracy >= 96.50, // S-
+		// PlayState.accuracy >= 93, // A+
+		// PlayState.accuracy >= 90, // A
+		// PlayState.accuracy >= 85, // A-
+		// PlayState.accuracy >= 80, // B
+		// PlayState.accuracy >= 70, // C
+		// PlayState.accuracy >= 60, // D
+		// PlayState.accuracy < 60 // E
 		// ];
 
-		var wifeConditions : Array<Bool> = [
+		var wifeConditions:Array<Bool> = [
 			PlayState.accuracy >= 99, // P
 			PlayState.accuracy >= 95, // X
 			PlayState.accuracy >= 92.5, // X-
