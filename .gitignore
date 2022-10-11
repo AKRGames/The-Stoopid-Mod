@@ -2,6 +2,6 @@ export/
 .vscode/
 .vs/
 ._*
-art/flashFiles/RECOVER_BoyFriend_Assets.fla
+art/flashFiles/RECOVER_*.fla
 *.aup3
 *.mp3
