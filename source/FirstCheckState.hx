@@ -14,12 +14,12 @@ class FirstCheckState extends MusicBeatState
 	{
 		FlxG.mouse.visible = false;
 
-		NGio.noLogin(APIStuff.API);
+		// NGio.noLogin(APIStuff.API);
 
-		#if ng
-		var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
-		trace('NEWGROUNDS LOL');
-		#end
+		// #if ng
+		// var ng:NGio = new NGio(APIStuff.API, APIStuff.EncKey);
+		// trace('NEWGROUNDS LOL');
+		// #end
 
 		PlayerSettings.init();
 		ModifierVariables.modifierSetup();

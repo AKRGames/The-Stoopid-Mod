@@ -27,7 +27,7 @@ class Substate_ChartType extends MusicBeatSubstate
     var camLerp:Float = 0.32;
 
     var boombox:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('Boombox'));
-    var checker:FlxBackdrop = new FlxBackdrop(Paths.image('Substate_Checker'), 0.2, 0.2, true, true);
+    var checker:FlxBackdrop = new FlxBackdrop(Paths.image('Substate_Checker'));
 	var gradientBar:FlxSprite = new FlxSprite(0,0).makeGraphic(FlxG.width, 300, 0xFFAA00AA);
 
     var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);

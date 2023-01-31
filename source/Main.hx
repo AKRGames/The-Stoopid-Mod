@@ -77,7 +77,7 @@ class Main extends Sprite
 		initialState = FirstCheckState;
 		#end
 
-		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
+		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
 
 		var ourSource:String = "assets/videos/dontDelete.webm";
 
