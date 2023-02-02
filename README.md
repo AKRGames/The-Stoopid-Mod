@@ -85,7 +85,9 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
 
 **This mod and it's engine was made with love to Friday Night Funkin' and its community. Extra love to the team behind it. 💖**
 
-# Mods and Modcharts ([skip](#Compiling))
+# Mods and Modcharts
+
+<summary>it doesn't exist</summary>
 
 <p align="center">
 	<a href="https://github.com/Verwex/Mic-d-Up-PRIVATE/blob/main/art/polymodNo.png" target="_blank"><img src="/art/polymodNo.png"></a>

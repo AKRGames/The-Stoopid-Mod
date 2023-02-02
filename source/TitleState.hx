@@ -54,9 +54,9 @@ class TitleState extends MusicBeatState
 	{
 		// systools.Registry.setValue(systools.Registry.HKEY_CURRENT_USER, 'deez\\nuts\\gottem', 'score', "deeznutsgottem");
 		// systools.Registry.setValue(systools.Registry.HKEY_CURRENT_USER, 'deez\\nuts\\gottem', 'seed', Bitchom.int(0, 999999).string());
-		#if polymod
-		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
-		#end
+		// #if polymod
+		// polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
+		// #end
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
 		transIn = FlxTransitionableState.defaultTransIn;

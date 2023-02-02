@@ -1,3 +1,5 @@
+**MODDING THE GAME IS NOT AVAILABLE UNTIL FURTHER NOTICE.**
+
 **MODS FOLDER GUIDE**
 
 In order to load in mods, it HAS to be in the mainMods/_append folder. 
