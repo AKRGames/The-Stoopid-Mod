@@ -532,7 +532,7 @@ class Controls extends FlxActionSet
 
 		keyboardScheme = scheme;
 
-		FlxG.save.bind('stoopidsavefile', "Stoopid Save File");
+		FlxG.save.bind('stoopidsavefile', "StoopidSaveFile");
 		loadControls();
 		#if (haxe >= "4.0.0")
 		switch (scheme)
