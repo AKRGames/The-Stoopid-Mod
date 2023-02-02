@@ -68,7 +68,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('stoopidsavefile', "Stoopid Save File");
+		FlxG.save.bind('stoopidsavefile', "StoopidSaveFile");
 
 		Highscore.load();
 

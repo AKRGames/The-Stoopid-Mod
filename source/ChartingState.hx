@@ -133,7 +133,7 @@ class ChartingState extends MusicBeatState
 		}
 
 		FlxG.mouse.visible = true;
-		FlxG.save.bind('stoopidsavefile', "Stoopid Save File");
+		FlxG.save.bind('stoopidsavefile', "StoopidSaveFile");
 
 		tempBpm = _song.bpm;
 

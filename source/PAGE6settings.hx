@@ -272,7 +272,7 @@ class PAGE6settings extends MusicBeatSubstate
 				FlxG.sound.play(Paths.sound('clearSave', 'shared'), _variables.svolume / 100);
 				FlxG.save.erase();
 				FlxG.save.flush();
-				FlxG.save.bind('stoopidsavefile', "Stoopid Save File");
+				FlxG.save.bind('stoopidsavefile', "StoopidSaveFile");
 				FlxG.game.stage.window.alert('All your scores have been cleared. You may now close the game. :)', 'Save file cleared.');
 				FlxG.camera.fade(FlxColor.BLACK, 1);
 				new FlxTimer().start(30, function(tmr:FlxTimer)
