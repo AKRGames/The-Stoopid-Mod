@@ -188,17 +188,9 @@ Desktop building can be a bit tedious. Each different version requires a differe
 ### Windows Building:
 **THIS METHOD REQUIRES UNDER 22 GIGABYTES OF STORAGE. SO SAVE UP YOUR STORAGESPACE!!**
 1. Install [Visual Studio Community 2022](https://visualstudio.microsoft.com/downloads/).
-2. Open the installer and go to the individual workloads tab and download the following (if available):
+2. Open the installer and go to the individual workloads tab and download the following:
 ```
-* C++ CMake tools for windows 
-* C++ Profiling tools 
-* C++ ATL for v142 build tools (x86 & x64)
-* C++ MFC for v142 build tools (x86 & x64)
-* C++/CLI support for v142 build tools (14.21)
-* C++ Modules for v142 build tools (x64/x86)
-* Clang Compiler for Windows
-* MSVC (v140 or v141 or v142)
-* Windows 10 SDK
+* MSVC v142 - VS 2019 C++ x64/x86 build tools
 ```
 3. Wait for the install to finish, which might take a while.
 4. Open your machine's command prompt/terminal and navigate to your root folder of the mod. [An easy guide can be found here!](https://ninjamuffin99.newgrounds.com/news/post/1090480)
