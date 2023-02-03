@@ -121,9 +121,9 @@ class DialogueBox extends FlxSpriteGroup
 		bgFade.alpha = 0;
 		add(bgFade);
 
-		new FlxTimer().start(bgFIT / 2, function(tmr:FlxTimer)
+		new FlxTimer().start(bgFIT, function(tmr:FlxTimer)
 		{
-			bgFade.alpha += (1 / bgFIL / 2);
+			bgFade.alpha += (1 / bgFIL);
 			if (bgFade.alpha > 1)
 				bgFade.alpha = 1;
 		}, bgFIL);
@@ -391,9 +391,9 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			portrait.alpha = 0;
 
-			new FlxTimer().start(fadeInTime / 2, function(tmr:FlxTimer)
+			new FlxTimer().start(fadeInTime, function(tmr:FlxTimer)
 			{
-				portrait.alpha += 1 / fadeInLoop / 2;
+				portrait.alpha += 1 / fadeInLoop;
 			}, fadeInLoop);
 
 			if (curFlip == 'true')

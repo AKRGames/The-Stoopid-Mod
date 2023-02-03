@@ -1682,17 +1682,20 @@ class PlayState extends MusicBeatState
 			}
 
 			switch (swagCounter)
-
 			{
 				case 0:
 					FlxG.sound.play(Paths.sound('intro3' + altSuffix, 'shared'), 0.6 * _variables.svolume / 100);
 
 					new FlxTimer().start(0.03, function(tmr:FlxTimer)
 					{
-						camHUD.alpha += 1 / 6;
-						camNOTES.alpha += 1 / 6;
-						camSus.alpha += 1 / 6;
-						camNOTEHUD.alpha += 1 / 6;
+						//camHUD.alpha += 1 / 6;
+						//camNOTES.alpha += 1 / 6;
+						//camSus.alpha += 1 / 6;
+						//camNOTEHUD.alpha += 1 / 6;
+						FlxTween.tween(camHUD, {alpha: 1}, 1, {ease: FlxEase.sineInOut});
+						FlxTween.tween(camNOTES, {alpha: 1}, 1, {ease: FlxEase.sineInOut});
+						FlxTween.tween(camSus, {alpha: 1}, 1, {ease: FlxEase.sineInOut});
+						FlxTween.tween(camNOTEHUD, {alpha: 1}, 1, {ease: FlxEase.sineInOut});
 					}, 10);
 				case 1:
 					var ready:FlxSprite = new FlxSprite();

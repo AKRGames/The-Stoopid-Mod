@@ -70,13 +70,13 @@ THERE ARE ALSO CERTAIN VARIABLES YOU CAN CHANGE AT THE BEGGINING OF DIALOGUE TO 
 
 >> - times a fade in of objects should occur per certain time. Must be higher than 0, and it can't be a decimal value.
 
-(( - fade out time (divided by 2) of many objects per some amount. It can be a decimal value.
+(( - fade out time of many objects per some amount. It can be a decimal value.
 
-)) - times the fade out of the objects should occur (divided by 2) per certain time. Must be higher than 0, and it can't be a decimal value.
+)) - times the fade out of the objects should occur per certain time. Must be higher than 0, and it can't be a decimal value.
 
-{{ - fade in time (divided by 2) of the background per some amount. It can be a decimal value.
+{{ - fade in time of the background per some amount. It can be a decimal value.
 
-}} - times the fade in of the background should occur (divided by 2) per certain time. Must be higher than 0, and it can't be a decimal value.
+}} - times the fade in of the background should occur per certain time. Must be higher than 0, and it can't be a decimal value.
 
 `` - textbox hand sprite
 
