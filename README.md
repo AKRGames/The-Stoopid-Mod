@@ -86,7 +86,7 @@ Go support the original repostiory for Mic'd Up [here](https://github.com/Verwex
 **This mod and it's engine was made with love to Friday Night Funkin' and its community. Extra love to the team behind it. 💖**
 
 <details>
-  <summary><h2>Mods and Modcharts (non-exisent)</h2></summary>
+  <summary><h3>Mods and Modcharts (non-exisent)</h3></summary>
 
 <p align="center">
 	<a href="https://github.com/Verwex/Mic-d-Up-PRIVATE/blob/main/art/polymodNo.png" target="_blank"><img src="/art/polymodNo.png"></a>
@@ -106,7 +106,6 @@ This allowed for arbitrary code execution while ingame, however they took up som
 Fortunately, this mod REMOVED THIS FEATURE and instead hardcodes all events. <sub>(just like old times!)</sub>
 
 <sub>Please don't replace any songs for a BETADCIU. Instead, use the source code.</sub>
-
 </details>
 
 # Compiling
