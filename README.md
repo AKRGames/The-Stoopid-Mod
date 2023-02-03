@@ -107,6 +107,8 @@ Fortunately, this mod REMOVED THIS FEATURE and instead hardcodes all events. <su
 
 <sub>Please don't replace any songs for a BETADCIU. Instead, use the source code.</sub>
 
+</details>
+
 # Compiling
 
 ## What can I do with compiling the mod? Why should I compile the mod instead of downloading it from [the GamaBanana page of the mod](https://gamebanana.com/concepts/1830)?
