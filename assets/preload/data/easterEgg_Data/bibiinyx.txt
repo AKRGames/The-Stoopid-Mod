@@ -1,2 +1,0 @@
-yes?
-(press ENTER if "yes")

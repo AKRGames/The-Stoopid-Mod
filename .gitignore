@@ -1,7 +1,7 @@
-export/
-.vscode/
-.vs/
+*/export/
+*/.vscode/
+*/.vs/
 ._*
-art/flashFiles/RECOVER_*.fla
+*/art/flashFiles/RECOVER_*.fla
 *.aup3
 *.mp3

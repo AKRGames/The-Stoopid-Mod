@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Modifiers.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Accelerant Notes Idle0000" x="2" y="2" width="194" height="186"/>
+	<SubTexture name="Accelerant Notes Select0000" x="198" y="2" width="194" height="186"/>
+	<SubTexture name="Only your GF can be a BADdie! (GFC) Idle0000" x="394" y="2" width="194" height="183"/>
+	<SubTexture name="Only your GF can be a BADdie! (GFC) Select0000 " x="590" y="2" width="194" height="183"/>
+	<SubTexture name="Across the Ass Idle0000" x="786" y="2" width="194" height="186"/>
+	<SubTexture name="Across the Ass Select0000" x="982" y="2" width="194" height="186"/>
+	<SubTexture name="Brightness Idle0000" x="1178" y="2" width="194" height="186"/>
+	<SubTexture name="Brightness Select0000" x="1374" y="2" width="194" height="186"/>
+	<SubTexture name="Camera Spin Idle0000" x="1570" y="2" width="194" height="186"/>
+	<SubTexture name="Camera Spin Select0000" x="1766" y="2" width="194" height="186"/>
+	<SubTexture name="Drunk Notes Idle0000" x="2" y="190" width="194" height="186"/>
+	<SubTexture name="Drunk Notes Select0000" x="198" y="190" width="194" height="186"/>
+	<SubTexture name="EARFQUAKE Idle0000" x="394" y="190" width="194" height="186"/>
+	<SubTexture name="EARFQUAKE Select0000" x="590" y="190" width="194" height="186"/>
+	<SubTexture name="Eel Notes Idle0000" x="786" y="190" width="194" height="187"/>
+	<SubTexture name="Eel Notes Select0000" x="982" y="190" width="194" height="187"/>
+	<SubTexture name="Did we get em? Idle0000" x="1178" y="190" width="194" height="183"/>
+	<SubTexture name="Did we get em? Select0000" x="1374" y="190" width="194" height="183"/>
+	<SubTexture name="Flipped Notes Idle0000" x="1570" y="190" width="194" height="183"/>
+	<SubTexture name="Flipped Notes Select0000" x="1766" y="190" width="194" height="183"/>
+	<SubTexture name="HP GET! Idle0000" x="2" y="379" width="194" height="186"/>
+	<SubTexture name="HP GET! Select0000" x="198" y="379" width="194" height="186"/>
+	<SubTexture name="HP LOSE! Idle0000" x="394" y="379" width="194" height="186"/>
+	<SubTexture name="HP LOSE! Select0000" x="590" y="379" width="194" height="186"/>
+	<SubTexture name="Safe Frames Idle0000" x="786" y="379" width="194" height="186"/>
+	<SubTexture name="Safe Frames Select0000" x="982" y="379" width="194" height="186"/>
+	<SubTexture name="Hyper Notes Idle0000" x="1178" y="379" width="194" height="186"/>
+	<SubTexture name="Hyper Notes Select0000" x="1374" y="379" width="194" height="186"/>
+	<SubTexture name="Invisible Notes Idle0000" x="1570" y="379" width="194" height="183"/>
+	<SubTexture name="Invisible Notes Select0000" x="1766" y="379" width="194" height="183"/>
+	<SubTexture name="Jack-TASTIC! Idle0000" x="2" y="567" width="194" height="186"/>
+	<SubTexture name="Jack-TASTIC! Select0000" x="198" y="567" width="194" height="186"/>
+	<SubTexture name="Lives Idle0000" x="394" y="567" width="194" height="186"/>
+	<SubTexture name="Lives Select0000" x="590" y="567" width="194" height="186"/>
+	<SubTexture name="You Cannot See Idle0000" x="786" y="567" width="194" height="186"/>
+	<SubTexture name="You Cannot See Select0000" x="982" y="567" width="194" height="186"/>
+	<SubTexture name="Mirror Idle0000" x="1178" y="567" width="194" height="183"/>
+	<SubTexture name="Mirror Select0000" x="1374" y="567" width="194" height="183"/>
+	<SubTexture name="Note Speed Idle0000" x="1570" y="567" width="194" height="186"/>
+	<SubTexture name="Note Speed Select0000" x="1766" y="567" width="194" height="186"/>
+	<SubTexture name="Offbeat Idle0000" x="2" y="755" width="194" height="186"/>
+	<SubTexture name="Offbeat Select0000" x="198" y="755" width="194" height="186"/>
+	<SubTexture name="Paparazzi Idle0000" x="394" y="755" width="194" height="186"/>
+	<SubTexture name="Paparazzi Select0000" x="590" y="755" width="194" height="186"/>
+	<SubTexture name="No Misses (FC) Idle0000" x="786" y="755" width="194" height="183"/>
+	<SubTexture name="No Misses (FC) Select0000" x="982" y="755" width="194" height="183"/>
+	<SubTexture name="Poison Fright Idle0000" x="1178" y="755" width="194" height="186"/>
+	<SubTexture name="Poison Fright Select0000" x="1374" y="755" width="194" height="186"/>
+	<SubTexture name="Practice Mode Idle0000" x="1570" y="755" width="194" height="183"/>
+	<SubTexture name="Practice Mode Select0000" x="1766" y="755" width="194" height="183"/>
+	<SubTexture name="Camera Swing Idle0000" x="2" y="943" width="194" height="186"/>
+	<SubTexture name="Camera Swing Select0000" x="198" y="943" width="194" height="186"/>
+	<SubTexture name="Try not to SHIT! (AFC) Idle0000" x="394" y="943" width="194" height="183"/>
+	<SubTexture name="Try not to SHIT! (AFC) Select0000" x="590" y="943" width="194" height="183"/>
+	<SubTexture name="Squint Idle0000" x="786" y="943" width="194" height="186"/>
+	<SubTexture name="Squint Select0000" x="982" y="943" width="194" height="186"/>
+	<SubTexture name="Single Digits Only (SDCB) Idle0000" x="1178" y="943" width="194" height="183"/>
+	<SubTexture name="Single Digits Only (SDCB) Select0000" x="1374" y="943" width="194" height="183"/>
+	<SubTexture name="Snake Notes Idle0000" x="1570" y="943" width="194" height="186"/>
+	<SubTexture name="Snake Notes Select0000" x="1766" y="943" width="194" height="186"/>
+	<SubTexture name="Stage Fright Idle0000" x="2" y="1131" width="194" height="186"/>
+	<SubTexture name="Stage Fright Select0000" x="198" y="1131" width="194" height="186"/>
+	<SubTexture name="Starting HP Idle0000" x="394" y="1131" width="194" height="186"/>
+	<SubTexture name="Starting HP Select0000" x="590" y="1131" width="194" height="186"/>
+	<SubTexture name="Stretched Idle0000" x="786" y="1131" width="194" height="186"/>
+	<SubTexture name="Stretched Select0000" x="982" y="1131" width="194" height="186"/>
+	<SubTexture name="I Love You! Idle0000" x="1178" y="1131" width="194" height="186"/>
+	<SubTexture name="I Love You! Select0000" x="1374" y="1131" width="194" height="186"/>
+	<SubTexture name="Ascension (MFC) Idle0000" x="1570" y="1131" width="194" height="183"/>
+	<SubTexture name="Ascension (MFC) Select0000" x="1766" y="1131" width="194" height="183"/>
+	<SubTexture name="Upside Down Idle0000" x="2" y="1319" width="194" height="183"/>
+	<SubTexture name="Upside Down Select0000" x="198" y="1319" width="194" height="183"/>
+	<SubTexture name="Vibe Idle0000" x="394" y="1319" width="194" height="186"/>
+	<SubTexture name="Vibe Select0000" x="590" y="1319" width="194" height="186"/>
+	<SubTexture name="Widen Idle0000" x="786" y="1319" width="194" height="186"/>
+	<SubTexture name="Widen Select0000" x="982" y="1319" width="194" height="186"/>
+</TextureAtlas>

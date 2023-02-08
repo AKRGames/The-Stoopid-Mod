@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="arrowMINE.png">
-	<!--I made this because the other asset wasn't loading correctly.-->
-	<SubTexture name="mineScroll0000" x="0" y="0" width="152" height="152"/>
-</TextureAtlas>
