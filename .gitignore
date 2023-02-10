@@ -5,4 +5,7 @@
 ._*
 */art/flashFiles/RECOVER_*.fla
 *.aup3
-*.mp3
+Windows/assets/*/music/*.mp3
+Windows/assets/*/sounds/*.mp3
+HTML/assets/*/music/*.ogg
+HTML/assets/*/sounds/*.ogg
