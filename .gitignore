@@ -7,5 +7,7 @@
 *.aup3
 Windows/assets/*/music/*.mp3
 Windows/assets/*/sounds/*.mp3
+Windows/assets/songs/*/*.mp3
 HTML/assets/*/music/*.ogg
 HTML/assets/*/sounds/*.ogg
+HTML/assets/songs/*/*.ogg

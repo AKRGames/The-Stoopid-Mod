@@ -69,7 +69,7 @@ class TitleState extends MusicBeatState
 		
 		#if !cpp
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('stoopidsavefile', "StoopidSaveFile");
 
 		PlayerSettings.init();
 
@@ -230,9 +230,8 @@ class TitleState extends MusicBeatState
 			// music.loadStream(Paths.music('freakyMenu'));
 			// FlxG.sound.list.add(music);
 			// music.play();
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+			FlxG.sound.playMusic(Paths.music('freakyMenu'), 1);
 
-			FlxG.sound.music.fadeIn(4, 0, 0.7);
 			Conductor.changeBPM(102);
 			initialized = true;
 		}
