@@ -64,20 +64,29 @@ class Main extends Sprite
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
-		if (zoom == -1)
-		{
-			var ratioX:Float = stageWidth / gameWidth;
-			var ratioY:Float = stageHeight / gameHeight;
-			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
-		}
+		// if (zoom == -1)
+		// {
+		var ratioX:Float = stageWidth / gameWidth;
+		var ratioY:Float = stageHeight / gameHeight;
+		zoom = Math.min(ratioX, ratioY);
+		gameWidth = Math.ceil(stageWidth / zoom);
+		gameHeight = Math.ceil(stageHeight / zoom);
+		// }
 
 		#if !debug
 		initialState = FirstCheckState;
 		#end
 
-		addChild(new FlxGame(gameWidth, gameHeight, initialState, framerate, framerate, skipSplash, startFullscreen));
+		#if cpp
+		initialState = Caching;
+		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
+		#else
+		game = new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen);
+		#end
+		addChild(game);
+		#if windows
+		DiscordClient.initialize();
+		#end
 
 		var ourSource:String = "assets/videos/dontDelete.webm";
 
