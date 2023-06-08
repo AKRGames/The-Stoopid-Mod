@@ -1,4 +1,4 @@
-package;
+package stoopid;
 
 import flash.Lib;
 import flash.display.*;
